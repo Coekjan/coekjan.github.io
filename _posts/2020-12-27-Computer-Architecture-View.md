@@ -1,7 +1,7 @@
 ---	
 layout:     post	
 title:      『Computer Architecture』 Introduction	
-subtitle:   『Computer Architecture』 引言    
+subtitle:   『计算机体系结构』 引言    
 date:       2020-12-27	   
 author:     Coekjan 
 header-img: img/post-bg-CA.jpg	
@@ -12,7 +12,7 @@ tags:
 
 ### 简介
 
-**Computer Architecture**即计算机体系结构, 本系列博客文章将以**Computer Organization**(*北航计算机学院核心专业课*)为基础, 从单周期CPU开始, 搭建一个内含流水线CPU的, 支持I/O与异常和中断的MIPS微体系.
+本系列博客文章将以**Computer Organization**(*北航计算机学院核心专业课*)为基础, 从单周期CPU开始, 搭建一个内含流水线CPU的, 支持I/O与异常和中断的MIPS微体系.
 
 ### 前言
 
