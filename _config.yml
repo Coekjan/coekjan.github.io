@@ -44,7 +44,12 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
-
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 
 # 评论系统
@@ -86,6 +91,8 @@ featured-condition-size: 0              # 相同标签数量大于这个数，�
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
+# MathJAX
+page-mathjax: false
 
 
 # Friends
