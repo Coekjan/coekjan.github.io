@@ -341,6 +341,7 @@ $$
     \end{aligned}\right.
 \end{aligned}
 $$
+
 $$
     \Rightarrow f = f_M\cdot f_B=n_0\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{\epsilon_k+\epsilon_p}{kT}\right)
 $$
@@ -409,7 +410,7 @@ $$
 因此:
 
 $$
-{\vec {v_1}}^2+{\vec {v_2}}^2=2{\vec {u_c}}^2+\frac{{\vec {v_r}}^2}{2}
+\vec {v_1}^2+\vec {v_2}^2=2\vec {u_c}^2+\frac{\vec {v_r}^2}{2}
 $$
 
 欲作变换 $\operatorname{d}\vec {v_1}\operatorname{d}\vec {v_2}\rightarrow\operatorname{d}\vec {u_c}\operatorname{d}\vec {v_r}$ , 须求雅可比行列式:
