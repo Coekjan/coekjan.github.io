@@ -4,7 +4,7 @@ title:      『Computer Architecture』 Introduction
 subtitle:   『Computer Architecture』 引言    
 date:       2020-12-27	   
 author:     Coekjan 
-header-img: img/post-bg-20201227-1-header.jpg	
+header-img: img/post-bg-CA.jpg	
 catalog:    true	
 tags:	
     - Computer Architecture  
