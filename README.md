@@ -1,2 +1,1 @@
-# coekjan.github.io
-Coekjan's blog
+# Coekjan的博客
