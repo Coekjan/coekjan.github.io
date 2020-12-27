@@ -35,10 +35,10 @@ tags:
 理想气体状态的三个参量间的关系, 就称为**理想气体的物态方程**. 从三定律, 可以得到, 质量为 $m$ , 摩尔质量为 $M$ 的理想气体处于平衡态时, 物态方程为:
 
 $$
-pV=\frac{m}{M}RT
+pV=\frac{m}{M}RT\tag{*}
 $$
 
-式中, $R$ 为普适气体常量, 在国际单位制下, $R = 8.31 \rm J/(mol\cdot K)$
+式中, $R$ 为**普适气体常量**, 在国际单位制下, $R = 8.31 \rm J/(mol\cdot K)$
 
 ## 理想气体的微观模型
 
@@ -104,4 +104,51 @@ $$
 \end{aligned}
 $$
 
+考虑到 $\operatorname{Avg}(v^2_x)=\displaystyle\frac{1}{3}\operatorname{Avg}(v^2)$, 压强公式即为:
+
+$$
+p=\frac{1}{3}nm_0\cdot \operatorname{Avg}(v^2)\tag{*}
+$$
+
+考虑到气体分子的平均平动动能 $\operatorname{Avg}(\varepsilon_k)=\displaystyle\frac{1}{2}m_0\cdot\operatorname{Avg}(v^2)$, 上式还能化为:
+
+$$
+p=\frac{2}{3}n\cdot\operatorname{Avg}(\varepsilon_k)\tag{*}
+$$
+
 ### 温度的本质与统计意义
+
+考虑到 $m=Nm_0$ , $M=N_Am_0$, 理想气体的物态方程可作变换:
+
+$$
+pV=\frac{m}{M}RT\Leftrightarrow p=\frac{N}{V}\frac{R}{N_A}T\xlongequal{n:=N/V,\:k:=R/N_A}nkT\tag{*}
+$$
+
+其中 $n$ 是气体分子数密度, $k$ 是**玻尔兹曼常数**, 国际单位制下, $k=1.38\times 10^{-23}\rm J/K$.
+
+将变换后的理想气体物态方程与压强公式比较, 可以得到温度公式:
+
+$$
+\begin{aligned}
+    &\operatorname{Avg}(\varepsilon_k)=\frac{3}{2}kT\tag{*}\\
+    \Leftrightarrow&T=\frac{2}{3k}\operatorname{Avg}(\varepsilon_k)
+\end{aligned}
+$$
+
+可以看到, 该关系式把宏观量 $T$ 与微观量 $\operatorname{Avg}(\varepsilon_k)$ 联系起来, 且说明温度 $T$ 仅与分子的平均平动动能 $\operatorname{Avg}(\varepsilon_k)$ 成正比.
+
+又言之, **气体温度是气体分子平均平动动能的量度**, 对于个别分子, 温度没有意义.
+
+更有推论, **同一温度下, 各种气体分子的平均平动动能相等**.
+
+#### 方均根速率
+
+记气体分子的方均根速率为 $v_{rms}=\sqrt{\operatorname{Avg}(v^2)}$ , 不难由上面推导出来的公式得到:
+
+$$
+v_{rms}=\sqrt{\frac{3kT}{m_0}}=\sqrt{\frac{3RT}{M}}
+$$
+
+注意到, 虽然同一温度下各种气体分子的平均平动动能相等, 但是**由于不同种类气体的分子质量不一致, 方均根速率会有差异**.
+
+## 能量均分定理与理想气体的内能
