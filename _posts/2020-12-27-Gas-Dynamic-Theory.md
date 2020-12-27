@@ -35,7 +35,7 @@ tags:
 理想气体状态的三个参量间的关系, 就称为**理想气体的物态方程**. 从三定律, 可以得到, 质量为 $m$ , 摩尔质量为 $M$ 的理想气体处于平衡态时, 物态方程为:
 
 $$
-pV=\frac{m}{M}RT\tag{*}
+pV=\frac{m}{M}RT
 $$
 
 式中, $R$ 为**普适气体常量**, 在国际单位制下, $R = 8.31 \rm J/(mol\cdot K)$
@@ -107,13 +107,13 @@ $$
 考虑到 $\operatorname{Avg}(v^2_x)=\displaystyle\frac{1}{3}\operatorname{Avg}(v^2)$, 压强公式即为:
 
 $$
-p=\frac{1}{3}nm_0\cdot \operatorname{Avg}(v^2)\tag{*}
+p=\frac{1}{3}nm_0\cdot \operatorname{Avg}(v^2)
 $$
 
 考虑到气体分子的平均平动动能 $\operatorname{Avg}(\varepsilon_k)=\displaystyle\frac{1}{2}m_0\cdot\operatorname{Avg}(v^2)$, 上式还能化为:
 
 $$
-p=\frac{2}{3}n\cdot\operatorname{Avg}(\varepsilon_k)\tag{*}
+p=\frac{2}{3}n\cdot\operatorname{Avg}(\varepsilon_k)
 $$
 
 ### 温度的本质与统计意义
@@ -121,7 +121,7 @@ $$
 考虑到 $m=Nm_0$ , $M=N_Am_0$, 理想气体的物态方程可作变换:
 
 $$
-pV=\frac{m}{M}RT\Leftrightarrow p=\frac{N}{V}\frac{R}{N_A}T\xlongequal{n:=N/V,\:k:=R/N_A}nkT\tag{*}
+pV=\frac{m}{M}RT\Leftrightarrow p=\frac{N}{V}\frac{R}{N_A}T\xlongequal{n:=N/V,\:k:=R/N_A}nkT
 $$
 
 其中 $n$ 是气体分子数密度, $k$ 是**玻尔兹曼常数**, 国际单位制下, $k=1.38\times 10^{-23}\rm J/K$.
@@ -130,7 +130,7 @@ $$
 
 $$
 \begin{aligned}
-    &\operatorname{Avg}(\varepsilon_k)=\frac{3}{2}kT\tag{*}\\
+    &\operatorname{Avg}(\varepsilon_k)=\frac{3}{2}kT\\
     \Leftrightarrow&T=\frac{2}{3k}\operatorname{Avg}(\varepsilon_k)
 \end{aligned}
 $$
@@ -146,7 +146,7 @@ $$
 记气体分子的方均根速率为 $v_{rms}=\sqrt{\operatorname{Avg}(v^2)}$ , 不难由上面推导出来的公式得到:
 
 $$
-v_{rms}=\sqrt{\frac{3kT}{m_0}}=\sqrt{\frac{3RT}{M}}\tag{*}
+v_{rms}=\sqrt{\frac{3kT}{m_0}}=\sqrt{\frac{3RT}{M}}
 $$
 
 注意到, 虽然同一温度下各种气体分子的平均平动动能相等, 但是**由于不同种类气体的分子质量不一致, 方均根速率会有差异**.
@@ -184,7 +184,7 @@ $$
 $$
 \begin{aligned}
     E&=\frac{m}{M}N_A\cdot\operatorname{Avg}(\epsilon_k)\\
-    &=\frac{m}{M}\frac{i}{2}\cdot N_A kT\xlongequal{N_Ak=R}\frac{m}{M}\frac{i}{2}RT\tag{*}
+    &=\frac{m}{M}\frac{i}{2}\cdot N_A kT\xlongequal{N_Ak=R}\frac{m}{M}\frac{i}{2}RT
 \end{aligned}
 $$
 
@@ -225,11 +225,11 @@ $$
 可以使用该概率密度函数, 计算一些物理量的平均值, 如平均速率, 方均根速率:
 
 $$
-\operatorname{Avg}(v)=\int_0^{+\infty}vf(v)\operatorname{d}v\tag{*}
+\operatorname{Avg}(v)=\int_0^{+\infty}vf(v)\operatorname{d}v
 $$
 
 $$
-\sqrt{\operatorname{Avg}(v^2)}=\sqrt{\int_0^{+\infty}v^2f(v)\operatorname{d}v}\tag{*}
+\sqrt{\operatorname{Avg}(v^2)}=\sqrt{\int_0^{+\infty}v^2f(v)\operatorname{d}v}
 $$
 
 ### 麦克斯韦速率分布律
@@ -237,7 +237,7 @@ $$
 麦克斯韦从理论上导出了理想气体在平衡态时气体分子的速率分布函数:
 
 $$
-f(v)=4\pi\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0v^2}{2kT}\right)v^2\tag{*}
+f(v)=4\pi\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0v^2}{2kT}\right)v^2
 $$
 对麦克斯韦分布律进行一些变换, 得到**动能分布概率密度**.
 
@@ -256,7 +256,7 @@ $$
 代入麦克斯韦速率分布律, 即得:
 
 $$
-f(\epsilon_k)=\frac{2}{\sqrt{\pi}}\left(\frac{1}{kT}\right)^{3/2}\exp\left(-\frac{\epsilon_k}{kT}\right)\epsilon_k^{1/2}\tag{*}
+f(\epsilon_k)=\frac{2}{\sqrt{\pi}}\left(\frac{1}{kT}\right)^{3/2}\exp\left(-\frac{\epsilon_k}{kT}\right)\epsilon_k^{1/2}
 $$
 
 #### 麦克斯韦速度分布律
@@ -274,7 +274,7 @@ $$
 任意有关速率的统计量 $g(v)$ 的平均值, 均可由积分:
 
 $$
-\operatorname{Avg}(g(v))=\int_0^{+\infty}g(v)f(v)\operatorname{d}v\tag{*}
+\operatorname{Avg}(g(v))=\int_0^{+\infty}g(v)f(v)\operatorname{d}v
 $$
 
 给出.
@@ -289,7 +289,7 @@ $$
 =\sqrt{\frac{8kT}{\pi m_0}}
 =\sqrt{\frac{8RT}{\pi M}}
 =\sqrt{\frac{8}{\pi}}\sqrt{\frac{RT}{M}}
-\approx1.60\sqrt{\frac{RT}{M}}\tag{*}
+\approx1.60\sqrt{\frac{RT}{M}}
 $$
 
 方均根速率:
@@ -300,7 +300,7 @@ v_{rsm}
 =\sqrt{\frac{3kT}{m_0}}
 =\sqrt{\frac{3RT}{M}}
 =\sqrt{3}\sqrt{\frac{RT}{M}}
-\approx1.73\sqrt{\frac{RT}{M}}\tag{*}
+\approx1.73\sqrt{\frac{RT}{M}}
 $$
 
 最概然速率(概率密度最大处对应的速率):
@@ -310,13 +310,13 @@ v_p
 =\sqrt{\frac{2kT}{m_0}}
 =\sqrt{\frac{2RT}{M}}
 =\sqrt{2}\sqrt{\frac{RT}{M}}
-\approx 1.44\sqrt{\frac{RT}{M}}\tag{*}
+\approx 1.44\sqrt{\frac{RT}{M}}
 $$
 
 可以看到, 这三个统计量有大小关系:
 
 $$
-v_{rms}>\operatorname{Avg}(v)>v_p\tag{*}
+v_{rms}>\operatorname{Avg}(v)>v_p
 $$
 
 ### 玻尔兹曼分布律与MB分布
@@ -342,7 +342,7 @@ $$
 \end{aligned}
 $$
 $$
-    \Rightarrow f = f_M\cdot f_B=n_0\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{\epsilon_k+\epsilon_p}{kT}\right)\tag{*}
+    \Rightarrow f = f_M\cdot f_B=n_0\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{\epsilon_k+\epsilon_p}{kT}\right)
 $$
 
 显然, 上式若对位置积分就是麦克斯韦分布, 若对速度积分就是玻尔兹曼分布.
@@ -489,7 +489,7 @@ $$
 利用以上关系, 可以最终算得:
 
 $$
-\bar Z = \sqrt{2}n\pi d^2\operatorname{Avg}(v)\tag{*}
+\bar Z = \sqrt{2}n\pi d^2\operatorname{Avg}(v)
 $$
 
 #### 平均自由程公式的导出
@@ -497,13 +497,13 @@ $$
 单位时间内, 分子运动平均经过的路程为 $\operatorname{Avg}(v)$ . 因此平均自由程为:
 
 $$
-\bar \lambda = \frac{\operatorname{Avg}(v)}{\bar Z} = \frac{1}{\sqrt{2}n\pi d^2}\tag{*}
+\bar \lambda = \frac{\operatorname{Avg}(v)}{\bar Z} = \frac{1}{\sqrt{2}n\pi d^2}
 $$
 
 利用 $p=nkT$ 即得:
 
 $$
-\bar \lambda = \frac{kT}{\sqrt{2}\pi d^2p}\tag{*}
+\bar \lambda = \frac{kT}{\sqrt{2}\pi d^2p}
 $$
 
 可见, 温度一定时, $\bar\lambda$ 与 $p$ 成反比.
