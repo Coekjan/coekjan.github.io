@@ -239,6 +239,7 @@ $$
 $$
 f(v)=4\pi\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0v^2}{2kT}\right)v^2
 $$
+
 对麦克斯韦分布律进行一些变换, 得到**动能分布概率密度**.
 
 $$
