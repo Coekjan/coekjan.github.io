@@ -93,5 +93,8 @@ page-mathjax: false
 
 # Friends
 friends: [
-    
+  {
+    title: "Coekjan's Blog",
+    href: "https://coekjan.github.io"
+  }
 ]
