@@ -1,6 +1,6 @@
 ---	
 layout:     post	
-title:      『Physics』 Gas Dynamic Theory	
+title:      『Physics』 Kinetic Theory of Gases	
 subtitle:   『物理学』 气体动理论    
 date:       2020-12-27	   
 author:     Coekjan 
@@ -222,16 +222,6 @@ $$
 \int_0^{+\infty}f(v)\operatorname{d}v=1
 $$
 
-可以使用该概率密度函数, 计算一些物理量的平均值, 如平均速率, 方均根速率:
-
-$$
-\operatorname{Avg}(v)=\int_0^{+\infty}vf(v)\operatorname{d}v
-$$
-
-$$
-\sqrt{\operatorname{Avg}(v^2)}=\sqrt{\int_0^{+\infty}v^2f(v)\operatorname{d}v}
-$$
-
 ### 麦克斯韦速率分布律
 
 麦克斯韦从理论上导出了理想气体在平衡态时气体分子的速率分布函数:
@@ -262,13 +252,58 @@ $$
 
 #### 麦克斯韦速度分布律
 
-使用矢量表达, 麦克斯韦速度分布律为:
+麦克斯韦一开始提出的是麦克斯韦**速度**分布律为:
 
 $$
-\operatorname{d}w=\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0{\vec v}^2}{kT}\right)\operatorname{d}\vec v
+f_M(\vec v)=\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0{\vec v}^2}{kT}\right)
 $$
 
-其中 $\operatorname{d}w$ 即为速度在 $\vec v$ 附近的概率密度.
+可通过速度分量写作标量形式:
+
+$$
+f_M(v_x, v_y, v_z)=\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left[-\frac{m_0(v_x^2+v_y^2+v_z^2)}{kT}\right]
+$$
+
+那么可以给出任意速度附近的分布概率密度:
+
+$$
+\operatorname{d}w=f_M(v_x, v_y, v_z)\operatorname{d}v_x\operatorname{d}v_y\operatorname{d}v_z
+$$
+
+考虑球坐标变换: $\operatorname{d}v_x\operatorname{d}v_y\operatorname{d}v_z\rightarrow\operatorname{d}v\operatorname{d}\phi\operatorname{d}\theta$ , 变换关系为:
+
+$$
+\left\{\begin{aligned}
+    v_x&=v\sin \phi \cos \theta\\
+    v_y&=v\sin \phi \sin \theta\\
+    v_z&=v\cos \phi
+\end{aligned}\right.
+$$
+
+其Jacobi行列式为:
+
+$$
+J=\begin{vmatrix}
+    \displaystyle\frac{\partial v_x}{\partial v} & \displaystyle\frac{\partial v_x}{\partial \phi} & 
+    \displaystyle\frac{\partial v_x}{\partial \theta}\\\\
+    \displaystyle\frac{\partial v_y}{\partial v} & \displaystyle\frac{\partial v_y}{\partial \phi} & 
+    \displaystyle\frac{\partial v_y}{\partial \theta}\\\\
+    \displaystyle\frac{\partial v_z}{\partial v} & \displaystyle\frac{\partial v_z}{\partial \phi} & 
+    \displaystyle\frac{\partial v_z}{\partial \theta}
+\end{vmatrix}=v^2\sin \phi
+$$
+
+变换后对 $\phi$ 和 $\theta$ 积分, 即可得到任意速率附近的分布概率密度:
+
+$$
+\operatorname{d}w=4\pi f_M(v)v^2\operatorname{d}v
+$$
+
+其中即可得到麦克斯韦速率分布律:
+
+$$
+f(v)=4\pi f_M(v) v^2=4\pi\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0v^2}{2kT}\right)v^2
+$$
 
 #### 分子速率的统计平均值
 
@@ -282,6 +317,17 @@ $$
 
 对于麦克斯韦速率分布律, 列出以下几个简单的统计量.
 
+方均根速率:
+
+$$
+v_{rms}
+=\sqrt{\int_0^{+\infty}v^2f(v)\operatorname{d}v}
+=\sqrt{\frac{3kT}{m_0}}
+=\sqrt{\frac{3RT}{M}}
+=\sqrt{3}\sqrt{\frac{RT}{M}}
+\approx1.73\sqrt{\frac{RT}{M}}
+$$
+
 平均速率:
 
 $$
@@ -291,17 +337,6 @@ $$
 =\sqrt{\frac{8RT}{\pi M}}
 =\sqrt{\frac{8}{\pi}}\sqrt{\frac{RT}{M}}
 \approx1.60\sqrt{\frac{RT}{M}}
-$$
-
-方均根速率:
-
-$$
-v_{rsm}
-=\int_0^{+\infty}v^2f(v)\operatorname{d}v
-=\sqrt{\frac{3kT}{m_0}}
-=\sqrt{\frac{3RT}{M}}
-=\sqrt{3}\sqrt{\frac{RT}{M}}
-\approx1.73\sqrt{\frac{RT}{M}}
 $$
 
 最概然速率(概率密度最大处对应的速率):
@@ -414,7 +449,7 @@ $$
 \vec {v_1}^2+\vec {v_2}^2=2\vec {u_c}^2+\frac{\vec {v_r}^2}{2}
 $$
 
-欲作变换 $\operatorname{d}\vec {v_1}\operatorname{d}\vec {v_2}\rightarrow\operatorname{d}\vec {u_c}\operatorname{d}\vec {v_r}$ , 须求雅可比行列式:
+欲作变换 $\operatorname{d}\vec {v_1}\operatorname{d}\vec {v_2}\rightarrow\operatorname{d}\vec {u_c}\operatorname{d}\vec {v_r}$ , 须求Jacobi行列式:
 
 $$
 J=\begin{vmatrix}
