@@ -255,14 +255,25 @@ $$
 麦克斯韦一开始提出的是麦克斯韦**速度**分布律为:
 
 $$
-f_M(\vec v)=\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0{\vec v}^2}{kT}\right)
+f_M(\vec v)=\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0{\vec v}^2}{2kT}\right)
 $$
 
 可通过速度分量写作标量形式:
 
 $$
-f_M(v_x, v_y, v_z)=\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left[-\frac{m_0(v_x^2+v_y^2+v_z^2)}{kT}\right]
+f_M(v_x, v_y, v_z)=\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left[-\frac{m_0(v_x^2+v_y^2+v_z^2)}{2kT}\right]
 $$
+
+> 本质上, 是称 $v_x, v_y, v_z \thicksim N(0, \displaystyle\frac{kT}{m_0})$ , 且三者相互独立. 则有:
+> 
+> $$
+> \left\{\begin{aligned}
+>   f_M^{(x)}(v_x)&=\left(\frac{m_0}{2\pi k T}\right)^{1/2}\exp\left(-\frac{m_0v_x^2}{2kT}\right)\\
+    f_M^{(y)}(v_y)&=\left(\frac{m_0}{2\pi k T}\right)^{1/2}\exp\left(-\frac{m_0v_y^2}{2kT}\right)\\
+    f_M^{(z)}(v_z)&=\left(\frac{m_0}{2\pi k T}\right)^{1/2}\exp\left(-\frac{m_0v_z^2}{2kT}\right)
+> \end{aligned}\right.\Rightarrow f_M(v_x, v_y, v_z) = f_M^{(x)}(v_x)f_M^{(y)}(v_y)f_M^{(z)}(v_z)
+> $$
+> 
 
 那么可以给出任意速度附近的分布概率密度:
 
