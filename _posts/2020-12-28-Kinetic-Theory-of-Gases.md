@@ -53,14 +53,14 @@ $$
 
 $$
 \begin{aligned}
-    &\operatorname{Avg}(\vec v_x)=
-    \operatorname{Avg}(\vec v_y)=
-    \operatorname{Avg}(\vec v_z)=
+    &\overline{\vec v_x}=
+    \overline{\vec v_y}=
+    \overline{\vec v_z}=
     \vec 0\\
-    &\operatorname{Avg}(v^2_x)=
-    \operatorname{Avg}(v^2_y)=
-    \operatorname{Avg}(v^2_z)=
-    \frac{1}{3}\operatorname{Avg}(v^2)
+    &\overline{v^2_x}=
+    \overline{v^2_y}=
+    \overline{v^2_z}=
+    \frac{1}{3}\overline{v^2}
 \end{aligned}
 $$
 
@@ -89,7 +89,7 @@ $$
     F&=\sum_i \left( 2m_0v_x\cdot\frac{v_x}{2l_1} \right)\\
     &=\sum_i \frac{m_0v^2_x}{l_1}\\
     &=\frac{m_0}{l_1}\sum_i v^2_x\\
-    &=\frac{Nm_0}{l_1}\cdot \operatorname{Avg}(v^2_x)
+    &=\frac{Nm_0}{l_1}\cdot \overline{v^2_x}
 \end{aligned}
 $$
 
@@ -98,22 +98,22 @@ $$
 $$
 \begin{aligned}
     p&=\frac{F}{l_2l_3}=
-    \frac{Nm_0}{l_1l_2l_3}\cdot \operatorname{Avg}(v^2_x)=
-    \frac{Nm_0}{V}\cdot \operatorname{Avg}(v^2_x)\\
-    \Rightarrow p&\xlongequal{n:=N/V}nm_0\cdot \operatorname{Avg}(v^2_x)
+    \frac{Nm_0}{l_1l_2l_3}\cdot \overline{v^2_x}=
+    \frac{Nm_0}{V}\cdot \overline{v^2_x}\\
+    \Rightarrow p&\xlongequal{n:=N/V}nm_0\cdot \overline{v^2_x}
 \end{aligned}
 $$
 
-考虑到 $\operatorname{Avg}(v^2_x)=\displaystyle\frac{1}{3}\operatorname{Avg}(v^2)$, 压强公式即为:
+考虑到 $\overline{v^2_x}=\displaystyle\frac{1}{3}\overline{v^2}$, 压强公式即为:
 
 $$
-p=\frac{1}{3}nm_0\cdot \operatorname{Avg}(v^2)
+p=\frac{1}{3}nm_0\cdot \overline{v^2}
 $$
 
-考虑到气体分子的平均平动动能 $\operatorname{Avg}(\varepsilon_k)=\displaystyle\frac{1}{2}m_0\cdot\operatorname{Avg}(v^2)$, 上式还能化为:
+考虑到气体分子的平均平动动能 $\overline{\varepsilon_k}=\displaystyle\frac{1}{2}m_0\cdot\overline{v^2}$, 上式还能化为:
 
 $$
-p=\frac{2}{3}n\cdot\operatorname{Avg}(\varepsilon_k)
+p=\frac{2}{3}n\cdot\overline{\varepsilon_k}
 $$
 
 ### 温度的本质与统计意义
@@ -130,12 +130,12 @@ $$
 
 $$
 \begin{aligned}
-    &\operatorname{Avg}(\varepsilon_k)=\frac{3}{2}kT\\
-    \Leftrightarrow&T=\frac{2}{3k}\operatorname{Avg}(\varepsilon_k)
+    &\overline{\varepsilon_k}=\frac{3}{2}kT\\
+    \Leftrightarrow&T=\frac{2}{3k}\overline{\varepsilon_k}
 \end{aligned}
 $$
 
-可以看到, 该关系式把宏观量 $T$ 与微观量 $\operatorname{Avg}(\varepsilon_k)$ 联系起来, 且说明温度 $T$ 仅与分子的平均平动动能 $\operatorname{Avg}(\varepsilon_k)$ 成正比.
+可以看到, 该关系式把宏观量 $T$ 与微观量 $\overline{\varepsilon_k}$ 联系起来, 且说明温度 $T$ 仅与分子的平均平动动能 $\overline{\varepsilon_k}$ 成正比.
 
 又言之, **气体温度是气体分子平均平动动能的量度**, 对于个别分子, 温度没有意义.
 
@@ -143,7 +143,7 @@ $$
 
 #### 方均根速率
 
-记气体分子的方均根速率为 $v_{rms}=\sqrt{\operatorname{Avg}(v^2)}$ , 不难由上面推导出来的公式得到:
+记气体分子的方均根速率为 $v_{rms}=\sqrt{\overline{v^2}}$ , 不难由上面推导出来的公式得到:
 
 $$
 v_{rms}=\sqrt{\frac{3kT}{m_0}}=\sqrt{\frac{3RT}{M}}
@@ -175,15 +175,15 @@ $$
 
 气体分子的能量以及分子与分子之间的势能构成气体内部的总能量, 称作**气体的内能**. 而对于理想气体, 气体分子间的使能忽略不计, 因此理想气体的内能就是所有分子的总动能.
 
-对于理想气体, 如果一个分子具有 $i$ 个自由度, 则每个分子的平均总动能为 $\operatorname{Avg}(\epsilon_k)=\displaystyle\frac{i}{2}kT$.
+对于理想气体, 如果一个分子具有 $i$ 个自由度, 则每个分子的平均总动能为 $\overline{\epsilon_k}=\displaystyle\frac{i}{2}kT$.
 
-> 只考虑平动动能的话, 自由度取 $i=3$ 即得 $\operatorname{Avg}(\varepsilon_k)=\displaystyle\frac{3}{2}kT$.
+> 只考虑平动动能的话, 自由度取 $i=3$ 即得 $\overline{\varepsilon_k}=\displaystyle\frac{3}{2}kT$.
 
 因此, 质量为 $m$ , 摩尔质量为 $M$ 的理想气体内能为:
 
 $$
 \begin{aligned}
-    E&=\frac{m}{M}N_A\cdot\operatorname{Avg}(\epsilon_k)\\
+    E&=\frac{m}{M}N_A\cdot\overline{\epsilon_k}\\
     &=\frac{m}{M}\frac{i}{2}\cdot N_A kT\xlongequal{N_Ak=R}\frac{m}{M}\frac{i}{2}RT
 \end{aligned}
 $$
@@ -310,7 +310,7 @@ $$
 任意有关速率的统计量 $g(v)$ 的平均值, 均可由积分:
 
 $$
-\operatorname{Avg}(g(v))=\int_0^{+\infty}g(v)f(v)\operatorname{d}v
+\overline{g(v)}=\int_0^{+\infty}g(v)f(v)\operatorname{d}v
 $$
 
 给出.
@@ -331,7 +331,7 @@ $$
 平均速率:
 
 $$
-\operatorname{Avg}(v)
+\overline{v}
 =\int_0^{+\infty}vf(v)\operatorname{d}v
 =\sqrt{\frac{8kT}{\pi m_0}}
 =\sqrt{\frac{8RT}{\pi M}}
@@ -352,7 +352,7 @@ $$
 可以看到, 这三个统计量有大小关系:
 
 $$
-v_{rms}>\operatorname{Avg}(v)>v_p
+v_{rms}>\overline{v}>v_p
 $$
 
 ### 玻尔兹曼分布律与MB分布
@@ -400,7 +400,7 @@ $$
 
 ## 分子平均自由程
 
-我们把分子 $1s$ 内和其他分子碰撞的次数称为**平均碰撞频率**(简称**碰撞频率**), 用 $\bar Z$ 表示; 把分子两侧连续碰撞间一个分子自由运动的平均路程称为**平均自由程**, 用 $\bar \lambda$ 表示.
+我们把分子 $1s$ 内和其他分子碰撞的次数称为**平均碰撞频率**(简称**碰撞频率**), 用 $\overline Z$ 表示; 把分子两侧连续碰撞间一个分子自由运动的平均路程称为**平均自由程**, 用 $\overline \lambda$ 表示.
 
 ### 平均自由程公式
 
@@ -408,11 +408,11 @@ $$
 
 为导出平均自由程公式, 下面先导出碰撞频率公式.
 
-假设每个分子都是直径为 $d$ 的小球. 由于碰撞考虑的是相对运动, 假设除了研究对象外的分子均静止, 只有研究对象以平均相对速率 $\operatorname{Avg}(v_r)$ 运动.
+假设每个分子都是直径为 $d$ 的小球. 由于碰撞考虑的是相对运动, 假设除了研究对象外的分子均静止, 只有研究对象以平均相对速率 $\overline{v_r}$ 运动.
 
-由于运动分子与其他分子之间的距离小于 $d$ 时才碰撞, 因此运动分子在单位时间内扫过一个长度为 $\operatorname{Avg}(v_r)$ , 横截面为 $\pi d^2$ 的**碰撞作用圆柱体**. 圆柱体因碰撞曲折而发生的体积变化在平均自由程很大时可以忽视.
+由于运动分子与其他分子之间的距离小于 $d$ 时才碰撞, 因此运动分子在单位时间内扫过一个长度为 $\overline{v_r}$ , 横截面为 $\pi d^2$ 的**碰撞作用圆柱体**. 圆柱体因碰撞曲折而发生的体积变化在平均自由程很大时可以忽视.
 
-假设单位体积内分子数目为 $n$ , 则静止分子中心在圆柱体内的数目为 $n\pi d^2\operatorname{Avg}(v_r)$ . 因中心在圆柱体内的所有分子都将与运动分子碰撞, 因此分子的平均碰撞频率为 $\bar Z = n\pi d^2\operatorname{Avg}(v_r)$ .
+假设单位体积内分子数目为 $n$ , 则静止分子中心在圆柱体内的数目为 $n\pi d^2\overline{v_r}$ . 因中心在圆柱体内的所有分子都将与运动分子碰撞, 因此分子的平均碰撞频率为 $\overline Z = n\pi d^2\overline{v_r}$ .
 
 为进一步导出碰撞频率与分子平均速率间的关系, 下面推导分子平均相对速率与平均速率间的关系.
 
@@ -510,39 +510,39 @@ $$
 
 $$
 \begin{aligned}
-    \operatorname{Avg}(v_r)
+    \overline{v_r}
     &=\int_0^{+\infty}v_rf(v_r)\operatorname{d}v_r\\
     &=\int_0^{+\infty}4\pi \left(\frac{m_0/2}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0v_r^2/2}{2kT}\right)v_r^3\operatorname{d}v_r\\
     &=\sqrt{2}\int_0^{+\infty}4\pi \left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left[-\frac{m_0(v_r/\sqrt{2})^2}{2kT}\right]\left(\frac{v_r}{\sqrt{2}}\right)^3\operatorname{d}\left(\frac{v_r}{\sqrt{2}}\right)\\
     &\xlongequal{v:=v_r/\sqrt{2}}\sqrt{2}\int_0^{+\infty}4\pi \left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left[-\frac{m_0v^2}{2kT}\right]v^3\operatorname{d}v\\
-    &=\sqrt{2}\operatorname{Avg}(v)
+    &=\sqrt{2}\overline{v}
 \end{aligned}
 $$
 
-推得: $\operatorname{Avg}(v_r)=\sqrt{2}\operatorname{Avg}(v)$
+推得: $\overline{v_r}=\sqrt{2}\overline{v}$
 
 ##### 平均碰撞频率公式
 
 利用以上关系, 可以最终算得:
 
 $$
-\bar Z = \sqrt{2}n\pi d^2\operatorname{Avg}(v)
+\overline Z = \sqrt{2}n\pi d^2\overline{v}
 $$
 
 #### 平均自由程公式的导出
 
-单位时间内, 分子运动平均经过的路程为 $\operatorname{Avg}(v)$ . 因此平均自由程为:
+单位时间内, 分子运动平均经过的路程为 $\overline{v}$ . 因此平均自由程为:
 
 $$
-\bar \lambda = \frac{\operatorname{Avg}(v)}{\bar Z} = \frac{1}{\sqrt{2}n\pi d^2}
+\overline \lambda = \frac{\overline{v}}{\overline Z} = \frac{1}{\sqrt{2}n\pi d^2}
 $$
 
 利用 $p=nkT$ 即得:
 
 $$
-\bar \lambda = \frac{kT}{\sqrt{2}\pi d^2p}
+\overline \lambda = \frac{kT}{\sqrt{2}\pi d^2p}
 $$
 
-可见, 温度一定时, $\bar\lambda$ 与 $p$ 成反比.
+可见, 温度一定时, $\overline\lambda$ 与 $p$ 成反比.
 
-另外, 实验表明, 气体密度一定时, $p$ 将随速度增加而减小, 因此当 $T$ 与 $p$ 比值一定时, $\bar\lambda$ 将随温度 $T$ 升高而略有增大.
+另外, 实验表明, 气体密度一定时, $p$ 将随速度增加而减小, 因此当 $T$ 与 $p$ 比值一定时, $\overline\lambda$ 将随温度 $T$ 升高而略有增大.
