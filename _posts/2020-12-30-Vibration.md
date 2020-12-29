@@ -2,7 +2,7 @@
 layout:     post	
 title:      『Physics』 Vibration	
 subtitle:   『物理学』 振动    
-date:       2020-12-29	   
+date:       2020-12-30	   
 author:     Coekjan 
 header-img: img/post-bg-PHY.jpg	
 catalog:    true	
@@ -29,9 +29,8 @@ $$
 
 $$
 \begin{aligned}
-    \frac{\operatorname{d}^2x}{\operatorname{d}t^2}&=-\frac{k}{m}x\\
-    \xRightarrow{\omega^2:=k/m}\frac{\operatorname{d}^2x}{\operatorname{d}t^2}&=-\omega^2x\\
-    \Leftrightarrow\frac{\operatorname{d}^2x}{\operatorname{d}t^2}&+\omega^2x=0
+    &\frac{\operatorname{d}^2x}{\operatorname{d}t^2}=-\frac{k}{m}x\xlongequal{\omega^2:=k/m}-\omega^2x\\
+    \Leftrightarrow&\frac{\operatorname{d}^2x}{\operatorname{d}t^2}+\omega^2x=0
 \end{aligned}
 $$
 
@@ -236,10 +235,10 @@ $$
 可以轻松得到一些结论:
 
 1. 若两振动同相 $\phi_{01}=\phi_{02}+2k\pi\:(k=0,\pm1,\pm2,\dotsm)$ , 则合振动的振幅为 $A=A_1+A_2$ ;
-2. 若两振动反相 $\phi_{01}=\phi_{02}+(2k+1)\pi\:(k=0,\pm1,\pm2,\dotsm)$ , 则合振动的振幅为 $A=|A_1-A_2|$
-3. 若两振动既不同相也不反相, 则合振动的振幅在区间 $(|A_1-A_2|,A_1+A_2)$ 内.
+2. 若两振动反相 $\phi_{01}=\phi_{02}+(2k+1)\pi\:(k=0,\pm1,\pm2,\dotsm)$ , 则合振动的振幅为 $A=\vert A_1-A_2\vert$
+3. 若两振动既不同相也不反相, 则合振动的振幅在区间 $(\vert A_1-A_2\vert,A_1+A_2)$ 内.
 
-##### 同一方向上的 $N$ 个同频率同振幅谐振动合成
+##### 同一直线上的 $N$ 个同频率同振幅谐振动合成
 
 若有一系列谐振动:
 
@@ -255,7 +254,7 @@ $$
 
 此时, 考虑使用旋转矢量法计算:
 
-![](../img/SHM-VectorRotation.svg)
+![](../img/SHM-VectorRotation.jpg)
 
 合振动方程形式应为:
 
@@ -277,3 +276,7 @@ $$
 $$
 x=a\frac{\displaystyle\sin\frac{N\varepsilon}{2}}{\displaystyle\sin\frac{\varepsilon}{2}}\cos\left(\omega t+\frac{N-1}{2}\varepsilon\right)
 $$
+
+#### 同一直线上两个不同频率的谐振动合成
+
+0
