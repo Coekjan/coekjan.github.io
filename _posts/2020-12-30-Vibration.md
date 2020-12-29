@@ -254,7 +254,7 @@ $$
 
 此时, 考虑使用旋转矢量法计算:
 
-![](https://raw.githubusercontent.com/Coekjan/coekjan.github.io/master/img/SHM-VectorRotation.jpg)
+![]({{ '/img/SHM-VectorRotation.jpg' | prepend: site.baseurl}})
 
 合振动方程形式应为:
 
