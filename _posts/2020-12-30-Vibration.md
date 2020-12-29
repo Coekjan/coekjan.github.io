@@ -278,3 +278,42 @@ x=a\frac{\displaystyle\sin\frac{N\varepsilon}{2}}{\displaystyle\sin\frac{\vareps
 $$
 
 #### 同一直线上两个不同频率的谐振动合成
+
+考虑两个谐振动:
+
+$$
+\left\{\begin{aligned}
+    x_1&=A_1\cos(\omega_1t+\phi_{01})\\
+    x_2&=A_2\cos(\omega_2t+\phi_{02})
+\end{aligned}\right.
+$$
+
+合振动: $x=x_1+x_2=A_1\cos(\omega_1t+\phi_{01})+A_2\cos(\omega_2t+\phi_{02})$ 一般情况下是相当复杂的. 现在我们讨论两个频率接近且 $\vert \omega_1-\omega_2\vert\ll\min\{\omega_1, \omega_2\}$ 这样的情况, 为进一步简化, 我们令 $A_1=A_2=A$ , $\phi_{01}=\phi_{02}=\phi_0$ , 上式化为:
+
+$$
+x=2A\cos\left(\frac{\omega_1-\omega_2}{2}t\right)\cos\left(\frac{\omega_1+\omega_2}{2}t+\phi_0\right)
+$$
+
+因为 $\vert \omega_1-\omega_2\vert\ll\min\{\omega_1, \omega_2\}$ , 式中第一项 $\displaystyle\cos\left(\frac{\omega_1-\omega_2}{2}t\right)$ 随时间缓慢变化, 第二项则近似于角频率为 $\omega_1$ 或 $\omega_2$ 的简谐函数, 故合振动可以看作角频率 $\displaystyle\frac{\omega_1+\omega_2}{2}\approx\omega_1\approx\omega_2$ , 振幅 $\left\vert2A\cos\displaystyle\frac{\omega_1-\omega_2}{2}t\right\vert$ 的谐振动.
+
+这种合振动出现时强时弱周期性缓慢变化的现象称作**拍**. 振幅变化的周期 $\tau$ 由 $\left\vert\displaystyle\frac{\omega_1-\omega_2}{2}\right\vert\tau=\pi$ 决定, 振幅变化的频率 $\nu_{\text{beat}}$ 称作拍频:
+
+$$
+\nu_{\text{beat}}=\frac{1}{\tau}=\left\vert\frac{\omega_1-\omega_2}{2\pi}\right\vert=\vert\nu_2-\nu_1\vert
+$$
+
+示例如下:
+
+![]({{ '/img/SHM-Beat1.svg' | prepend: site.baseurl}})
+
+$$
+\LARGE{+}
+$$
+
+![]({{ '/img/SHM-Beat2.svg' | prepend: site.baseurl}})
+
+$$
+\LARGE{\Downarrow}
+$$
+
+![]({{ '/img/SHM-BeatComb.svg' | prepend: site.baseurl}})
