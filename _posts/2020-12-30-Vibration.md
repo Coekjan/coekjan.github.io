@@ -200,10 +200,10 @@ $$
 考虑两个谐振动:
 
 $$
-\begin{aligned}
+\left\{\begin{aligned}
     x_1&=A_1\cos(\omega t+\phi_{01})\\
     x_2&=A_2\cos(\omega t+\phi_{02})
-\end{aligned}
+\end{aligned}\right.
 $$
 
 一个质点若同时参与这两个谐振动, 则有合位移:
@@ -317,3 +317,169 @@ $$
 $$
 
 ![]({{ '/img/SHM-BeatComb.svg' | prepend: site.baseurl}})
+
+### 二维谐振动的合成
+
+#### 两个相互垂直的同频率谐振动合成
+
+考虑两个谐振动:
+
+$$
+\left\{\begin{aligned}
+    x&=A_1\cos(\omega t+\phi_{01})\\
+    y&=A_2\cos(\omega t+\phi_{02})
+\end{aligned}\right.
+$$
+
+把参量 $t$ 消去, 得到轨迹方程:
+
+$$
+\frac{x^2}{A_1^2}+\frac{y^2}{A_2^2}-2\frac{xy}{A_1A_2}\cos(\phi_{01}-\phi_{02})=\sin^2(\phi_{01}-\phi_{02})
+$$
+
+若两振动同相 $\phi_{01}=\phi_{02}+k\pi\:(k=0,\pm1,\pm2,\dotsm)$ . 上式化为:
+
+$$
+\frac{x}{A_1}\pm\frac{y}{A_2}=0
+$$
+
+是一条直线.
+
+若两振动不同相, 则上式为椭圆方程.
+
+#### 两个相互垂直的不同频率谐振动合成
+
+若两个振动频率相差很大, 且有简单整数比, 可以得到稳定的封闭图线, 称这些图线为**李萨如图形**. 若李萨如图形在横轴上有 $n_x$ 个交点, 在纵轴上有 $n_y$ 个交点, 则有:
+
+$$
+\frac{n_x}{n_y}=\frac{\nu_y}{\nu_x}
+$$
+
+注意, 选取轴线时要使得交点数**极大**.
+
+## 阻尼振动与受迫振动
+
+### 阻尼振动
+
+对于一个存在阻尼的振动系统, 当速度不太大时, 可以认为阻尼力与速度大小成正比:
+
+$$
+F_f=-\gamma\frac{\operatorname{d}x}{\operatorname{d}t}
+$$
+
+其中 $\gamma$ 称作阻尼系数.
+
+设质量为 $m$ 的物体, 在弹性力(或准弹性力)和阻尼力的共同作用下运动, 则物体的运动方程为:
+
+$$
+m\frac{\operatorname{d}^2x}{\operatorname{d}t^2}=-kx-\gamma\frac{\operatorname{d}x}{\operatorname{d}t}
+$$
+
+命 $\displaystyle\frac{k}{m}=\omega_0^2$ , $\displaystyle\frac{\gamma}{m}=2\delta$ , 这里 $\omega_0$ 称作无阻尼时振子的**固有角频率**, $\delta$ 称作**阻尼系数**. 上式改写为:
+
+$$
+\frac{\operatorname{d}^2x}{\operatorname{d}t^2}+2\delta\frac{\operatorname{d}x}{\operatorname{d}t}+\omega_0^2x=0
+$$
+
+在 $\delta < \omega_0$ 时, 即阻尼较小时, 此微分方程的解为:
+
+$$
+x=A_0e^{-\delta t}\cos(\omega't+\phi_0')
+$$
+
+式中:
+
+$$
+\omega'=\sqrt{\omega_0^2-\delta^2}=\sqrt{\frac{k}{m}-\frac{\gamma^2}{4m^2}}
+$$
+
+另外, $A_0$ 和 $\phi_0'$ 是积分常量, 由初始条件决定.
+
+阻尼振动的周期:
+
+$$
+T'=\frac{2\pi}{\omega'}=\frac{2\pi}{\sqrt{\omega_0^2-\delta^2}}<\frac{2\pi}{\omega_0}=T_0
+$$
+
+也就是说, 由于阻尼, 振动变慢了.
+
+**小阻尼**: 若 $\delta < \omega_0$ , 那么物体相当于作振动幅度逐渐减小的谐振动.
+
+**临界阻尼**: 若 $\delta = \omega_0$ , 那么微分方程的解为: $x=(C_1x+C_2)e^{-\delta t}$, 物体将**单侧**平滑地回到平衡位置.
+
+**过阻尼**: 若 $\delta > \omega_0$ , 那么物体**单侧**将缓慢地回到平衡位置. 其向平衡位置移动的速度将慢于临界阻尼情形.
+
+### 受迫振动
+
+物体在周期性外力作用下发生的振动为**受迫振动**. 这种周期性的外力称作**驱动力**.
+
+假设驱动力 $F=F_0\cos\omega_dt$ , 其中 $F_0$ 是驱动力的幅值, $omega_d$ 称作驱动力的角频率. 物体在弹性力, 阻尼力, 驱动力的作用下运动的方程为:
+
+$$
+m\frac{\operatorname{d}^2x}{\operatorname{d}t^2}=-kx-\gamma\frac{\operatorname{d}x}{\operatorname{d}t}+F_0\cos\omega_dt
+$$
+
+令 $\displaystyle\frac{k}{m}=\omega_0^2$ , $\displaystyle\frac{\gamma}{m}=2\delta$ , 则上式可写作:
+
+$$
+\frac{\operatorname{d}^2x}{\operatorname{d}t^2}+2\delta\frac{\operatorname{d}x}{\operatorname{d}t}+\omega_0^2x=\frac{F_0}{m}\cos\omega_dt
+$$
+
+阻尼较小时, 上式的解为:
+
+$$
+x=A_0e^{-\delta t}\cos(\sqrt{\omega_0^2-\delta^2}t+\phi_0')+A\cos(\omega_dt+\phi)
+$$
+
+此式表示受迫振动一开始时是由一个减幅振动和一个等幅振动合成的, 比较复杂. 而经过一段时间后, 第一项可以忽略不计, 振动达到稳态:
+
+$$
+x=A\cos(\omega_dt+\phi)
+$$
+
+理论计算得到:
+
+$$
+\left\{\begin{aligned}
+    A&=\frac{F_0}{m\sqrt{(\omega_0^2-\omega_d^2)^2+4\delta^2\omega_d^2}}\\
+    \phi&=\arctan\left(-\frac{2\delta\omega_d}{\omega_0^2-\omega_d^2}\right)
+\end{aligned}\right.
+$$
+
+稳态时, 物体速度:
+
+$$
+v=v_m\cos\left(\omega_dt+\phi+\frac{\pi}{2}\right)
+$$
+
+其中:
+
+$$
+v_m=\frac{\omega_d F_0}{m\sqrt{(\omega_0^2-\omega_d^2)^2+4\delta^2\omega_d^2}}
+$$
+
+从上述分析结果来看, 受迫振动有以下特征:
+1. 角频率是驱动力的角频率, 而不是振子的固有角频率;
+2. 受迫振动的振幅依赖于振子的性质, 阻尼的大小和驱动力的特征, 而不是决定于振子的初始状态.
+
+#### 共振
+
+##### 位移振动
+
+振幅达到最大的现象称为**位移共振**. 即令 $\displaystyle\frac{\operatorname{d}A}{\operatorname{d}\omega_d}=0$ , 得到共振角频率:
+
+$$
+\omega_r=\sqrt{\omega_0^2-2\delta^2}
+$$
+
+可见位移共振时, 驱动力的角频率略小于系统的固有角频率. 阻尼越小, 共振角频率越接近于固有角频率, 共振振幅越大.
+
+##### 速度共振
+
+速度达到最大的现象称为**速度共振**. 即令 $\displaystyle\frac{\operatorname{d}v_m}{\operatorname{d}\omega_d}=0$ , 得到共振角频率:
+
+$$
+\omega_r=\omega_0
+$$
+
+可见"频率相等时共振"的说法是指速度共振, 但是阻尼很小时, 速度共振和位移共振可以不加区分.
