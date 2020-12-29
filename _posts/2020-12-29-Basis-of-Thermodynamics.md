@@ -262,7 +262,7 @@ $$
 考虑理想气体物态方程, 代入得:
 
 $$
-A=\frac{i}{2}(p_1V_1-p_2V_2)\xlongequal[\Rightarrow i=2/(\gamma-1)]{\gamma\coloneqq(i+2)/i}\frac{p_1V_1-p_2V_2}{\gamma-1}
+A=\frac{i}{2}(p_1V_1-p_2V_2)\xlongequal[\Rightarrow i=2/(\gamma-1)]{\gamma:=(i+2)/i}\frac{p_1V_1-p_2V_2}{\gamma-1}
 $$
 
 ### 多方过程
