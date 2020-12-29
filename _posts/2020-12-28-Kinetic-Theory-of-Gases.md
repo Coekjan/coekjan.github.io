@@ -100,7 +100,7 @@ $$
     p&=\frac{F}{l_2l_3}=
     \frac{Nm_0}{l_1l_2l_3}\cdot \overline{v^2_x}=
     \frac{Nm_0}{V}\cdot \overline{v^2_x}\\
-    \Rightarrow p&\xlongequal{n:=N/V}nm_0\cdot \overline{v^2_x}
+    \Rightarrow p&\xlongequal{n\coloneqq N/V}nm_0\cdot \overline{v^2_x}
 \end{aligned}
 $$
 
@@ -121,7 +121,7 @@ $$
 考虑到 $m=Nm_0$ , $M=N_Am_0$, 理想气体的物态方程可作变换:
 
 $$
-pV=\frac{m}{M}RT\Leftrightarrow p=\frac{N}{V}\frac{R}{N_A}T\xlongequal{n:=N/V,\:k:=R/N_A}nkT
+pV=\frac{m}{M}RT\Leftrightarrow p=\frac{N}{V}\frac{R}{N_A}T\xlongequal{n\coloneqq N/V,\:k\coloneqq R/N_A}nkT
 $$
 
 其中 $n$ 是气体分子数密度, $k$ 是**玻尔兹曼常数**, 国际单位制下, $k=1.38\times 10^{-23}\rm J/K$.
@@ -525,7 +525,7 @@ $$
     &=\int_0^{+\infty}v_rf(v_r)\operatorname{d}v_r\\
     &=\int_0^{+\infty}4\pi \left(\frac{m_0/2}{2\pi k T}\right)^{3/2}\exp\left(-\frac{m_0v_r^2/2}{2kT}\right)v_r^3\operatorname{d}v_r\\
     &=\sqrt{2}\int_0^{+\infty}4\pi \left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left[-\frac{m_0(v_r/\sqrt{2})^2}{2kT}\right]\left(\frac{v_r}{\sqrt{2}}\right)^3\operatorname{d}\left(\frac{v_r}{\sqrt{2}}\right)\\
-    &\xlongequal{v:=v_r/\sqrt{2}}\sqrt{2}\int_0^{+\infty}4\pi \left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left[-\frac{m_0v^2}{2kT}\right]v^3\operatorname{d}v\\
+    &\xlongequal{v\coloneqq v_r/\sqrt{2}}\sqrt{2}\int_0^{+\infty}4\pi \left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left[-\frac{m_0v^2}{2kT}\right]v^3\operatorname{d}v\\
     &=\sqrt{2}\overline{v}
 \end{aligned}
 $$
