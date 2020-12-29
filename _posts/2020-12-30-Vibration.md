@@ -29,7 +29,7 @@ $$
 
 $$
 \begin{aligned}
-    &\frac{\operatorname{d}^2x}{\operatorname{d}t^2}=-\frac{k}{m}x\xlongequal{\omega^2:=k/m}-\omega^2x\\
+    &\frac{\operatorname{d}^2x}{\operatorname{d}t^2}=-\frac{k}{m}x\xlongequal{\omega^2\coloneqq k/m}-\omega^2x\\
     \Leftrightarrow&\frac{\operatorname{d}^2x}{\operatorname{d}t^2}+\omega^2x=0
 \end{aligned}
 $$
@@ -112,7 +112,7 @@ $$
 当 $\theta$ 很小时, $\sin\theta\approx\theta$ , 因此:
 
 $$
-\frac{\operatorname{d}^2\theta}{\operatorname{d}t^2}=-\frac{g}{l}\theta\xlongequal{\omega^2:=g/l}-\omega^2\theta
+\frac{\operatorname{d}^2\theta}{\operatorname{d}t^2}=-\frac{g}{l}\theta\xlongequal{\omega^2\coloneqq g/l}-\omega^2\theta
 $$
 
 可见这是谐振动, 振动表达式为:
@@ -150,7 +150,7 @@ $$
 当 $\theta$ 很小时, $\sin\theta\approx\theta$ , 因此:
 
 $$
-\frac{\operatorname{d}^2\theta}{\operatorname{d}t^2}=-\frac{mgh}{J}\theta\xlongequal{\omega^2:=mgh/J}-\omega^2\theta
+\frac{\operatorname{d}^2\theta}{\operatorname{d}t^2}=-\frac{mgh}{J}\theta\xlongequal{\omega^2\coloneqq mgh/J}-\omega^2\theta
 $$
 
 可见这是谐振动, 振动表达式为:
