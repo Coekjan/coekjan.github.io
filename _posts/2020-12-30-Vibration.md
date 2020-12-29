@@ -254,7 +254,7 @@ $$
 
 此时, 考虑使用旋转矢量法计算:
 
-![](../img/SHM-VectorRotation.jpg)
+![](https://raw.githubusercontent.com/Coekjan/coekjan.github.io/master/img/SHM-VectorRotation.jpg)
 
 合振动方程形式应为:
 
@@ -278,5 +278,3 @@ x=a\frac{\displaystyle\sin\frac{N\varepsilon}{2}}{\displaystyle\sin\frac{\vareps
 $$
 
 #### 同一直线上两个不同频率的谐振动合成
-
-0
