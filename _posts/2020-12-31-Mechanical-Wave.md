@@ -275,13 +275,13 @@ $$
 根据 $A$ 的表达式, 得到相干相涨条件:
 
 $$
-\Delta \phi=2k\pi\:(k=0,\pm1,\pm2,\dotsm)
+\Delta \phi=2k\pi\quad (k=0,\pm1,\pm2,\dotsm)
 $$
 
 相干相消条件:
 
 $$
-\Delta \phi=(2k+1)\pi\:(k=0,\pm1,\pm2,\dotsm)
+\Delta \phi=(2k+1)\pi\quad (k=0,\pm1,\pm2,\dotsm)
 $$
 
 若 $\phi_{02}=\phi_{01}$ , 则上述条件得到简化.
@@ -289,13 +289,13 @@ $$
 相干相涨条件:
 
 $$
-\delta=r_1-r_2=k\lambda\:(k=0,\pm1,\pm2,\dotsm)
+\delta=r_1-r_2=k\lambda\quad (k=0,\pm1,\pm2,\dotsm)
 $$
 
 相干相消条件:
 
 $$
-\delta=r_1-r_2=\left(k+\frac{1}{2}\right)\lambda\:(k=0,\pm1,\pm2,\dotsm)
+\delta=r_1-r_2=\left(k+\frac{1}{2}\right)\lambda\quad (k=0,\pm1,\pm2,\dotsm)
 $$
 
 #### 驻波
@@ -320,9 +320,9 @@ $$
 \end{aligned}
 $$
 
-波腹: $\displaystyle\left\vert\cos\frac{2\pi x}{\lambda}\right\vert=1\Leftrightarrow x=k\frac{\lambda}{2}\:(k=0,\pm1,\pm2,\dotsm)$
+波腹: $\displaystyle\left\vert\cos\frac{2\pi x}{\lambda}\right\vert=1\Leftrightarrow x=k\frac{\lambda}{2}\quad (k=0,\pm1,\pm2,\dotsm)$
 
-波节: $\displaystyle\left\vert\cos\frac{2\pi x}{\lambda}\right\vert=0\Leftrightarrow x=(2k+1)\frac{\lambda}{4}\:(k=0,\pm1,\pm2,\dotsm)$
+波节: $\displaystyle\left\vert\cos\frac{2\pi x}{\lambda}\right\vert=0\Leftrightarrow x=(2k+1)\frac{\lambda}{4}\quad (k=0,\pm1,\pm2,\dotsm)$
 
 > 波节点将介质划分为长为 $\displaystyle\frac{\lambda}{2}$ 的许多段, 每段中振幅不同但相位相同; 而相邻段间各质点的振动相位相反. 即驻波中不存在相位传播, 也就没有能量的传播.
 
