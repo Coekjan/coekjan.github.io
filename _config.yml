@@ -11,7 +11,7 @@ github_repo: "https://github.com/coekjan/coekjan.github.io.git" # you code repos
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "计科很有趣哦"
+sidebar-about-description: "An undergraduate from BUAA-SCSE."
 sidebar-avatar: /img/about-ycj.jpg
 
 
