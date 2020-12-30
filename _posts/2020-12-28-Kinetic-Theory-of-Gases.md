@@ -121,7 +121,7 @@ $$
 考虑到 $m=Nm_0$ , $M=N_Am_0$, 理想气体的物态方程可作变换:
 
 $$
-pV=\frac{m}{M}RT\Leftrightarrow p=\frac{N}{V}\frac{R}{N_A}T\xlongequal{n:=N/V,\:k:=R/N_A}nkT
+pV=\frac{m}{M}RT\Leftrightarrow p=\frac{N}{V}\frac{R}{N_A}T\xlongequal{n:=N/V,\quad k:=R/N_A}nkT
 $$
 
 其中 $n$ 是气体分子数密度, $k$ 是**玻尔兹曼常数**, 国际单位制下, $k=1.38\times 10^{-23}\rm J/K$.
