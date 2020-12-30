@@ -413,7 +413,7 @@ $$
 
 物体在周期性外力作用下发生的振动为**受迫振动**. 这种周期性的外力称作**驱动力**.
 
-假设驱动力 $F=F_0\cos\omega_dt$ , 其中 $F_0$ 是驱动力的幅值, $omega_d$ 称作驱动力的角频率. 物体在弹性力, 阻尼力, 驱动力的作用下运动的方程为:
+假设驱动力 $F=F_0\cos\omega_dt$ , 其中 $F_0$ 是驱动力的幅值, $\omega_d$ 称作驱动力的角频率. 物体在弹性力, 阻尼力, 驱动力的作用下运动的方程为:
 
 $$
 m\frac{\operatorname{d}^2x}{\operatorname{d}t^2}=-kx-\gamma\frac{\operatorname{d}x}{\operatorname{d}t}+F_0\cos\omega_dt
