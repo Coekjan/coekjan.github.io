@@ -9,13 +9,8 @@ header-img: "img/about-bg.jpg"
 <!-- Chinese Version -->
 <div class="zh post-container">
 
-    <!--copied from markdown -->
-
-    <p>欢迎来到我的博客:</p>
-    
-    <p>我是<strong>Coekjan</strong>, 一名来自北航计算机学院的学生.</p>
-
-    <p></p>
+    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
+    {{ about_zh | markdownify }}
     
 </div>
 
