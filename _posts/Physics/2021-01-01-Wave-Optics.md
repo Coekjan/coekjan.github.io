@@ -105,7 +105,7 @@ $$
 
 考虑以杨氏双缝干涉为例, 对屏幕上的干涉条纹位置作定量分析. 设相干光源 $S_1$ 和 $S_2$ 相距 $d$ , 中点为 $M$, 到屏幕的距离为 $D$ . 在屏幕上取一点 $P$ , $P$ 与 $S_1$ 和 $S_2$ 的距离分别为 $r_1$ 和 $r_2$ .
 
-![]({{ '../img/WO-2SlitInterferenceCalcu.svg' | prepend: site.baseurl}})
+![]({{ '/img/WO-2SlitInterferenceCalcu.svg' | prepend: site.baseurl}})
 
 考察从 $S_1$ 和 $S_2$ 发出的光, 到达 $P$ 处的波程差为:
 
