@@ -298,6 +298,18 @@ $$
 \delta=r_1-r_2=\left(k+\frac{1}{2}\right)\lambda\quad (k=0,\pm1,\pm2,\dotsm)
 $$
 
+关于叠加后波的强度:
+
+$$
+I=I_1+I_2+2\sqrt{I_1I_2}\cos\Delta\phi
+$$
+
+若两列波强度相等 $I_1=I_2=I_0$ , 那么有:
+
+$$
+I=4I_0\cos^2\frac{\Delta\phi}{2}
+$$
+
 #### 驻波
 
 若有两列振幅相同, 相向传播的相干波, 它们叠加的结果即为**驻波**.
