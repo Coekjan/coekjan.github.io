@@ -8,15 +8,9 @@ header-img: "img/resources-bg.jpg"
 <!-- Chinese Version -->
 <div class="zh post-container">
 
-    <!--copied from markdown -->
+    {% capture resources_zh %}{% include resources/zh.md %}{% endcapture %}
+    {{ resources_zh | markdownify }}
     
-
-    <p>这里是计算机科学与技术相关的资源, 欢迎常来看~</p>
-
-
-    <p></p>
-    
-        
 </div>
 
 <!-- Handle Language Change -->
