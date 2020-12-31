@@ -1,0 +1,175 @@
+---	
+layout:     post	
+title:      『Physics』 Wave Optics	
+subtitle:   『物理学』 波动光学    
+date:       2021-01-01	   
+author:     Coekjan 
+header-img: img/post-bg-PHY.jpg	
+catalog:    true	
+mathjax:    true    
+tags:	
+    - Physics  
+---
+
+## 光是电磁波
+
+### 电磁波
+
+凡作加速运动的电荷或电荷系都是电磁波的波源. 麦克斯韦电磁场理论表明:
+1. 变化的磁场能激发涡旋电场: $\displaystyle\oint_L\vec{E}\cdot\operatorname{d}\vec{l}=-\int_S\frac{\partial \vec{B}}{\partial t}\cdot\operatorname{d}\vec{S}$
+2. 传导电流和变化的电场能激发涡旋磁场: $\displaystyle\oint_L\vec{H}\cdot\operatorname{d}\vec{l}=\int_S\left(\vec{j}+\frac{\partial \vec{D}}{\partial t}\right)\cdot\operatorname{d}\vec{S}$
+
+### 电磁波谱
+
+波长量级 $\lambda$ ( $\rm m$ ) | $10^{4}\quad10^{2}$ | $1$ | $10^{-2}$ | $10^{-5}$ | $10^{-6}$ | $10^{-8}$ | $10^{-10}\quad10^{-12}$
+:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+电磁波种类 | 无线电波 | 微波 | 红外光 | 可见光 | 紫外光 | $\rm X$ 射线 | $\rm \gamma$ 射线
+
+### 电磁波的波速
+
+通过麦克斯韦电磁场方程组, 可以得到电磁波的波动方程:
+
+$$
+\nabla^2\vec{E}=\varepsilon_0\varepsilon_r\mu_0\mu_r\frac{\partial^2\vec{E}}{\partial t^2}\xlongequal{v^2:=(\varepsilon_0\varepsilon_r\mu_0\mu_r)^{-1}}\frac{1}{v^2}\frac{\partial^2\vec{E}}{\partial t^2}
+$$
+
+因此电磁波在介质中的波速为:
+
+$$
+v=\frac{1}{\sqrt{\varepsilon_0\varepsilon_r\mu_0\mu_r}}=\frac{c}{\sqrt{\varepsilon_r\mu_r}}\xlongequal{n:=\sqrt{\varepsilon_r\mu_r}}=\frac{c}{n}
+$$
+
+其中 $c=\displaystyle\frac{1}{\sqrt{\varepsilon_0\mu_0}}$ 为真空中的光速, $n$ 为介质的折射率.
+
+### 平面简谐电磁波
+
+电磁波动方程:
+
+$$
+\nabla^2\vec{E}=\frac{1}{v^2}\frac{\partial^2\vec{E}}{\partial t^2}
+$$
+
+电磁波波函数:
+
+$$
+\left\{\begin{aligned}
+    \vec{E}_y(x,t)=\vec{E}_{0y}\cos\left[\omega\left(t-\frac{x}{v}\right)+\phi_0\right]\\
+    \vec{H}_z(x,t)=\vec{H}_{0z}\cos\left[\omega\left(t-\frac{x}{v}\right)+\phi_0\right]
+\end{aligned}\right.
+$$
+
+特征:
+1. $\vec{E}$ 与 $\vec{H}$ 同相, 同速度传播;
+2. $\vec{E}$ , $\vec{H}$ 和 $\vec{v}$ 两两垂直且满足右手螺旋定律, 电磁波是横波;
+3. 关系式 $\sqrt{\varepsilon_0\varepsilon_r}E=\sqrt{\mu_0\mu_r}H$ ;
+4. 波速 $v=\displaystyle\sqrt{\frac{1}{\varepsilon_0\varepsilon_r\mu_0\mu_r}}$ ;
+5. 折射率 $n=\displaystyle\frac{c}{v}=\sqrt{\varepsilon_r\mu_r}$ ;
+6. 电磁波平均能量密度 $w=\displaystyle\frac{1}{2}\varepsilon_0\varepsilon_rE^2+\frac{1}{2}\mu_0\mu_rH^2$ ;
+7. 坡印廷矢量 $\vec{S}=\vec{E}\times\vec{H}$ ;
+8. 电磁波能流密度 $I=\displaystyle\frac{1}{T}\int\vert S\vert \operatorname{d}t=\frac{1}{2}E_0H_0=\frac{1}{2}\sqrt{\frac{\varepsilon_o\varepsilon_r}{\mu_0\mu_r}}E_0^2$ .
+
+后续研究时, 以电矢量 $\vec{E}$ 作为光矢量研究.
+
+> 实验表明, 对人眼或仪器起作用的主要是电场.
+
+利用折射率公式, 可以导出:
+
+$$
+\begin{aligned}
+    \lambda&=\frac{\lambda_0}{n}\\
+    v&=\frac{c}{n}
+\end{aligned}
+$$
+
+其中, $\lambda_0$ 是光在真空中的波长, $c$ 是光在真空中的波速.
+
+## 光波的干涉
+
+### 波的叠加原理
+
+**波在空间中的传播不会因为同时存在其他波而受影响**, 若干列波在重叠区某点处引起的合振动是分振动的和.
+
+### 光的相干条件
+
+波动光学中的干涉条件与机械波的一致: **振动频率相同, 振动方向相同和相位差恒定**. 我们在波动光学中满足这个条件的光波称为**相干光**.
+
+#### 相干光的获取
+
+两类经典方法:
+1. **分波前法(分波阵面法)**;
+2. **分振幅法**.
+
+### 干涉条纹
+
+#### 干涉条纹的位置
+
+考虑以杨氏双缝干涉为例, 对屏幕上的干涉条纹位置作定量分析. 设相干光源 $S_1$ 和 $S_2$ 相距 $d$ , 中点为 $M$, 到屏幕的距离为 $D$ . 在屏幕上取一点 $P$ , $P$ 与 $S_1$ 和 $S_2$ 的距离分别为 $r_1$ 和 $r_2$ .
+
+![]({{ '../img/WO-2SlitInterferenceCalcu.svg' | prepend: site.baseurl}})
+
+考察从 $S_1$ 和 $S_2$ 发出的光, 到达 $P$ 处的波程差为:
+
+$$
+\delta=r_2-r_1
+$$
+
+考虑到 $D\gg d$ , $D\gg x$ , 即 $\theta$ 很小时, $\sin\theta\approx\tan\theta$ , 得:
+
+$$
+\delta=r_2-r_1\approx d\sin\theta\approx d\tan\theta=\frac{xd}{D}
+$$
+
+由波动理论可知:
+
+若 $\delta=\displaystyle\frac{xd}{D}=\pm k\lambda$ , 则 $P$ 处为明纹, 即各级明纹离中心的距离为:
+
+$$
+x=\pm k\frac{D\lambda}{d}\quad k=0,1,2,\dotsm
+$$
+
+其中, $k=0$ 对应的明纹称为零级明纹或中央明纹. 相应于 $k=1,2,\dotsm$ 的明纹称为第一级, 第二级,...... 明纹.
+
+若 $\delta=\displaystyle\frac{xd}{D}=\pm (2k+1)\frac{\lambda}{2}$ , 点 $P$ 处即为暗纹, 即各级暗纹离中心的距离为:
+
+$$
+x=\pm(2k+1)\frac{D\lambda}{2d}\quad k=0,1,2,\dotsm
+$$
+
+两相邻明纹或暗纹的间距都是 $\Delta x=\displaystyle\frac{D\lambda}{d}$ , 所以干涉条纹是等距离分布的.
+
+#### 干涉条纹的强度分布
+
+与机械波的叠加一样, 两列等强度的光波相干叠加后的强度:
+
+$$
+I=4I_0\cos^2\frac{\Delta \phi}{2}
+$$
+
+使用光强度的强弱来推导明暗条纹位置的结论与上述一致.
+
+#### 半波损失
+
+实验表明: **光从光疏介质射到光密介质界面反射时, 在掠入射/正入射的情况下, 反射光的相位较之入射光的相位有 $\pi$ 的突变**. 称这种现象为**半波损失**.
+
+## 光程与光程差
+
+### 光程
+
+光波在介质中的路程 $x$ 相当于在真空中的路程 $nx$ ( $n$ 是介质的折射率), 称 $nx$ 为**光程**.
+
+### 光程差
+
+采用光程概念后, 相当于把光在不同介质中传播都折算为光在真空中的传播, 这样, 相位差 $\Delta\phi$ 可以使用光程差 $\delta$ 表达:
+
+$$
+\Delta\phi=\frac{2\pi\delta}{\lambda}
+$$
+
+#### 物象的等光程性
+
+使用透镜只能改变光波的传播路径, **但对物象各光线不会引起附加的光程差**.
+
+#### 半波损失与附加光程差
+
+当且仅当发生半波损失时, 有附加光程差 $\displaystyle\frac{\lambda}{2}$ .
+
