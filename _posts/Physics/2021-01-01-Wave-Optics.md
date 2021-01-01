@@ -327,7 +327,7 @@ $$
 
 若单缝宽度为 $a$ , 在平行单色光垂直照射下, 位于单缝所处的波阵面上个点发出的子波向各个方向传播. 称衍射后某一方向传播的子波波线与平面衍射屏法线间的夹角为**衍射角**, 用 $\theta$ 表示. 衍射角相同的平行光束在会聚透镜的作用下聚焦在屏幕上. 两边缘的衍射光束之间的光程差为: $a\sin\theta$ .
 
-![]({{ 'img/WO-1SlitDiffraction.svg' | prepend: site.baseurl}})
+![]({{ '/img/WO-1SlitDiffraction.svg' | prepend: site.baseurl}})
 
 菲涅尔提出**半波带法**: 把单缝处的波阵面划分为整数个波带. 相邻波带之间任意相应点发出子波的光程差总是 $\displaystyle\frac{\lambda}{2}$ , 会聚后光振动完全抵消.
 
@@ -377,7 +377,7 @@ $$
 
 其中 $\alpha:=\displaystyle\frac{\pi a\sin\varphi}{\lambda}$ .
 
-![]({{ 'img/WO-1SlitDiffraction-I-Alpha.svg' | prepend: site.baseurl}})
+![]({{ '/img/WO-1SlitDiffraction-I-Alpha.svg' | prepend: site.baseurl}})
 
 中央明纹: $I_0=I_\text{m}$
 
