@@ -216,7 +216,7 @@ $$
 由上述两式, 消去 $\operatorname{d}T$ , 可得:
 
 $$
-C_{V,m}(p\operatorname{d}V+V\operatorname{d}p)=-Rp\operatorname{d}T
+C_{V,m}(p\operatorname{d}V+V\operatorname{d}p)=-Rp\operatorname{d}V
 $$
 
 由迈耶公式, $R=C_{p,m}-C_{V,m}$ , 简化上式, 即得:
