@@ -161,9 +161,14 @@ layout: default
     </div>
 </article>
 
-<!-- add support for mathjax by voleking-->
+<!-- add support for mathjax-->
 {% if page.mathjax %}
 {% include mathjax_support.html %}
+{% endif %}
+
+<!-- add support for katex-->
+{% if page.katex %}
+{% include katex_support.html %}
 {% endif %}
 
 {% if site.disqus_username %}

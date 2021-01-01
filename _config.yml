@@ -90,6 +90,8 @@ service-worker: true
 # MathJAX
 page-mathjax: false
 
+# KaTeX
+page-katex: false
 
 # Friends
 friends: [

@@ -6,7 +6,7 @@ date:       2021-01-01
 author:     Coekjan 
 header-img: img/post-bg-PHY.jpg	
 catalog:    true	
-mathjax:    true    
+katex:    true    
 tags:	
     - Physics  
 ---
@@ -300,3 +300,7 @@ $$
 $$
 
 通过测定条纹半径, 即可算得曲率半径.
+
+## 光波的衍射与惠更斯-菲涅耳原理
+
+**波在传播过程中遇到障碍物时, 能够绕过障碍物的边缘前进.** 这种偏离直线传播的现象称为**波的衍射**.
