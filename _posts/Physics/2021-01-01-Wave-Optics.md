@@ -306,3 +306,101 @@ $$
 **波在传播过程中遇到障碍物时, 能够绕过障碍物的边缘前进.** 这种偏离直线传播的现象称为**波的衍射**.
 
 ### 菲涅尔衍射与夫琅禾费衍射
+
+按光源, 衍射屏, 接受屏的相互间距离不同, 通常将衍射分为两类:
+1. **菲涅耳衍射**: 衍射屏离光源或接受屏的距离为有限远;
+2. **夫琅禾费衍射**: 衍射屏与光源和接受屏的距离都是无穷远.
+
+实验室中可以用两个会聚透镜实现夫琅禾费衍射. 考虑到菲涅耳衍射较为复杂, 本文只讨论夫琅禾费衍射.
+
+### 惠更斯-菲涅耳原理
+
+菲涅尔发展了惠更斯原理吗: **波在传播过程中, 从同一波阵面上各点发出的子波, 经传播而在空间某点相遇时, 产生相干叠加**. 这个原理称为: **惠更斯-菲涅尔原理**.
+
+可以用积分表达:
+
+$$
+U_P=\oiint_\Sigma\operatorname{d}U_P
+$$
+
+## 单缝夫琅禾费衍射
+
+若单缝宽度为 $a$ , 在平行单色光垂直照射下, 位于单缝所处的波阵面上个点发出的子波向各个方向传播. 称衍射后某一方向传播的子波波线与平面衍射屏法线间的夹角为**衍射角**, 用 $\theta$ 表示. 衍射角相同的平行光束在会聚透镜的作用下聚焦在屏幕上. 两边缘的衍射光束之间的光程差为: $a\sin\theta$ .
+
+![]({{ 'img/WO-1SlitDiffraction.svg' | prepend: site.baseurl}})
+
+菲涅尔提出**半波带法**: 把单缝处的波阵面划分为整数个波带. 相邻波带之间任意相应点发出子波的光程差总是 $\displaystyle\frac{\lambda}{2}$ , 会聚后光振动完全抵消.
+
+因此, **对于某个给定角度 $\theta$ , 单缝可以分为偶数个波带时, 出现暗纹; 单缝可以分为奇数个波带时, 出现明纹**:
+
+$$
+\left.\begin{aligned}
+    \text{Dark}&&&
+    a\sin\theta=\pm2k\frac{\lambda}{2}
+    &&&k=1,2,3,\dotsm\\
+    \text{Bright}&&&
+    a\sin\theta=\pm(2k+1)\frac{\lambda}{2}
+    &&&k=1,2,3,\dotsm
+\end{aligned}\right\}
+$$
+
+称 $k=1$ 的两个暗纹之间的角距离为中央明纹的角宽度. 显然**半角宽度**:
+
+$$
+\begin{aligned}
+    &\Delta\theta_0=\theta_1=\arcsin\frac{\lambda}{a}\\
+    \xRightarrow{\theta_1\rightarrow0^+}&\Delta\theta_0\approx\frac{\lambda}{a}
+\end{aligned}
+$$
+
+若知道透镜的焦距 $f$ , 且 $\theta$ 较小( $\theta<5^\circ$ ), 有: $\sin\theta\approx\tan\theta=\displaystyle\frac{x}{f}\approx \theta$ , 因此可得到暗纹离中心线的距离:
+
+$$
+x=k\frac{f\lambda}{a}\quad k=\pm1,\pm2,\dotsm
+$$
+
+### 单缝夫琅禾费衍射的实验现象
+
+1. 条纹**对称**分布;
+2. 中央明纹是其他明纹宽度的**两倍**;
+3. 条纹宽与缝宽成**反比**;
+4. 中央明纹光强**远大于**其他各级明纹;
+5. 白光入射时, 中央为白色明纹, 两侧**内紫外红**.
+
+### 单缝夫琅禾费衍射的光强分布
+
+通过振动的合成, 可以计算得到:
+
+$$
+I_\varphi=I_\text{m}\left(\frac{\sin\alpha}{\alpha}\right)^2
+$$
+
+其中 $\alpha:=\displaystyle\frac{\pi a\sin\varphi}{\lambda}$ .
+
+![]({{ 'img/WO-1SlitDiffraction-I-Alpha.svg' | prepend: site.baseurl}})
+
+中央明纹: $I_0=I_\text{m}$
+
+暗纹条件: $I=0\Rightarrow a\sin\varphi=\pm k\lambda(k=1,2,3,\dotsm)$ , 与半波带法结果一致.
+
+次级明纹条件: $\displaystyle\frac{\operatorname{d}I}{\operatorname{d}\alpha}=0\Rightarrow \tan\alpha=\alpha$ , 近似解:
+
+$$
+\begin{aligned}
+    \alpha&=\pm1.43\pi,\pm2.46\pi, \pm3.47\pi,\dotsm\\
+    \Rightarrow a\sin\varphi&=\pm1.43\lambda,\pm2.46\lambda, \pm3.47\lambda,\dotsm
+\end{aligned}
+$$
+
+可见半波带法得到的明纹位置只是一种近似.
+
+光强分布:
+* 中央明纹: $I_\text{m}$
+* $1$ 级明纹: $I_1=4.72\%I_\text{m}$
+* $2$ 级明纹: $I_2=1.65\%I_\text{m}$
+* $3$ 级明纹: $I_3=0.80\%I_\text{m}$
+* $\dotsm$
+
+可见, 单缝衍射中, 绝大部分的能量均集中在中央明纹.
+
+### 光学仪器的分辨本领
