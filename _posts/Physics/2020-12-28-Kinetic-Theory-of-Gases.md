@@ -143,10 +143,10 @@ $$
 
 #### 方均根速率
 
-记气体分子的方均根速率为 $v_{rms}=\sqrt{\overline{v^2}}$ , 不难由上面推导出来的公式得到:
+记气体分子的方均根速率为 $v_{\text{rms}}=\sqrt{\overline{v^2}}$ , 不难由上面推导出来的公式得到:
 
 $$
-v_{rms}=\sqrt{\frac{3kT}{m_0}}=\sqrt{\frac{3RT}{M}}
+v_{\text{rms}}=\sqrt{\frac{3kT}{m_0}}=\sqrt{\frac{3RT}{M}}
 $$
 
 注意到, 虽然同一温度下各种气体分子的平均平动动能相等, 但是**由于不同种类气体的分子质量不一致, 方均根速率会有差异**.
@@ -331,7 +331,7 @@ $$
 方均根速率:
 
 $$
-v_{rms}
+v_{\text{rms}}
 =\sqrt{\int_0^{+\infty}v^2f(v)\operatorname{d}v}
 =\sqrt{\frac{3kT}{m_0}}
 =\sqrt{\frac{3RT}{M}}
@@ -363,7 +363,7 @@ $$
 可以看到, 这三个统计量有大小关系:
 
 $$
-v_{rms}>\overline{v}>v_p
+v_{\text{rms}}>\overline{v}>v_p
 $$
 
 ### 玻尔兹曼分布律与MB分布
