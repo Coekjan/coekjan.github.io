@@ -6,7 +6,7 @@ date:       2020-12-28
 author:     Coekjan 
 header-img: img/post-bg-PHY.jpg	
 catalog:    true	
-mathjax:    true    
+katex:    true    
 tags:	
     - Physics  
 ---
