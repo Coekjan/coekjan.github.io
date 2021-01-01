@@ -413,49 +413,49 @@ $$
 
 物体在周期性外力作用下发生的振动为**受迫振动**. 这种周期性的外力称作**驱动力**.
 
-假设驱动力 $F=F_0\cos\omega_dt$ , 其中 $F_0$ 是驱动力的幅值, $\omega_d$ 称作驱动力的角频率. 物体在弹性力, 阻尼力, 驱动力的作用下运动的方程为:
+假设驱动力 $F=F_0\cos\omega_{\text{d}}t$ , 其中 $F_0$ 是驱动力的幅值, $\omega_{\text{d}}$ 称作驱动力的角频率. 物体在弹性力, 阻尼力, 驱动力的作用下运动的方程为:
 
 $$
-m\frac{\operatorname{d}^2x}{\operatorname{d}t^2}=-kx-\gamma\frac{\operatorname{d}x}{\operatorname{d}t}+F_0\cos\omega_dt
+m\frac{\operatorname{d}^2x}{\operatorname{d}t^2}=-kx-\gamma\frac{\operatorname{d}x}{\operatorname{d}t}+F_0\cos\omega_{\text{d}}t
 $$
 
 令 $\displaystyle\frac{k}{m}=\omega_0^2$ , $\displaystyle\frac{\gamma}{m}=2\delta$ , 则上式可写作:
 
 $$
-\frac{\operatorname{d}^2x}{\operatorname{d}t^2}+2\delta\frac{\operatorname{d}x}{\operatorname{d}t}+\omega_0^2x=\frac{F_0}{m}\cos\omega_dt
+\frac{\operatorname{d}^2x}{\operatorname{d}t^2}+2\delta\frac{\operatorname{d}x}{\operatorname{d}t}+\omega_0^2x=\frac{F_0}{m}\cos\omega_{\text{d}}t
 $$
 
 阻尼较小时, 上式的解为:
 
 $$
-x=A_0e^{-\delta t}\cos(\sqrt{\omega_0^2-\delta^2}t+\phi_0')+A\cos(\omega_dt+\phi)
+x=A_0e^{-\delta t}\cos(\sqrt{\omega_0^2-\delta^2}t+\phi_0')+A\cos(\omega_{\text{d}}t+\phi)
 $$
 
 此式表示受迫振动一开始时是由一个减幅振动和一个等幅振动合成的, 比较复杂. 而经过一段时间后, 第一项可以忽略不计, 振动达到稳态:
 
 $$
-x=A\cos(\omega_dt+\phi)
+x=A\cos(\omega_{\text{d}}t+\phi)
 $$
 
 理论计算得到:
 
 $$
 \left\{\begin{aligned}
-    A&=\frac{F_0}{m\sqrt{(\omega_0^2-\omega_d^2)^2+4\delta^2\omega_d^2}}\\
-    \phi&=\arctan\left(-\frac{2\delta\omega_d}{\omega_0^2-\omega_d^2}\right)
+    A&=\frac{F_0}{m\sqrt{(\omega_0^2-\omega_{\text{d}}^2)^2+4\delta^2\omega_{\text{d}}^2}}\\
+    \phi&=\arctan\left(-\frac{2\delta\omega_{\text{d}}}{\omega_0^2-\omega_{\text{d}}^2}\right)
 \end{aligned}\right.
 $$
 
 稳态时, 物体速度:
 
 $$
-v=v_m\cos\left(\omega_dt+\phi+\frac{\pi}{2}\right)
+v=v_m\cos\left(\omega_{\text{d}}t+\phi+\frac{\pi}{2}\right)
 $$
 
 其中:
 
 $$
-v_m=\frac{\omega_d F_0}{m\sqrt{(\omega_0^2-\omega_d^2)^2+4\delta^2\omega_d^2}}
+v_m=\frac{\omega_{\text{d}} F_0}{m\sqrt{(\omega_0^2-\omega_{\text{d}}^2)^2+4\delta^2\omega_{\text{d}}^2}}
 $$
 
 从上述分析结果来看, 受迫振动有以下特征:
@@ -466,7 +466,7 @@ $$
 
 ##### 位移振动
 
-振幅达到最大的现象称为**位移共振**. 即令 $\displaystyle\frac{\operatorname{d}A}{\operatorname{d}\omega_d}=0$ , 得到共振角频率:
+振幅达到最大的现象称为**位移共振**. 即令 $\displaystyle\frac{\operatorname{d}A}{\operatorname{d}\omega_{\text{d}}}=0$ , 得到共振角频率:
 
 $$
 \omega_r=\sqrt{\omega_0^2-2\delta^2}
@@ -476,7 +476,7 @@ $$
 
 ##### 速度共振
 
-速度达到最大的现象称为**速度共振**. 即令 $\displaystyle\frac{\operatorname{d}v_m}{\operatorname{d}\omega_d}=0$ , 得到共振角频率:
+速度达到最大的现象称为**速度共振**. 即令 $\displaystyle\frac{\operatorname{d}v_m}{\operatorname{d}\omega_{\text{d}}}=0$ , 得到共振角频率:
 
 $$
 \omega_r=\omega_0
