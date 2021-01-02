@@ -36,7 +36,7 @@ $$
 因此电磁波在介质中的波速为:
 
 $$
-v=\frac{1}{\sqrt{\varepsilon_0\varepsilon_r\mu_0\mu_r}}=\frac{c}{\sqrt{\varepsilon_r\mu_r}}\xlongequal{n:=\sqrt{\varepsilon_r\mu_r}}=\frac{c}{n}
+v=\frac{1}{\sqrt{\varepsilon_0\varepsilon_r\mu_0\mu_r}}=\frac{c}{\sqrt{\varepsilon_r\mu_r}}\xlongequal{n:=\sqrt{\varepsilon_r\mu_r}}\frac{c}{n}
 $$
 
 其中 $c=\displaystyle\frac{1}{\sqrt{\varepsilon_0\mu_0}}$ 为真空中的光速, $n$ 为介质的折射率.
