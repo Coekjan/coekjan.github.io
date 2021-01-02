@@ -416,13 +416,17 @@ $$
 
 一维无限深势阱中的粒子运动特征如下:
 1. 粒子的能量不连续, 是量子化的:
+   
    $$
-   E_n=\displaystyle\frac{\pi^2\hbar^2}{2ma^2}n^2(n=1,2,3,\dotsm)
+   E_n=\frac{\pi^2\hbar^2}{2ma^2}n^2(n=1,2,3,\dotsm)
    $$
+
 2. 粒子的最小能量不为零:
+   
    $$
-   E_\text{min}=E_1=\displaystyle\frac{\pi^2\hbar^2}{2ma^2}
+   E_\text{min}=E_1=\frac{\pi^2\hbar^2}{2ma^2}
    $$
+
 3. 粒子出现的概率随位置变化;
 4. 粒子的物质波在阱内形成驻波.
 
