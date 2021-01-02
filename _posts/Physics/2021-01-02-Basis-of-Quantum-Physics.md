@@ -308,3 +308,236 @@ $$
 > 若微观粒子处于某一状态范围对应的能量不确定度为 $\Delta E$ , 则微观粒子具有平均寿命 $\Delta t$ .
 
 ## 波函数与薛定谔方程
+
+### 波函数及其统计诠释
+
+描述自由粒子波动性的平面物质波的波函数为:
+
+$$
+\varPsi(x,t)=\varPsi_0\exp\left[-i \frac{2\pi}{h}(Et-px)\right]
+$$
+
+**在某一时刻, 空间某一地点, 粒子出现的概率正比于波函数与其共轭复数的乘积.** 即 $\vert\varPsi\vert^2=\varPsi\varPsi^*$ .
+
+在空间中 $(x,y,z)$ 处找到粒子的概率就是:
+
+$$
+\vert\varPsi\vert^2\operatorname{d}V=\varPsi\varPsi^*\operatorname{d}V
+$$
+
+其中, $\vert\varPsi\vert^2=\varPsi\varPsi^*$ 表示在某一时刻在某点处单位体积内粒子出现的概率, 称为**概率密度**.
+
+波函数模的平方作为概率密度, 有**归一化条件**:
+
+$$
+\iiint_\Omega\vert\varPsi\vert^2\operatorname{d}V=1
+$$
+
+还有**单值, 有限, 可导, 一阶导数连续**的特性.
+
+### 薛定谔方程
+
+薛定谔方程是量子力学中的基本方程之一, 不可由公式推导.
+
+#### 自由粒子的薛定谔方程
+
+质量为 $m$ 的自由粒子的波函数满足:
+
+$$
+-\frac{\hbar^2}{2m}\nabla^2\varPsi=i\hbar\frac{\partial \varPsi}{\partial t}
+$$
+
+#### 势场中粒子的薛定谔方程
+
+质量为 $m$ 的粒子在势能为 $U(\vec{r},t)$ 的势场中的满足:
+
+$$
+-\frac{\hbar^2}{2m}\nabla^2\varPsi+U\varPsi=i\hbar\frac{\partial \varPsi}{\partial t}
+$$
+
+采用哈密顿算符: $\hat{H}=\displaystyle-\frac{\hbar^2}{2m}\nabla^2+U$ , 则该方程可以写作:
+
+$$
+\hat{H}\varPsi=i\hbar\frac{\partial \varPsi}{\partial t}
+$$
+
+> 算符是一种操作, 物理中每一个物理量都对应一个算符. 以下给出一些算符:
+> 1. 位置算符就是位置本身;
+> 2. 能量算符: $E\rightarrow\displaystyle i\hbar\frac{\partial}{\partial t}$ 或 $E\rightarrow \hat{H}$ ;
+> 3. 动量算符: $\vec{p}\rightarrow -i\hbar\nabla$ .
+> 
+> 若要求算符为 $\hat{A}$ 的物理量的均值, 则可以使用积分 $\displaystyle\int_\Omega \varPsi^*\hat{A}\varPsi\operatorname{d}\omega$ 来计算.
+
+##### 定态薛定谔方程
+
+若势能只是坐标的函数而与时间无关, 则可以把波函数分离变量: $\varPsi(\vec{r},t)=\psi(\vec{r})\cdot f(t)$ . 代入上述方程可解得:
+
+$$
+E:=i\hbar\frac{\operatorname{d}f(t)}{\operatorname{d}t}\frac{1}{f(t)}\Rightarrow f(t)=\exp\left(-\frac{i}{h}Et\right)
+$$
+
+其中, $E$ 就是粒子的能量. 同时得到**定态薛定谔方程**:
+
+$$
+-\frac{\hbar^2}{2m}\nabla^2\psi+U\psi=E\psi
+$$
+
+或
+
+$$
+\nabla^2\psi+\frac{2m}{\hbar^2}(E-U)\psi=0
+$$
+
+易得: $\vert\varPsi\vert^2=\vert\psi\vert^2$ .
+
+### 一维无限深势阱
+
+设一维无限深势阱的势能分布:
+
+$$
+U(x)=\left\{\begin{aligned}
+    0,&&&0<x<a\\
+    +\infty,&&&x\le0,x\ge a
+\end{aligned}\right.
+$$
+
+阱外, 薛定谔方程的解为 $\psi_e(x)\equiv0$ 说明粒子不可能出现在阱外.
+
+阱内, 薛定谔方程的解为 $\psi_i(x)=\displaystyle\sqrt{\frac{2}{a}}\sin\frac{n\pi}{a}x\quad(n=1,2,3,\dotsm)$ .
+
+综合得到定态波函数:
+
+$$
+\psi(x)=\left\{\begin{aligned}
+    \sqrt{\frac{2}{a}}\sin\frac{n\pi}{a}x,&&&0<x<a\\
+    0,&&&x\le0,x\ge a
+\end{aligned}\right.
+$$
+
+一维无限深势阱中的粒子运动特征如下:
+1. 粒子的能量不连续, 是量子化的:
+   $$
+   E_n=\displaystyle\frac{\pi^2\hbar^2}{2ma^2}n^2(n=1,2,3,\dotsm)
+   $$
+2. 粒子的最小能量不为零:
+   $$
+   E_\text{min}=E_1=\displaystyle\frac{\pi^2\hbar^2}{2ma^2}
+   $$
+3. 粒子出现的概率随位置变化;
+4. 粒子的物质波在阱内形成驻波.
+
+### 一维有限势垒
+
+设一维有限势垒的势能分布:
+
+$$
+U(x)=\left\{\begin{aligned}
+    U_0,&&&0<x<a\\
+    0,&&&x\le0,x\ge a
+\end{aligned}\right.
+$$
+
+有结论:
+1. **隧道效应**: 粒子能够穿透比其动能更高的势垒的现象;
+2. **反射系数**: 粒子反射的"强度"与入射的"强度"之比("强度"指波函数模的平方):
+   $$
+   R=\frac{(k_1^2-k_2^2)\sin^2k_2a}{(k_1^2-k_2^2)\sin^2k_2a+4k_1^2k_2^2}
+   $$
+   尽管 $E>U_0$ , 也有 $R\neq0$ . 这说明粒子仍有一定概率反射;
+3. **透射系数**: 粒子透射的"强度"与入射的"强度"之比:
+   $$
+   T=\frac{4k_1^2k_2^2}{(k_1^2-k_2^2)\sin^2k_2a+4k_1^2k_2^2}
+   $$
+   尽管 $E<U_0$ , 也有 $T\neq0$ . 这说明粒子仍有一定概率透射.
+
+## 量子力学中的氢原子
+
+### 能量量子化
+
+氢原子的能量为:
+
+$$
+E_n=-\frac{1}{n^2}\left(\frac{me^4}{8\varepsilon_0^2h^2}\right)\xlongequal{E_1:=-(me^4)/(8\varepsilon_0^2h^2)}\frac{E_1}{n^2}\quad n=1,2,3,\dotsm
+$$
+
+其中 $E_1=-13.6\rm eV$ , 而 $n$ 称为**主量子数**.
+
+### 角动量大小量子化
+
+氢原子电子绕核转动的角动量大小:
+
+$$
+L=\sqrt{l(l+1)}\hbar\quad l=0,1,2,\dotsm,n-1
+$$
+
+这与玻尔理论的结果不同, 实验表明, 量子力学理论的结果是正确的. 称 $l$ 为**角量子数(副量子数)**.
+
+### 角动量空间量子化
+
+氢原子电子绕核转动的角动量方向也不能连续改变. 角动量在外磁场方向 $Z$ 的投影:
+
+$$
+L_z=m_lh\quad m_l=0,\pm1,\pm2,\dotsm,\pm l
+$$
+
+称 $m_l$ 为**磁量子数**.
+
+#### 塞曼效应
+
+光源处于磁场中时, 一条谱线会分裂为若干条谱线. 量子力学对此的解释为: 原子中绕核运动的电子不仅有角动量, 还有磁矩 $\mu_z$ .
+
+$$
+\mu_z=-m_l\frac{e\hbar}{2m_e}=-m_l\mu_\text{B}
+$$
+
+其中 $\mu_\text{B}$ 为**玻尔磁子**.
+
+由于磁场的作用, 粒子附加的能量为 $\Delta E=-\vec{\mu}\cdot\vec{B}=-\mu_zB=m_l\mu_\text{B}B$ .
+
+### 电子自旋
+
+电子除了轨道运动之外, 还存在一种"自旋运动", 具有**自旋角动量 $\vec S$** 和 **自旋磁矩 $\vec \mu_s$** , 它们都只能取两个特定值:
+
+$$
+\begin{aligned}
+    S&=\sqrt{s(s+1)}\hbar&&s=\frac{1}{2}\\
+    S_z&=m_s\hbar&&m_s=\pm\frac{1}{2}\\
+    \mu_{sz}&=\pm\mu_\text{B}
+\end{aligned}
+$$
+
+称 $m_s$ 为**自旋磁量子数**.
+
+量子物理中用以上四个量子数可以**完全表征**电子的运动状态:
+1. 主量子数 $n=1,2,3,\dotsm$ , 大体上决定了电子的能量;
+2. 副量子数 $l=0,1,2,\dotsm,n-1$ , 决定了电子的轨道角动量大小, 对能量有些许影响;
+3. 磁量子数 $m_l=0,\pm1,\pm2,\dotsm,\pm l$ , 有外磁场时决定了电子轨道角动量的空间取向;
+4. 自旋磁量子数 $m_s=\displaystyle\pm\frac{1}{2}$ , 决定了电子自旋角动量空间取向.
+
+### 电子云
+
+量子力学中没有轨道的概念, 而是以**电子云**的概念描述电子的运动. 电子出现在某处的概率就使用概率密度 $\vert\varPsi\vert^2$ 来计算.
+
+## 原子的电子壳层结构
+
+引入**壳层**: 主量子数 $n$ 不同的电子分布在不同的壳层上.
+
+$n$ | 1 | 2 | 3 | 4 | 5 | 6 
+:-: |:-:|:-:|:-:|:-:|:-:|:-:
+符号 | $\rm K$ | $\rm L$ | $\rm M$ | $\rm N$ | $\rm O$ | $\rm P$
+
+主量子数 $l$ 相同而角量子数不同的电子, 分布在不同的支壳层上:
+
+$l$ | 0 | 1 | 2 | 3 | 4 | 5 
+:-: |:-:|:-:|:-:|:-:|:-:|:-:
+符号 | $\rm s$ | $\rm p$ | $\rm d$ | $\rm f$ | $\rm g$ | $\rm h$
+
+### 泡利不相容原理
+
+在一个原子中, 不能有两个或两个以上的电子处于完全相同的量子态, 即他们不可能具有一组完全相同的量子数.
+
+可以推得, 第 $n$ 个壳层容纳电子的最大数目为 $Z_n=\displaystyle\sum_{l=0}^{n-1}2(2l+1)=2n^2$ .
+
+### 能量最低原理
+
+原子处于正常状态时, 每个电子都趋于占据可能的最低能级.
