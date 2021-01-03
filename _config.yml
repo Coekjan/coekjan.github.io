@@ -96,11 +96,11 @@ page-katex: false
 # Friends
 friends: [
   {
-    title: "Coekjan's Blog",
+    title: "Coekjan",
     href: "https://coekjan.github.io"
   },
   {
-    title: "ROIFE BLOG",
+    title: "ROIFE",
     href: "https://roife.github.io"
   }
 ]
