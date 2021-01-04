@@ -917,8 +917,7 @@ $$
 f(x_1,x_2,\dotsm,x_n)=\frac{1}{(2\pi)^{\frac{n}{2}}(\det \mathbf{C})^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\mathbf{X}-\mathbf{U})^T\mathbf{C}^{-1}(\mathbf{X}-\mathbf{U})\right]
 $$
 
-其中 $\mathbf{X}=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n
-\end{pmatrix},\mathbf{U}=\begin{pmatrix}\mu_1\\\mu_2\\\vdots\\\mu_n\end{pmatrix}$ , $\mathbf{C}$ 是对称正定矩阵, 则称这个随机变量服从 $n$ 维正态分布.
+其中 $\mathbf{X}=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix},\mathbf{U}=\begin{pmatrix}\mu_1\\\mu_2\\\vdots\\\mu_n\end{pmatrix}$ , $\mathbf{C}$ 是对称正定矩阵, 则称这个随机变量服从 $n$ 维正态分布.
 
 可以证明, 其中的矩阵 $\mathbf{C}$ 正是 $(X_1,X_2,\dotsm,X_n)$ 的协方差矩阵.
 
