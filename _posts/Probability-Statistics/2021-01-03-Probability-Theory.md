@@ -700,4 +700,289 @@ $$
 
 ### 数学期望
 
-...
+#### 一维离散型随机变量及其函数的数学期望
+
+若离散型随机变量 $X$ 分布律为
+
+$$
+P(X=x_k)=p_k\quad k=1,2,\dotsm
+$$
+
+若级数 $\displaystyle\sum_{k=1}^{+\infty}x_kp_k$ 绝对收敛, 则称之为 $X$ 的数学期望:
+
+$$
+E(X)=EX=\sum_{k=1}^{+\infty}x_kp_k
+$$
+
+若随机变量 $Y=g(X)$ , 则若级数 $\displaystyle\sum_{k=1}^{+\infty}g(x_k)p_k$ 绝对收敛, 则:
+
+$$
+E(Y)=EY=\sum_{k=1}^{+\infty}g(x_k)p_k
+$$
+
+#### 一维连续型随机变量及其函数的数学期望
+
+若连续型随机变量 $X$ 的概率密度为 $f(x)$ , 若积分 $\displaystyle\int_{-\infty}^{+\infty}xf(x)\operatorname{d}x$ 绝对收敛, 则称之为 $X$ 的数学期望:
+
+$$
+E(X)=EX=\int_{-\infty}^{+\infty}xf(x)\operatorname{d}x
+$$
+
+若随机变量 $Y=g(X)$ , 则若积分 $\displaystyle\int_{-\infty}^{+\infty}g(x)f(x)\operatorname{d}x$ 绝对收敛, 则:
+
+$$
+E(Y)=EY=\int_{-\infty}^{+\infty}g(x)f(x)\operatorname{d}x
+$$
+
+#### 随机向量的函数的数学期望
+
+设随机变量 $(X,Y)$ , 连续函数 $g(x,y)$ , 那么 $Z=g(X,Y)$ 是一个随机变量.
+
+##### 离散型
+
+若 $(X,Y)$ 为离散型随机变量, 其分布律为
+
+$$
+P(X=x_i,Y=y_j)=p_{ij}\quad i,j=1,2,\dotsm
+$$
+
+则
+
+$$
+E(Z)=EZ=\sum_{i=1}^{+\infty}\sum_{j=1}^{+\infty}g(x_i,y_j)p_{ij}
+$$
+
+要求该级数绝对收敛.
+
+##### 连续型
+
+若 $(X,Y)$ 为连续型随机变量, 其概率密度为 $f(x,y)$ , 则有
+
+$$
+E(Z)=EZ=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}g(x,y)f(x,y)\operatorname{d}x\operatorname{d}y
+$$
+
+#### 数学期望的性质
+
+**线性**: 设 $X_1,X_2,\dotsm,X_n$ 为随机变量, $k_1,k_2,\dotsm, k_n$ 为常数, 则:
+
+$$
+E\left(\sum_{i=1}^nk_iX_i\right)=\sum_{i=1}^nk_iE(X_i)
+$$
+
+**独立可乘**: 设 $X_1,X_2,\dotsm,X_n$ 为**相互独立**的随机变量, 则
+
+$$
+E\left(\prod_{i=1}^nX_i\right)=\prod_{i=1}^nE(X_i)
+$$
+
+### 方差
+
+设随机变量 $X$ 的数学期望为 $EX$ . 若 $E(X-EX)^2$ 存在, 则称之为 $X$ 的方差, 记作 $DX$ , 或 $D(X)$ , 或 $\operatorname{Var}(X)$ . $\sqrt{DX}$ 称为标准差或均方差.
+
+求方差除了使用求数学期望的方法外, 还有另一公式:
+
+$$
+DX=EX^2-(EX)^2
+$$
+
+#### 方差的性质
+
+主要由以下性质:
+1. 设 $C$ 为常数, 则 $D(C)=0$ ;
+2. 设 $C$ 为常数, $X$ 为随机变量, 则 $D(CX)=C^2DX$ ;
+3. 若随机变量 $X$ 和 $Y$ 相互独立, 则
+   
+   $$
+   \left\{\begin{aligned}
+     &D(X\pm Y)&=&DX+DY\\
+     &D(aX+bY+c)&=&a^2DX+b^2DY\\
+     &D(XY)&=&EX^2EY^2-(EX)^2(EY)^2
+   \end{aligned}\right.
+   $$
+
+### 常用随机变量的数学期望与方差
+
+#### 二项分布
+
+若随机变量 $X\sim B(n,p)$ , 则
+
+$$
+EX=np,\quad DX=np(1-p)
+$$
+
+#### 泊松分布
+
+若随机变量 $X\sim \Pi(\lambda)$ , 则
+
+$$
+EX=\lambda,\quad DX=\lambda
+$$
+
+#### 均匀分布
+
+若随机变量 $X\sim U[a,b]$ , 则
+
+$$
+EX=\frac{a+b}{2},\quad DX=\frac{(b-a)^2}{12}
+$$
+
+#### 指数分布
+
+若随机变量 $X\sim E(\lambda)$ , 则
+
+$$
+EX=\frac{1}{\lambda},\quad DX=\frac{1}{\lambda^2}
+$$
+
+#### 正态分布
+
+若随机变量 $X\sim N(\mu,\sigma^2)$ , 则
+
+$$
+EX=\mu,\quad DX=\sigma^2
+$$
+
+### 协方差与相关系数
+
+#### 协方差
+
+设 $(X,Y)$ 是二维随机变量, 若 $E[(X-EX)(Y-EY)]$ 存在, 则称之为随机变量 $X$ 和 $Y$ 的协方差, 记作 $\operatorname{Cov}(X,Y)$ . 即
+
+$$
+\operatorname{Cov}(X,Y)=E[(X-EX)(Y-EY)]
+$$
+
+除了按定义计算, 还有另一公式:
+
+$$
+\operatorname{Cov}(X,Y)=E(XY)-EX\cdot EY
+$$
+
+协方差有以下性质:
+1. $\operatorname{Cov}(X,Y)=\operatorname{Cov}(Y,X)$ ;
+2. $\operatorname{Cov}(aX,bY)=ab\operatorname{Cov}(X,Y)$ ;
+3. $\operatorname{Cov}(X_1+X_2,Y)=\operatorname{Cov}(X_1,Y)+\operatorname{Cov}(X_2,Y)$ ;
+4. $D(X\pm Y)=DX+DY\pm 2\operatorname{Cov}(X,Y)$ .
+
+若 $X$ 和 $Y$ 相互独立, 则
+
+$$
+\operatorname{Cov}(X,Y)=0
+$$
+
+> 协方差为 $0$ , 不能说明 $X$ 和 $Y$ 相互独立.
+
+#### 相关系数
+
+> 此处的相关, 是指线性相关.
+
+设 $(X,Y)$ 是二维随机变量, 协方差 $\operatorname{Cov}(X,Y)$ 存在, 且 $DX\cdot DY>0$ , 则称
+
+$$
+\rho=\rho_{XY}=\frac{\operatorname{Cov}(X,Y)}{\sqrt{DX}\cdot\sqrt{DY}}
+$$
+
+为随机变量 $X$ 和 $Y$ 的相关系数或标准协方差. 记作 $\rho_{XY}$ 或简记为 $\rho$ .
+
+可以证明 $\vert\rho\vert\le1$ , 当且仅当 $P(Y=aX+b)=1,(a\neq0)$ 时取等号.
+
+> 称 $X$ 与 $Y$ 不相关, 是指它们的相关系数为 $0$ , 即协方差为 $0$ .
+> 
+> 不相关的两个随机变量有可能不独立.
+
+### 矩和协方差矩阵
+
+#### 矩
+
+引入 **$k$ 阶原点距**: $E(X^k)$ .
+
+引入 **$k$ 阶中心距**: $E(X-EX)^k$ .
+
+#### 协方差矩阵
+
+对于 $n$ 维随机向量 $(X_1,X_2,\dotsm,X_n)$ , 若
+
+$$
+C_{ij}=\operatorname{Cov}(X_i,X_j)\quad i,j=1,2,\dotsm,n
+$$
+
+存在, 则称矩阵 $\mathbf{C}=(C_{ij})_{n\times n}$ 为这个随机向量的协方差矩阵.
+
+通过协方差矩阵, 可以导出 $n$ 为正态随机变量 $(X_1,X_2,\dotsm,X_n)$ 的定义.
+
+设 $n$ 维随机向量 $(X_1,X_2,\dotsm,X_n)$ , 若其概率密度为
+
+$$
+f(x_1,x_2,\dotsm,x_n)=\frac{1}{(2\pi)^{\frac{n}{2}}(\det \mathbf{C})^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\mathbf{X}-\mathbf{U})^T\mathbf{C}^{-1}(\mathbf{X}-\mathbf{U})\right]
+$$
+
+其中 $\mathbf{X}=\begin{pmatrix}
+  x_1\\x_2\\\vdots\\x_n
+\end{pmatrix},\mathbf{U}=\begin{pmatrix}
+  \mu_1\\\mu_2\\\vdots\\\mu_n
+\end{pmatrix}$ , $\mathbf{C}$ 是对称正定矩阵, 则称这个随机变量服从 $n$ 维正态分布.
+
+可以证明, 其中的矩阵 $\mathbf{C}$ 正是 $(X_1,X_2,\dotsm,X_n)$ 的协方差矩阵.
+
+## 大数定律和中心极限定理
+
+### 马尔可夫不等式
+
+设随机变量 $X$ , 若 $E\vert X\vert^k$ 存在 ( $k>0$ ) , 则对于任意正数 $\varepsilon>0$ , 有
+
+$$
+P(\vert X\vert\ge\varepsilon)\le\frac{E\vert X\vert^k}{\varepsilon^k}
+$$
+
+### 切比雪夫不等式
+
+设随机变量 $X$ 存在数学期望 $EX$ 和方差 $DX$ , 则对于任意正数 $\varepsilon>0$ , 有
+
+$$
+P(\vert X-EX\vert\ge \varepsilon)\le\frac{DX}{\varepsilon^2}
+$$
+
+### 大数定律
+
+#### 切比雪夫大数定律
+
+设 $X_1,X_2,\dotsm,X_n,\dotsm$ 是相互独立的随机变量序列, 每一个 $X_i$ 都有有限的方差, 且有公共上界, 令 $Y_n=\displaystyle\frac{1}{n}\sum_{i=1}^nX_i$ , 则有
+1. $\displaystyle\lim_{n\rightarrow+\infty}DY_n=0$ ;
+2. 对于任意 $\varepsilon>0$ , $\displaystyle\lim_{n\rightarrow+\infty}P(\vert Y_n-EY_n\vert<\varepsilon)=1$ .
+
+#### 辛钦大数定律
+
+若随机变量序列 $X_1,X_2,\dotsm,X_n,\dotsm$ 相互独立, 且有相同的数学期望 $\mu$ 与方差 $\sigma^2$ , 则对任意的 $\varepsilon>0$ , 有
+
+$$
+\lim_{n\rightarrow+\infty}P(\vert \overline{X}-\mu \vert<\varepsilon)=1
+$$
+
+> 条件也可改为这些随机变量独立同分布, 具有有限的数学期望.
+
+#### 伯努利大数定律
+
+设 $n_A$ 是 $n$ 次独立重复试验中事件 $A$ 发生的次数, $p$ 是事件 $A$ 在每次试验中发生的概率, 则对于任意 $\varepsilon>0$ , 有
+
+$$
+\lim_{n\rightarrow+\infty}P\left(\left\vert\frac{n_A}{n}-p\right\vert<\varepsilon\right)=1
+$$
+
+### 中心极限定理
+
+#### 同分布的中心极限定理
+
+设随机变量 $X_1,X_2,\dotsm,X_n,\dotsm$ 独立同分布, 且存在有限的数学期望 $\mu$ 和方差 $\sigma^2$ , 则有
+
+$$
+\lim_{n\rightarrow+\infty}P\left( \frac{\displaystyle\sum_{k=1}^nX_n-n\mu}{\sqrt{n}\sigma} \le x\right)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^x\exp\left(-\frac{t^2}{2}\right)\operatorname{d}t
+$$
+
+#### 棣莫弗-拉普拉斯定理
+
+设随机变量 $\mu_n\sim B(n,p)$ 则对于任意实数 $x$ , 有
+
+$$
+\lim_{n\rightarrow+\infty}P\left(\frac{\mu_n-np}{\sqrt{np(1-p)}}\le x\right)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^x\exp\left(-\frac{t^2}{2}\right)\operatorname{d}t
+$$
