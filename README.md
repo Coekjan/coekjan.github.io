@@ -1,6 +1,6 @@
-### [Coekjan's Blog](coekjan.github.io)
+### [Coekjan's Blog](https://coekjan.github.io)
 
-This respository supports **[Coekjan's Blog](coekjan.github.io)**.
+This respository supports **[Coekjan's Blog](https://coekjan.github.io)**.
 
 ---
 
