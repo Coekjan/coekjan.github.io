@@ -1,10 +1,19 @@
-# Coekjan的博客
+### [Coekjan's Blog](coekjan.github.io)
 
-## 博客内容
+This respository supports **[Coekjan's Blog](coekjan.github.io)**.
 
-* 计科相关
-* 数理相关
+---
 
-## 模板来源
+#### Developer
 
-**HUX blog**
+**@Coekjan** - From *School of Computer Science and Engineering, Beihang University*
+
+#### Topic
+
+* ***Computer Science***
+* ***Mathematics***
+* ***Natural Science***
+
+#### Template
+
+The template of the blog is from **[HUX BLOG](https://github.com/Huxpro/huxpro.github.io)**.
