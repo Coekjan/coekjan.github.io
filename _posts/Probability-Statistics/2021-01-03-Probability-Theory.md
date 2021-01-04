@@ -397,4 +397,256 @@ $$
 
 ## 二维随机变量
 
-...
+### 随机向量与联合分布
+
+设 $(X,Y)$ 是二维随机变量, 对任意实数 $x,y$ , 二元函数
+
+$$
+F(x,y)=P(X\le x,Y\le y)
+$$
+
+称为二维随机变量 $(X,Y)$ 的联合分布函数. 这个函数有以下性质:
+1. $0\le F(x,y)\le 1$ ;
+2. $F$ 对 $x$ 或 $y$ 单调不减;
+3. 一些极限结果:
+   
+   $$
+   \left\{\begin{aligned}
+     F(x,-\infty)&=0\\
+     F(-\infty,y)&=0\\
+     F(-\infty,-\infty)&=0\\
+     F(+\infty,+\infty)&=1
+   \end{aligned}\right.
+   $$
+   
+4. $F(x,y)$ 对 $x$ 或 $y$ 右连续, 即:
+   
+   $$
+   \begin{aligned}
+     F(x^+,y)=F(x,y)\\
+     F(x,y^+)=F(x,y)
+   \end{aligned}
+   $$
+   
+5. 对任意实数 $x_1<x_2,y_1<y_2$ 有:
+   
+   $$
+   P(x_1<X\le x_2,y_1<Y\le y_2)=F(x_2,y_2)+F(x_1,y_1)-F(x_1,y_2)-F(x_2,y_1)
+   $$
+
+
+#### 二维离散型随机变量
+
+若二维随机变量 $(X,Y)$ 的所有取值为有限对或可列对 $(x_i,y_j),i,j=1,2,\dotsm$ , 则称 $(X,Y)$ 为离散型随机变量. 记 $P(X=x_i,Y=y_j)=p_{ij},i,j=1,2,\dotsm$ , 称它为二维离散型随机变量 $(X,Y)$ 的联合分布律.
+
+#### 二维连续型随机变量
+
+设二维随机变量 $(X,Y)$ 的分布函数为 $F(x,y)$ , 若有非负可积函数 $f(x,y)$ 使得对于任意实数 $x,y$ 恒有:
+
+$$
+F(x,y)=\int_{-\infty}^y\int_{-\infty}^xf(u,v)\operatorname{d}u\operatorname{d}v
+$$
+
+则称 $(X,Y)$ 是二维连续型随机变量, 称 $f(x,y)$ 是连续型随机变量 $(X,Y)$ 的联合概率密度.
+
+概率分布函数与密度函数有如下性质:
+1. $F(x,y)$ 是连续函数;
+2. $P(a<X\le b,c<Y\le d)=\displaystyle\int_a^b\int_c^df(x,y)\operatorname{d}y\operatorname{d}x$ ;
+3. 设 $D$ 是平面上的区域, 则:
+   
+   $$
+   P((X,Y)\in D)=\iint_Df(x,y)\operatorname{d}x\operatorname{d}y
+   $$
+
+##### 常用的二维连续型随机变量
+
+###### 均匀分布
+
+若随机变量 $(X,Y)$ 的概率密度为
+
+$$
+f(x,y)=\left\{\begin{aligned}
+  \frac{1}{A},&&&(x,y)\in D\\
+  0,&&&(x,y)\notin D
+\end{aligned}\right.
+$$
+
+其中 $A=\displaystyle\iint_D\operatorname{d}\sigma$ 是有界区域 $D$ 的面积. 则称 $(X,Y)$ 在区域 $D$ 上服从均匀分布, 记作 $(X,Y)\sim U(D)$ .
+
+###### 二维正态分布
+
+若随机变量 $(X,Y)$ 的概率密度函数为
+
+$$
+f(x,y)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}\exp\left\{-\frac{1}{2(1-\rho^2)}\left[\frac{(x-\mu_1)^2}{\sigma_1}-2\rho\frac{(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}+\frac{(y-\mu_2)^2}{\sigma_2}\right]\right\}
+$$
+
+其中:
+
+$$
+-\infty<\mu_{1,2}<+\infty,\quad\sigma_{1,2}>0,\quad\vert\rho\vert<1
+$$
+
+则称随机变量 $(X,Y)$ 服从参数为 $\mu_1,\mu_2,\sigma_1,\sigma_2,\rho$ 的二维正态分布, 记作: $(X,Y)\sim N(\mu_1,\sigma^2;\mu_2,\sigma_2;\rho)$ .
+
+### 边缘分布函数
+
+由 $(X,Y)$ 的分布函数 $F(x,y)$ 可以确定 $X$ 和 $Y$ 的边缘分布函数:
+
+$$
+\begin{aligned}
+  F_X(x)&=F(x,+\infty)\\
+  F_Y(y)&=F(+\infty,y)
+\end{aligned}
+$$
+
+#### 二维离散型随机变量的边缘分布律与条件分布律
+
+##### 边缘分布律
+
+设二维离散型随机变量 $(X,Y)$ 的分布律为
+
+$$
+P(X=x_i,Y=y_j)=p_{ij},i,j=1,2,\dotsm
+$$
+
+则 $(X,Y)$ 的边缘分布律:
+
+$$
+\left\{\begin{aligned}
+  p_{i\cdot}&=P(X=x_i)&=\sum_jp_{ij}\\
+  p_{\cdot j}&=P(Y=y_j)&=\sum_ip_{ij}
+\end{aligned}\right.
+$$
+
+> 对分布表的列和行分别求和, 即可得到相应的边缘分布律.
+
+##### 条件分布律
+
+设二维离散型随机变量 $(X,Y)$ 的分布律为
+
+$$
+P(X=x_i,Y=y_j)=p_{ij},i,j=1,2,\dotsm
+$$
+
+当 $P(X=x_i)>0$ 时称
+
+$$
+P(Y=y_j\vert X=x_i)=\frac{P(X=x_i,Y=y_j)}{P(X=x_i)},j=1,2,\dotsm
+$$
+
+为在 $X=x_i$ 条件下的条件分布律.
+
+当 $P(Y=y_j)>0$ 时称
+
+$$
+P(X=x_i\vert Y=y_j)=\frac{P(X=x_i,Y=y_j)}{P(Y=y_j)},i=1,2,\dotsm
+$$
+
+为在 $Y=y_j$ 条件下的条件分布律.
+
+#### 二维连续型随机变量的边缘概率密度与条件概率密度
+
+##### 边缘概率密度
+
+设二维连续型随机变量 $(X,Y)$ 的概率密度为 $f(x,y)$ , 分布函数为 $F(x,y)$ , 则 $(X,Y)$ 的边缘概率密度:
+
+$$
+\left\{\begin{aligned}
+  f_X(x)=\int_{-\infty}^{+\infty}f(x,y)\operatorname{d}y\\
+  f_Y(y)=\int_{-\infty}^{+\infty}f(x,y)\operatorname{d}x
+\end{aligned}\right.
+$$
+
+##### 条件概率密度
+
+对于二维连续型随机变量 $(X,Y)$ , 若存在极限:
+
+$$
+\lim_{\varepsilon\rightarrow0^+}P(X\le x\vert y-\varepsilon<Y\le y+\varepsilon)
+$$
+
+则称此极限为条件 $Y=y$ 下 $X$ 的条件分布函数, 记为 $F_{X\vert Y}(x\vert y)$ 或 $P(X\le x\vert Y=y)$ .
+
+可计算:
+
+$$
+\begin{aligned}
+  F_{X\vert Y}(x\vert y)&=\frac{\displaystyle\frac{\partial}{\partial y}F(x,y)}{\displaystyle\frac{\operatorname{d}}{\operatorname{d}y}F_Y(y)}\\
+  F_{Y\vert X}(y\vert x)&=\frac{\displaystyle\frac{\partial}{\partial x}F(x,y)}{\displaystyle\frac{\operatorname{d}}{\operatorname{d}x}F_X(x)}
+\end{aligned}
+$$
+
+对应的条件概率密度:
+
+$$
+\begin{aligned}
+  f_{X\vert Y}(x\vert y)&=\frac{f(x,y)}{f_Y(y)}\\
+  f_{Y\vert X}(y\vert x)&=\frac{f(x,y)}{f_X(x)}
+\end{aligned}
+$$
+
+### 相互独立的随机变量
+
+称随机变量 $X$ 与 $Y$ 相互独立, 是指对任意实数 $x$ 和 $y$ , 有: $P(X\le x,Y\le y)=P(X\le x)P(Y\le y)$ .
+
+有判定定理:
+
+$$
+P(X\le x,Y\le y)=P(X\le x)P(Y\le y)\Leftrightarrow F(x,y)=F_X(x)F_Y(y)
+$$
+
+#### 离散型随机变量相互独立
+
+设二维离散型随机变量 $(X,Y)$ 的分布律:
+
+$$
+P(X=x_i,Y=y_j)=p_{ij}\quad i,j=1,2,\dotsm
+$$
+
+则称 $X$ 和 $Y$ 相互独立的充要条件是
+
+$$
+P(X=x_i,Y=y_j)=P(X=x_i)P(Y=y_j)\Leftrightarrow p_{ij}=p_{\cdot j}\cdot p_{i\cdot}
+$$
+
+#### 连续型随机变量相互独立
+
+设二维连续型随机变量 $(X,Y)$ 的概率密度为 $f(x,y)$ . 则 $X$ 和 $Y$ 相互独立的充要条件为
+
+$$
+f(x,y)=f_X(x)f_Y(y)
+$$
+
+#### 有限多个或可列个随机变量的相互独立
+
+设 $X_1,X_2,\dotsm,X_n$ 为 $n$ 个随机变量, 若对于任意实数 $x_1,x_2,\dotsm,x_n$ 都有
+
+$$
+P(X_1\le x_1,X_2\le x_2,\dotsm,X_n\le x_n)=P(X_1\le x_1)P(X_2\le x_2)\dotsm P(X_n\le x_n)
+$$
+
+有充要判定条件:
+
+$$
+\begin{aligned}
+  P(X_1\le x_1,X_2\le x_2,\dotsm,X_n\le x_n)&=P(X_1\le x_1)P(X_2\le x_2)\dotsm P(X_n\le x_n)\\
+  &\Updownarrow\\
+  F(x_1,x_2,\dotsm,x_n)&=F_{X_1}(x_1)F_{X_2}(x_2)\dotsm F_{X_3}(x_3)
+\end{aligned}
+$$
+
+针对连续型随机变量, 有充要条件:
+
+$$
+\begin{aligned}
+  P(X_1\le x_1,X_2\le x_2,\dotsm,X_n\le x_n)&=P(X_1\le x_1)P(X_2\le x_2)\dotsm P(X_n\le x_n)\\
+  &\Updownarrow\\
+  F(x_1,x_2,\dotsm,x_n)&=F_{X_1}(x_1)F_{X_2}(x_2)\dotsm F_{X_3}(x_3)\\
+  &\Updownarrow\\
+  f(x_1,x_2,\dotsm,x_n)&=f_{X_1}(x_1)f_{X_2}(x_2)\dotsm f_{X_3}(x_3)
+\end{aligned}
+$$
+
+> 设 $X_1,X_2,\dotsm,X_n,\dotsm$ 为可列无穷多个随机变量, 若对任意整数 $k(k\ge2)$ 及任意互不相同的正整数 $i_1<i_2<\dotsm<i_k$ , $X_{i_1},X_{i_2},\dotsm,X_{i_k}$ 都相互独立, 则称这无穷多个随机变量相互独立.
+
