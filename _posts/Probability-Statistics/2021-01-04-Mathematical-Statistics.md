@@ -287,7 +287,13 @@ $$
 
 选枢轴量 $\displaystyle\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma}\right)^2\sim\chi^2(n)$
 
-由 $\displaystyle P\left(\chi^2_{\frac{\alpha}{2}}(n)<\frac{\displaystyle\sum_{i=1}^n(X_i-\mu)^2}{\sigma^2}<\chi^2_{1-\frac{\alpha}{2}}(n)\right)=1-\alpha$ 得到 $\sigma^2$ 的置信区间
+由
+
+$$
+\displaystyle P\left(\chi^2_{\frac{\alpha}{2}}(n)<\frac{\displaystyle\sum_{i=1}^n(X_i-\mu)^2}{\sigma^2}<\chi^2_{1-\frac{\alpha}{2}}(n)\right)=1-\alpha
+$$
+
+得到 $\sigma^2$ 的置信区间
 
 $$
 \left(\frac{\displaystyle\sum_{i=1}^n(X_i-\mu)^2}{\chi^2_{1-\frac{\alpha}{2}}(n)},\frac{\displaystyle\sum_{i=1}^n(X_i-\mu)^2}{\chi^2_{\frac{\alpha}{2}}(n)}\right)
@@ -297,7 +303,13 @@ $$
 
 选枢轴量 $\displaystyle\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1)$
 
-由 $\displaystyle P\left(\chi^2_{\frac{\alpha}{2}}(n-1)<\frac{(n-1)S^2}{\sigma^2}<\chi^2_{1-\frac{\alpha}{2}}(n-1)\right)=1-\alpha$ 得到 $\sigma^2$ 的置信区间
+由
+
+$$
+\displaystyle P\left(\chi^2_{\frac{\alpha}{2}}(n-1)<\frac{(n-1)S^2}{\sigma^2}<\chi^2_{1-\frac{\alpha}{2}}(n-1)\right)=1-\alpha
+$$
+
+得到 $\sigma^2$ 的置信区间
 
 $$
 \left(\frac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n-1)},\frac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n-1)}\right)
