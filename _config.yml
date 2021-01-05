@@ -9,6 +9,7 @@ keyword: "北京航空航天大学, 计算机科学与技术"
 url: "https://coekjan.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/coekjan/coekjan.github.io.git" # you code repository
+github_url: "https://github.com/Coekjan"
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
