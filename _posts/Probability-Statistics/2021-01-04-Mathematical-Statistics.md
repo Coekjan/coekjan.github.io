@@ -323,7 +323,7 @@ $$
 
 #### $\sigma^2$ 已知, 检验 $\mu$
 
-选统计量 $\displaystyle\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0,1)$ .
+选统计量 $\displaystyle\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0,1)$
 
 ##### 检验假设 $H_0:\mu=\mu_0,H_1:\mu\neq\mu_0$
 
@@ -419,4 +419,104 @@ $$
 
 $$
 \frac{\overline{X}-\mu_0}{S/\sqrt{n}}<-t_{1-\alpha}(n-1)
+$$
+
+#### $\mu$ 已知, 检验 $\sigma^2$
+
+选统计量 $\displaystyle\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma_0}\right)^2\sim \chi^2(n)$
+
+##### 检验假设 $H_0:\sigma^2=\sigma_0^2,H_1:\sigma^2\neq\sigma_0^2$
+
+根据
+
+$$
+P_{H_0}\left[\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma_0}\right)^2<\chi^2_{\frac{\alpha}{2}}(n)\quad\text{or}\quad\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma_0}\right)^2>\chi^2_{1-\frac{\alpha}{2}}(n)\right]=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma_0}\right)^2<\chi^2_{\frac{\alpha}{2}}(n)\quad\text{or}\quad\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma_0}\right)^2>\chi^2_{1-\frac{\alpha}{2}}(n)
+$$
+
+##### 检验假设 $H_0:\sigma^2=\sigma_0^2,H_1:\sigma^2>\sigma_0^2$
+
+> $\sum(X_i-\mu)^2$ 不能太大, 否则拒绝.
+
+根据
+
+$$
+P_{H_0}\left[\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma_0}\right)^2>\chi^2_{1-\alpha}(n)\right]=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma_0}\right)^2>\chi^2_{1-\alpha}(n)
+$$
+
+##### 检验假设 $H_0:\sigma^2=\sigma_0^2,H_1:\sigma^2<\sigma_0^2$
+
+> $\sum(X_i-\mu)^2$ 不能太小, 否则拒绝.
+
+根据
+
+$$
+P_{H_0}\left[\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma_0}\right)^2<\chi^2_{\alpha}(n)\right]=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma_0}\right)^2<\chi^2_{\alpha}(n)
+$$
+
+#### $\mu$ 未知, 检验 $\sigma^2$
+
+选统计量 $\displaystyle\frac{(n-1)S^2}{\sigma_0^2}\sim\chi^2(n-1)$
+
+##### 检验假设 $H_0:\sigma^2=\sigma_0^2,H_1:\sigma^2\neq\sigma_0^2$
+
+根据
+
+$$
+P_{H_0}\left(\frac{(n-1)S^2}{\sigma_0^2}<\chi^2_{\frac{\alpha}{2}}(n-1)\quad\text{or}\quad\frac{(n-1)S^2}{\sigma_0^2}>\chi^2_{1-\frac{\alpha}{2}}(n-1)\right)=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\frac{(n-1)S^2}{\sigma_0^2}<\chi^2_{\frac{\alpha}{2}}(n-1)\quad\text{or}\quad\frac{(n-1)S^2}{\sigma_0^2}>\chi^2_{1-\frac{\alpha}{2}}(n-1)
+$$
+
+##### 检验假设 $H_0:\sigma^2=\sigma_0^2,H_1:\sigma^2>\sigma_0^2$
+
+> $S^2$ 不能太大, 否则拒绝.
+
+根据
+
+$$
+P_{H_0}\left(\frac{(n-1)S^2}{\sigma_0^2}>\chi^2_{1-\alpha}(n-1)\right)=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\frac{(n-1)S^2}{\sigma_0^2}>\chi^2_{1-\alpha}(n-1)
+$$
+
+##### 检验假设 $H_0:\sigma^2=\sigma_0^2,H_1:\sigma^2<\sigma_0^2$
+
+> $S^2$ 不能太小, 否则拒绝.
+
+根据
+
+$$
+P_{H_0}\left(\frac{(n-1)S^2}{\sigma_0^2}<\chi^2_{\alpha}(n-1)\right)=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\frac{(n-1)S^2}{\sigma_0^2}<\chi^2_{\alpha}(n-1)
 $$
