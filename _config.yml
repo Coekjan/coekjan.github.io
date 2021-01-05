@@ -18,8 +18,9 @@ sidebar-avatar: /img/about-ycj.jpg
 
 
 # SNS settings
-RSS: false
+RSS: true
 github_username:      coekjan
+mail: cn_yzr@qq.com
 
 
 # Build settings
