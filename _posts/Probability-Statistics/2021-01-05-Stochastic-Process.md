@@ -290,4 +290,163 @@ $$
 
 ### 离散参数马尔可夫链
 
-...
+#### 转移概率
+
+在离散参数马尔可夫链 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 中, 条件概率
+
+$$
+P(X(t_{m+1})=j\vert X(t_m)=i)=p_{ij}(t_m)
+$$
+
+称为 $X(t)$ 在时刻 $t_m$ 由状态 $i$ 一步转移到状态 $j$ 的一步转移概率, 简称转移概率.
+
+条件概率
+
+$$
+P(X(t_{m+n})=j\vert X(t_m)=i)=p_{ij}^{(n)}(t_m)
+$$
+
+称为 $X(t)$ 在时刻 $t_m$ 由状态 $i$ 经 $n$ 步转移到状态 $j$ 的 $n$ 步转移概率.
+
+##### 转移概率的性质
+
+对于状态空间 $S$ 中的任意两个状态 $i$ 和 $j$ , 恒有
+1. $p_{ij}^{(n)}(t_m)\ge 0$ ;
+2. $\displaystyle\sum_{j\in S}p_{ij}^{(n)}(t_m)=1\quad(n=1,2,\dotsm)$ .
+
+#### 离散参数齐次马尔可夫链
+
+在离散参数马尔可夫链 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 中, 如果一部转移概率 $p_{ij}(t_m)$ 不依赖于参数 $t_m$ , 即对任意两个不等参数 $t_m,t_k(m\neq k)$ 有
+
+$$
+P(X(t_{m+1})=j\vert X(t_m)=i)=P(X(t_{k+1})=j\vert X(t_k)=i)=p_{ij}
+$$
+
+则称此马尔可夫链具有齐次性或时齐性, 称 $X(t)$ 为离散参数齐次马尔可夫链.
+
+### 离散参数齐次马尔可夫链
+
+#### 转移概率矩阵
+
+设 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 是齐次马尔可夫链, 由于状态空间 $S$ 离散, 不妨设其状态空间为 $S=\{0,1,2,\dotsm,n\dotsm\}$ , 则对 $S$ 中任意两个状态 $i$ 和 $j$ , 由转移概率 $p_{ij}$ 排列的到一个矩阵
+
+$$
+\bm{P}=\begin{pmatrix}
+    p_{00} & p_{01} & \dotsm & p_{0j} & \dotsm\\
+    p_{10} & p_{11} & \dotsm & p_{1j} & \dotsm\\
+    \vdots & \vdots &        & \vdots &       \\
+    p_{i0} & p_{i1} & \dotsm & p_{ij} & \dotsm\\
+    \vdots & \vdots &        & \vdots &       
+\end{pmatrix}
+$$
+
+称该矩阵为一步转移概率矩阵. 该矩阵有显然有性质:
+1. $p_{ij}\ge 0$ , 即元素非负;
+2. $\displaystyle\sum_{j\in S}p_{ij}=1$ , 即行和为 $1$ .
+
+#### 科尔莫戈罗夫-查普曼方程
+
+设 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 是马尔可夫链, 则
+
+$$
+p_{ij}^{(n+l)}(t_m)=\sum_kp_{ik}^{(n)}(t_m)\cdot p_{kj}^{(l)}(t_{m+n})
+$$
+
+称为科尔莫戈罗夫-查普曼方程.
+
+若马尔可夫链齐次, 则上述方程可以化为
+
+$$
+p_{ij}^{(n+l)}=\sum_kp_{ik}^{(n)}\cdot p_{kj}^{(l)}
+$$
+
+当 $n=1,l=1$ 时, 得到
+
+$$
+p_{ij}^{(2)}=\sum_kp_{ik}p_{kj}
+$$
+
+写作矩阵形式, 即可得到
+
+$$
+\bm{P}^{(2)}=\bm{P}^2
+$$
+
+其中 $\bm{P}^{(2)}=\left(p_{ij}^{(2)}\right)$ 是两步转移概率矩阵. 进一步, 通过数学归纳法, 可以证明:
+
+$$
+\bm{P}^{(n)}=\bm{P}^n
+$$
+
+#### 有限维概率分布
+
+马尔可夫链 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 在初始时刻 $t_0$ 的概率分布:
+
+$$
+p_j(t_0)=P(X(t_0)=j)\quad j=0,1,2,\dotsm
+$$
+
+称为初始分布.
+
+初始分布和转移概率完全确定了马尔可夫链的任何有限维分布.
+
+设齐次马尔可夫链 $\{X(n),n=0,1,2\dotsm\}$ 的状态空间为 $S=\{0,1,2,\dotsm,i,\dotsm\}$ , 则对任意 $n$ 个非负整数 $k_1<k_2<\dotsm<k_n$ 和 $S$ 内任意 $n$ 个状态 $j_1,j_2,\dotsm,j_n$ , 有
+
+$$
+\begin{aligned}
+    &P(X(k_1)=j_1,X(k_2)=j_2,\dotsm,X(k_n)=j_n)\\
+    =&\sum_{i=0}^{+\infty}p_i(0)\cdot p_{ij_1}^{(k_1)}\cdot p_{j_1j_2}^{(k_2-k_1)}\dotsm p_{j_{n-1}j_n}^{(k_n-k_{n-1})}
+\end{aligned}
+$$
+
+> 记 $p_j(t_n)=P(X(t_n)=j)\quad j=0,1,2,\dotsm$ 为绝对概率或瞬时概率. 由全概率公式, 易得
+> 
+> $$
+> p_j(t_n)=\sum_{i=0}^{+\infty}p_i(t_{n-1})p_{ij}(t_{n-1})\qquad j=0,1,2,\dotsm
+> $$
+> 
+> 若马尔可夫链齐次, 则化为
+> 
+> $$
+> p_j(t_n)=\sum_{i=0}^{+\infty}p_i(t_{n-1})p_{ij}\qquad j=0,1,2,\dotsm
+> $$
+> 
+> 递推得
+> 
+> $$
+> p_j(t_n)=\sum_{i=0}^{+\infty}p_i(t_0)p_{ij}^{(n)}\qquad j=0,1,2,\dotsm
+> $$
+
+#### 平稳分布
+
+设 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 是齐次马尔可夫链, 则若存在概率分布
+
+$$
+\bm{\pi}=(\pi_0,\pi_1,\dotsm,\pi_j,\dotsm)\quad \left(\pi_j\ge0,\sum_{j=0}^{+\infty}\pi_j=1\right)
+$$
+
+满足
+
+$$
+\pi_j=\sum_{i=0}^{+\infty}\pi_ip_{ij}\quad j=0,1,2,\dotsm
+$$
+
+则称 $\bm{\pi}=(\pi_0,\pi_1,\dotsm,\pi_j,\dotsm)$ 为平稳分布, 称 $X(t)$ 具有平稳性, 是平稳齐次马尔可夫链.
+
+> 求平稳分布 $\bm{\pi}=(\pi_0,\pi_1,\dotsm,\pi_j,\dotsm)$ 的过程, 就是解线性方程组
+> 
+> $$
+> \bm{\pi P}=\bm{P}
+> $$
+
+若齐次马尔可夫链 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 的初始分布
+
+$$
+p_j(t_0)=P(X(t_0)=j)\quad j=0,1,2,\dotsm
+$$
+
+是一个平稳分布, 则
+
+$$
+p_j(t_n)=p_j(t_0)\quad j=0,1,2,\dotsm;n=0,1,2,\dotsm
+$$
