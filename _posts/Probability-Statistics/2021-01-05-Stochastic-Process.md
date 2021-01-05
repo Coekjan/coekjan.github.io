@@ -436,7 +436,7 @@ $$
 > 求平稳分布 $\bm{\pi}=(\pi_0,\pi_1,\dotsm,\pi_j,\dotsm)$ 的过程, 就是解线性方程组
 > 
 > $$
-> \bm{\pi P}=\bm{P}
+> \bm{\pi}=\bm{\pi P}
 > $$
 
 若齐次马尔可夫链 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 的初始分布
