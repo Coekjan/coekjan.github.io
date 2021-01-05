@@ -89,6 +89,16 @@
                         </a>
                     </li>
                     {% endif %}
+                    {% if site.mail %}
+                    <li>
+                        <a target="_blank" href="mailto:{{ site.mail }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
                 </ul>
                 <p class="copyright text-muted">
                     Copyright &copy; <a href="{{ site.github_url }}">{{ site.author }}</a> {{ site.time | date: '%Y' }} | Powered by <a href="http://huangxuan.me/">Hux Blog</a> | Supported by <a href="{{ site.github_repo }}">GitHub Page</a><br>
