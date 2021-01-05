@@ -212,7 +212,7 @@ $$
 设 $\hat{\theta}$ 为未知参数 $\theta$ 的估计量, 若
 
 $$
-E(\hat{\theta})=\theta
+E\left(\hat{\theta}\right)=\theta
 $$
 
 则称之为无偏.
@@ -222,7 +222,7 @@ $$
 设 $\hat{\theta}_1$ 和 $\hat{\theta}_2$ 都是总体参数 $\theta$ 的**无偏估计**, 且
 
 $$
-D(\hat{\theta}_1) < D(\hat{\theta}_2)
+D\left(\hat{\theta}_1\right) < D\left(\hat{\theta}_2\right)
 $$
 
 则称 $\hat{\theta}_1$ 比 $\hat{\theta}_2$ 更有效.
@@ -232,7 +232,7 @@ $$
 设 $\hat{\theta}$ 是总体参量 $\theta$ 的估计量, 若对于任意 $\theta\in\varTheta$ , 当 $n\rightarrow \infty$ 时, $\hat{\theta}$ 依概率收敛于 $\theta$ , 即
 
 $$
-\forall \varepsilon>0,\lim_{n\rightarrow\infty}P(\vert\hat{\theta}-\theta\vert\ge\varepsilon)=0
+\forall \varepsilon>0,\lim_{n\rightarrow\infty}P\left(\left\vert\hat{\theta}-\theta\right\vert\ge\varepsilon\right)=0
 $$
 
 则称 $\hat{\theta}$ 是总体参量 $\theta$ 的一致(或相合)估计量.
@@ -244,7 +244,7 @@ $$
 设 $\theta$ 是一个待估计的参数, $\alpha(0<\alpha<1)$ 是一给定的数. 若能找到两个统计量 $\hat{\theta}_1$ 和 $\hat{\theta}_2$ , 使得
 
 $$
-P(\hat{\theta}_1<\theta<\hat{\theta}_1)=1-\alpha
+P\left(\hat{\theta}_1<\theta<\hat{\theta}_1\right)=1-\alpha
 $$
 
 则称随机区间 $\left(\hat{\theta}_1,\hat{\theta}_2\right)$ 为参数 $\theta$ 的置信度为 $1-\alpha$ 的**置信区间**. 分别称 $\hat{\theta}_1$ 和 $\hat{\theta}_2$ 为置信下限和置信上限, $1-\alpha$ 称为置信水平或置信度.
@@ -259,8 +259,164 @@ $$
    P(a<g(X_1,X_2,\dotsm,X_n,\theta)<b)=1-\alpha
    $$
 
-3. 解出 $\theta\in(\underline{\theta},\overline{\theta})$ , 即为置信区间.
+3. 解出 $\theta\in\left(\underline{\theta},\overline{\theta}\right)$ , 即为置信区间.
 
 #### 正态总体均值与方差的区间估计
 
-...
+##### $\sigma^2$ 已知, 求 $\mu$ 的置信区间
+
+选枢轴量 $\displaystyle \frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)$
+
+由 $\displaystyle P\left(\left\vert\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\right\vert< z_{1-\frac{\alpha}{2}}\right)=1-\alpha$ 得到 $\mu$ 的置信区间
+
+$$
+\left(\overline{X}-z_{1-\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}},\overline{X}+z_{1-\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}\right)
+$$
+
+##### $\sigma^2$ 未知,  求 $\mu$ 的置信区间
+
+选枢轴量 $\displaystyle \frac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$
+
+由 $\displaystyle P\left(\left\vert\frac{\overline{X}-\mu}{S/\sqrt{n}}\right\vert<t_{1-\frac{\alpha}{2}}(n-1)\right)=1-\alpha$ 得到 $\mu$ 的置信区间
+
+$$
+\left(\overline{X}-t_{1-\frac{\alpha}{2}}(n-1)\frac{S}{\sqrt{n}},\overline{X}+t_{1-\frac{\alpha}{2}}(n-1)\frac{S}{\sqrt{n}}\right)
+$$
+
+##### $\mu$ 已知, 求 $\sigma^2$ 的置信区间
+
+选枢轴量 $\displaystyle\sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma}\right)^2\sim\chi^2(n)$
+
+由 $\displaystyle P\left(\chi^2_{\frac{\alpha}{2}}(n)<\frac{\displaystyle\sum_{i=1}^n(X_i-\mu)^2}{\sigma^2}<\chi^2_{1-\frac{\alpha}{2}}(n)\right)=1-\alpha$ 得到 $\sigma^2$ 的置信区间
+
+$$
+\left(\frac{\displaystyle\sum_{i=1}^n(X_i-\mu)^2}{\chi^2_{1-\frac{\alpha}{2}}(n)},\frac{\displaystyle\sum_{i=1}^n(X_i-\mu)^2}{\chi^2_{\frac{\alpha}{2}}(n)}\right)
+$$
+
+##### $\mu$ 未知, 求 $\sigma^2$ 的置信区间
+
+选枢轴量 $\displaystyle\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1)$
+
+由 $\displaystyle P\left(\chi^2_{\frac{\alpha}{2}}(n-1)<\frac{(n-1)S^2}{\sigma^2}<\chi^2_{1-\frac{\alpha}{2}}(n-1)\right)=1-\alpha$ 得到 $\sigma^2$ 的置信区间
+
+$$
+\left(\frac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n-1)},\frac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n-1)}\right)
+$$
+
+> 若要求单侧置信区间, 则只需要取不等式的一边, 并调整分位点:
+> 
+> $$
+> \frac{\alpha}{2}\rightarrow\alpha
+> $$
+> 
+> 即可.
+
+## 假设检验
+
+在给定了显著性水平 $\alpha$ 的前提下, 接受或拒绝原假设都完全取决于样本值, 因此检验可能会发生两类错误:
+* 第一类错误: 事实上原假设正确, 却拒绝
+* 第二类错误: 事实上原假设错误, 却接受
+
+> 通常把有把握, 有经验的结论作为原假设. 立场的不同会导致检验结果不同.
+
+### 正态总体均值和方差的假设检验
+
+#### $\sigma^2$ 已知, 检验 $\mu$
+
+选统计量 $\displaystyle\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0,1)$ .
+
+##### 检验假设 $H_0:\mu=\mu_0,H_1:\mu\neq\mu_0$
+
+根据
+
+$$
+P_{H_0}\left(\left\vert\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\right\vert>z_{1-\frac{\alpha}{2}}\right)=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\left\vert\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\right\vert>z_{1-\frac{\alpha}{2}}
+$$
+
+##### 检验假设 $H_0:\mu=\mu_0,H_1:\mu>\mu_0$
+
+> $\overline{X}$ 不能太大, 否则拒绝.
+
+根据
+
+$$
+P_{H_0}\left(\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}>z_{1-\alpha}\right)=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}>z_{1-\alpha}
+$$
+
+##### 检验假设 $H_0:\mu=\mu_0,H_1:\mu<\mu_0$
+
+> $\overline{X}$ 不能太小, 否则拒绝.
+
+根据
+
+$$
+P_{H_0}\left(\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}<-z_{1-\alpha}\right)=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}<-z_{1-\alpha}
+$$
+
+#### $\sigma^2$ 未知, 检验 $\mu$
+
+选统计量 $\displaystyle\frac{\overline{X}-\mu_0}{S/\sqrt{n}}\sim t(n-1)$
+
+##### 检验假设 $H_0:\mu=\mu_0,H_1:\mu\neq\mu_0$
+
+根据
+
+$$
+P_{H_0}\left(\left\vert\frac{\overline{X}-\mu_0}{S/\sqrt{n}}\right\vert>t_{1-\frac{\alpha}{2}}(n-1)\right)=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\left\vert\frac{\overline{X}-\mu_0}{S/\sqrt{n}}\right\vert>t_{1-\frac{\alpha}{2}}(n-1)
+$$
+
+##### 检验假设 $H_0:\mu=\mu_0,H_1:\mu>\mu_0$
+
+> $\overline{X}$ 不能太大, 否则拒绝.
+
+根据
+
+$$
+P_{H_0}\left(\frac{\overline{X}-\mu_0}{S/\sqrt{n}}>t_{1-\alpha}(n-1)\right)=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\frac{\overline{X}-\mu_0}{S/\sqrt{n}}>t_{1-\alpha}(n-1)
+$$
+
+##### 检验假设 $H_0:\mu=\mu_0,H_1:\mu<\mu_0$
+
+> $\overline{X}$ 不能太小, 否则拒绝.
+
+根据
+
+$$
+P_{H_0}\left(\frac{\overline{X}-\mu_0}{S/\sqrt{n}}<-t_{1-\alpha}(n-1)\right)=\alpha
+$$
+
+得到拒绝域:
+
+$$
+\frac{\overline{X}-\mu_0}{S/\sqrt{n}}<-t_{1-\alpha}(n-1)
+$$
