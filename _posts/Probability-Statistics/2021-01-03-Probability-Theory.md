@@ -142,7 +142,7 @@ $$
 则对于任意事件 $A$ , 恒有:
 
 $$
-P(B_i\vert A)=\frac{P(AB_i)}{A}=\frac{P(B_i)P(A\vert B_i)}{\displaystyle\sum_{j=1}^nP(B_j)P(A\vert B_j)}\quad i=1,2,\dotsm,n
+P(B_i\vert A)=\frac{P(AB_i)}{P(A)}=\frac{P(B_i)P(A\vert B_i)}{\displaystyle\sum_{j=1}^nP(B_j)P(A\vert B_j)}\quad i=1,2,\dotsm,n
 $$
 
 > 贝叶斯公式提供了从结果推测原因的方法.
