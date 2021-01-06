@@ -3,8 +3,6 @@
 
 This respository supports **[Coekjan's Blog](https://coekjan.github.io)**.
 
----
-
 ### Developer
 
 #### @Coekjan
