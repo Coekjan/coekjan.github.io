@@ -1,22 +1,23 @@
-### [Coekjan's Blog](https://coekjan.github.io)
+[Coekjan's Blog](https://coekjan.github.io)
+============================================
 
 This respository supports **[Coekjan's Blog](https://coekjan.github.io)**.
 
 ---
 
-#### Developer
+### Developer
 
-##### @Coekjan
+#### @Coekjan
 * Studying in *School of Computer Science and Engineering, Beihang University*
 * From *Zhaoqing, Guangdong*
 
-#### Topic
+### Topic
 
 * ***Computer Science***
 * ***Mathematics***
 * ***Natural Science***
 
-#### Acknowledgements
+### Acknowledgements
 
 The template of the blog refers to
 
@@ -31,7 +32,7 @@ The website is supported by
 * **[MathJax](https://www.mathjax.org/)**
 * **[KaTeX](https://katex.org/)**
 
-#### License
+### License
 
 **The respository is licensed under the [MIT License](https://github.com/Coekjan/coekjan.github.io/blob/main/LICENSE)** .
 
