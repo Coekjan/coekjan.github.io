@@ -910,25 +910,25 @@ $$
 C_{ij}=\operatorname{Cov}(X_i,X_j)\quad i,j=1,2,\dotsm,n
 $$
 
-存在, 则称矩阵 $\mathbf{C}=(C_{ij})_{n\times n}$ 为这个随机向量的协方差矩阵.
+存在, 则称矩阵 $\bm{C}=(C_{ij})_{n\times n}$ 为这个随机向量的协方差矩阵.
 
 通过协方差矩阵, 可以导出 $n$ 为正态随机变量 $(X_1,X_2,\dotsm,X_n)$ 的定义.
 
 设 $n$ 维随机向量 $(X_1,X_2,\dotsm,X_n)$ , 若其概率密度为
 
 $$
-f(x_1,x_2,\dotsm,x_n)=\frac{1}{(2\pi)^{\frac{n}{2}}(\det \mathbf{C})^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\mathbf{X}-\mathbf{U})^T\mathbf{C}^{-1}(\mathbf{X}-\mathbf{U})\right]
+f(x_1,x_2,\dotsm,x_n)=\frac{1}{(2\pi)^{\frac{n}{2}}(\det \bm{C})^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\bm{X}-\bm{U})^T\bm{C}^{-1}(\bm{X}-\bm{U})\right]
 $$
 
 其中
 
 $$
-\mathbf{X}=\begin{pmatrix}
+\bm{X}=\begin{pmatrix}
   x_1\\
   x_2\\
   \vdots\\
   x_n
-\end{pmatrix},\mathbf{U}=\begin{pmatrix}
+\end{pmatrix},\bm{U}=\begin{pmatrix}
   \mu_1\\
   \mu_2\\
   \vdots\\
@@ -936,9 +936,9 @@ $$
 \end{pmatrix}
 $$
 
-且 $\mathbf{C}$ 是对称正定矩阵, 则称这个随机变量服从 $n$ 维正态分布.
+且 $\bm{C}$ 是对称正定矩阵, 则称这个随机变量服从 $n$ 维正态分布.
 
-可以证明, 其中的矩阵 $\mathbf{C}$ 正是 $(X_1,X_2,\dotsm,X_n)$ 的协方差矩阵.
+可以证明, 其中的矩阵 $\bm{C}$ 正是 $(X_1,X_2,\dotsm,X_n)$ 的协方差矩阵.
 
 ## 大数定律和中心极限定理
 
