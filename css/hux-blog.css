@@ -56,7 +56,7 @@
   overflow: auto;
   height: 100%;
   padding-bottom: 40px;
-  width: 195px;
+  width: 250px;
 }
 .side-catalog.fixed {
   position: fixed;
@@ -99,17 +99,31 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.side-catalog .catalog-body .h1_nav,
-.side-catalog .catalog-body .h2_nav,
-.side-catalog .catalog-body .h3_nav {
+.side-catalog .catalog-body .h1_nav {
   margin-left: 0;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
 }
-.side-catalog .catalog-body .h4_nav,
-.side-catalog .catalog-body .h5_nav,
+.side-catalog .catalog-body .h2_nav {
+  margin-left: 0;
+  font-size: 14px;
+  /* font-weight: bold; */
+}
+.side-catalog .catalog-body .h3_nav {
+  margin-left: 15px;
+  font-size: 14px;
+  /* font-weight: bold; */
+}
+.side-catalog .catalog-body .h4_nav {
+  margin-left: 25px;
+  font-size: 12px;
+}
+.side-catalog .catalog-body .h5_nav {
+  margin-left: 30px;
+  font-size: 12px;
+}
 .side-catalog .catalog-body .h6_nav {
-  margin-left: 10px;
+  margin-left: 35px;
   font-size: 12px;
 }
 .side-catalog .catalog-body .h4_nav a,
