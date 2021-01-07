@@ -268,7 +268,7 @@ $$
 另, 称
 
 $$
-\rho_{XY}(\tau)=\frac{C_{XY}(\tau)}{\sqrt{C_X\cdot C_Y}}
+\rho_{XY}(\tau)=\frac{C_{XY}(\tau)}{\sqrt{\sigma_X^2\cdot \sigma_Y^2}}
 $$
 
 为标准互协方差函数.
