@@ -61,13 +61,13 @@ $$
 
 ##### 顺序统计量
 
-设 $X_1,X_2,\dotsm,X_n$ 为取自总体 $X$ 的样本, $x_1,x_2,\dotsm,x_n$ 为样本的观测值. 将观测值依次序排列得到 $x_1^*\le x_2^*\le\dotsm\le x_n^*$ . 规定 $X_k^*$ 的取值为 $x_k^*$ 就得到 $X_1,X_2,\dotsm,X_n$ 的一组顺序统计量 $X_1^*,X_2^*,\dotsm,X_n^*$ , 有:
+设 $X_1,X_2,\dotsm,X_n$ 为取自总体 $X$ 的样本, $x_1,x_2,\dotsm,x_n$ 为样本的观测值. 将观测值依次序排列得到 $x_1^\star\le x_2^\star\le\dotsm\le x_n^\star$ . 规定 $X_k^\star$ 的取值为 $x_k^\star$ 就得到 $X_1,X_2,\dotsm,X_n$ 的一组顺序统计量 $X_1^\star,X_2^\star,\dotsm,X_n^\star$ , 有:
 
 $$
-X_1^*\le X_2^*\le\dotsm\le X_n^*
+X_1^\star\le X_2^\star\le\dotsm\le X_n^\star
 $$
 
-其中 $X_1^*=\displaystyle\min_{1\le i\le n} X_i,\quad X_n^*=\displaystyle\max_{1\le i\le n} X_i$ . 称 $D=X_n^*-X_1^*$ 为极差.
+其中 $X_1^\star=\displaystyle\min_{1\le i\le n} X_i,\quad X_n^\star=\displaystyle\max_{1\le i\le n} X_i$ . 称 $D=X_n^\star-X_1^\star$ 为极差.
 
 ### 常用统计量的分布
 
