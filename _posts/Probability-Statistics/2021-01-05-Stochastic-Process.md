@@ -17,7 +17,7 @@ tags:
 
 #### 随机过程的 $n$ 维分布函数
 
-设 $\{X(t),t\in T\}$ 是一随机过程, 对于参数集 $T$ 内任意 $n$ 个元素 $t_1,t_2,\dotsm,t_n$ 所对应的 $n$ 个随机变量
+设 $\left\{X(t),t\in T\right\}$ 是一随机过程, 对于参数集 $T$ 内任意 $n$ 个元素 $t_1,t_2,\dotsm,t_n$ 所对应的 $n$ 个随机变量
 
 $$
 X(t_1),X(t_2),\dotsm,X(t_n)
@@ -55,7 +55,7 @@ $$
 
 #### 两个随机过程的有限维联合分布及独立性
 
-设 $\{X(t),t\in T_1\}$ 和 $\{Y(t),t\in T_2\}$ 是两个随机过程, 由过程 $X(t)$ 的任意 $m$ 个状态: $X(t_1),X(t_2),\dotsm,X(t_m)$ , 和过程 $Y(t)$ 的任意 $n$ 个状态: $Y(t_1'),Y(t_2'),\dotsm,Y(t_n')$ 组成 $m+n$ 维随机向量. 其分布函数
+设 $\left\{X(t),t\in T_1\right\}$ 和 $\left\{Y(t),t\in T_2\right\}$ 是两个随机过程, 由过程 $X(t)$ 的任意 $m$ 个状态: $X(t_1),X(t_2),\dotsm,X(t_m)$ , 和过程 $Y(t)$ 的任意 $n$ 个状态: $Y(t_1'),Y(t_2'),\dotsm,Y(t_n')$ 组成 $m+n$ 维随机向量. 其分布函数
 
 $$
 F_{XY}(x_1,\dotsm,x_m,y_1,\dotsm,y_n;t_1,\dotsm,t_m,t_1',\dotsm,t_n')
@@ -76,7 +76,7 @@ $$
 
 ### 随机过程的数字特征
 
-考虑随机过程 $\{X(t),t\in T\}$ , 对于任意给定的 $t\in T$ , 过程在 $t$ 的状态 $X(t)$ 是一个随机变量, 则:
+考虑随机过程 $\left\{X(t),t\in T\right\}$ , 对于任意给定的 $t\in T$ , 过程在 $t$ 的状态 $X(t)$ 是一个随机变量, 则:
 1. 过程在 $t$ 的状态 $X(t)$ 的数学期望为
    
    $$
@@ -134,7 +134,7 @@ $$
 
 #### 两个随机过程的互相关函数
 
-对于两个随机过程 $\{X(t),t\in T_1\}$ 和 $\{Y(t),t\in T_2\}$ , 任选 $t_1\in T_1,t_2\in T_2$ , 对应有过程 $X(t)$ 在 $t_1$ 的状态 $X(t_1)$ 和过程 $Y(t)$ 在 $t_2$ 的状态 $Y(t_2)$ . $X(t_1)$ 和 $Y(t_2)$ 的二阶原点混合矩
+对于两个随机过程 $\left\{X(t),t\in T_1\right\}$ 和 $\left\{Y(t),t\in T_2\right\}$ , 任选 $t_1\in T_1,t_2\in T_2$ , 对应有过程 $X(t)$ 在 $t_1$ 的状态 $X(t_1)$ 和过程 $Y(t)$ 在 $t_2$ 的状态 $Y(t_2)$ . $X(t_1)$ 和 $Y(t_2)$ 的二阶原点混合矩
 
 $$
 R_{XY}(t_1,t_2)=E[X(t_1)\cdot Y(t_2)]
@@ -162,7 +162,7 @@ $$
 
 ### 严平稳过程
 
-设随机过程 $\{X(t),t\in T\}$ , 如果对任意 $t_1,t_2,\dotsm,t_n\in T$ , 任意实数 $\varepsilon$ , 有 $t_1+\varepsilon,t_2+\varepsilon,\dotsm,t_n+\varepsilon\in T$ , 对任意 $n$ 维分布函数都有
+设随机过程 $\left\{X(t),t\in T\right\}$ , 如果对任意 $t_1,t_2,\dotsm,t_n\in T$ , 任意实数 $\varepsilon$ , 有 $t_1+\varepsilon,t_2+\varepsilon,\dotsm,t_n+\varepsilon\in T$ , 对任意 $n$ 维分布函数都有
 
 $$
 \begin{aligned}
@@ -175,7 +175,7 @@ $$
 
 #### 严平稳过程一维分布和二维分布的性质
 
-设随机过程 $\{X(t),t\in T\}$ 是严平稳过程, 则:
+设随机过程 $\left\{X(t),t\in T\right\}$ 是严平稳过程, 则:
 1. 一维分布函数
    
    $$
@@ -193,7 +193,7 @@ $$
 
 #### 离散状态随机过程的严平稳条件
 
-设离散状态随机过程 $\{X(t),t\in T\}$ . 对于任意 $t_1,t_2,\dotsm,t_n\in T$ , 任意实数 $\varepsilon$ , 有 $t_1+\varepsilon,t_2+\varepsilon,\dotsm,t_n+\varepsilon\in T$ , 且有
+设离散状态随机过程 $\left\{X(t),t\in T\right\}$ . 对于任意 $t_1,t_2,\dotsm,t_n\in T$ , 任意实数 $\varepsilon$ , 有 $t_1+\varepsilon,t_2+\varepsilon,\dotsm,t_n+\varepsilon\in T$ , 且有
 
 $$
 \begin{aligned}
@@ -204,7 +204,7 @@ $$
 
 #### 连续状态随机过程的严平稳条件
 
-设连续状态随机过程 $\{X(t),t\in T\}$ . 对于任意 $t_1,t_2,\dotsm,t_n\in T$ , 任意实数 $\varepsilon$ , 有 $t_1+\varepsilon,t_2+\varepsilon,\dotsm,t_n+\varepsilon\in T$ , 且有
+设连续状态随机过程 $\left\{X(t),t\in T\right\}$ . 对于任意 $t_1,t_2,\dotsm,t_n\in T$ , 任意实数 $\varepsilon$ , 有 $t_1+\varepsilon,t_2+\varepsilon,\dotsm,t_n+\varepsilon\in T$ , 且有
 
 $$
 \begin{aligned}
@@ -227,13 +227,13 @@ $$
 
 #### 严平稳过程的数字特征性质
 
-设随机过程 $\{X(t),t\in T\}$ 是严平稳过程, 若该过程的二阶矩存在, 则
+设随机过程 $\left\{X(t),t\in T\right\}$ 是严平稳过程, 若该过程的二阶矩存在, 则
 1. $\mu_X(t)=\mu_X,\varPsi_X^2(t)=\varPsi_X^2,\sigma_X^2(t)=\sigma_X^2$ 均为常数, 与参数 $t$ 无关.
 2. $R_X(t_1,t_2)=R_X(\tau),C_X(t_1,t_2)=C_X(\tau)$ 仅依赖于参数间距, 而不依赖于参数本身.
 
 ### 广义平稳过程
 
-设随机过程 $\{X(t),t\in T\}$ , 对于任意 $t\in T$ , 满足:
+设随机过程 $\left\{X(t),t\in T\right\}$ , 对于任意 $t\in T$ , 满足:
 1. $E[X^2(t)]$ 存在且有限;
 2. $E[X(t)]=\mu_X$ 是常数;
 3. $E[X(t)X(t+\tau)]=R_X(\tau)$ 仅依赖于 $\tau$ 而与 $t$ 无关.
@@ -244,7 +244,7 @@ $$
 
 #### 广义平稳过程的数字特征性质
 
-设随机过程 $\{X(t),t\in T\}$ 是平稳过程, 则
+设随机过程 $\left\{X(t),t\in T\right\}$ 是平稳过程, 则
 1. $E[X(t)]=\mu_X$ 是常数;
 2. $E[X^2(t)]=\varPsi_X^2$ 是常数;
 3. $D[X(t)]=\varPsi_X^2-\mu_X^2=\sigma_X^2$ 是常数;
@@ -277,7 +277,7 @@ $$
 
 ### 马尔可夫链的概念
 
-设随机过程 $\{X(t),t\in T\}$ 的状态空间 $S$ 是有限集或可列集, 若对任意正整数 $n$ , 对于 $T$ 内任意 $n+1$ 个参数 $t_1<t_2<\dotsm<t_n<t_{n+1}$ 和 $S$ 内任意 $n+1$ 个状态 $j_1,j_2,\dotsm,j_n,j_{n+1}$ , 条件概率
+设随机过程 $\left\{X(t),t\in T\right\}$ 的状态空间 $S$ 是有限集或可列集, 若对任意正整数 $n$ , 对于 $T$ 内任意 $n+1$ 个参数 $t_1<t_2<\dotsm<t_n<t_{n+1}$ 和 $S$ 内任意 $n+1$ 个状态 $j_1,j_2,\dotsm,j_n,j_{n+1}$ , 条件概率
 
 $$
 \begin{aligned}
@@ -292,7 +292,7 @@ $$
 
 #### 转移概率
 
-在离散参数马尔可夫链 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 中, 条件概率
+在离散参数马尔可夫链 $\left\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\right\}$ 中, 条件概率
 
 $$
 P(X(t_{m+1})=j\vert X(t_m)=i)=p_{ij}(t_m)
@@ -316,7 +316,7 @@ $$
 
 #### 离散参数齐次马尔可夫链
 
-在离散参数马尔可夫链 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 中, 如果一部转移概率 $p_{ij}(t_m)$ 不依赖于参数 $t_m$ , 即对任意两个不等参数 $t_m,t_k(m\neq k)$ 有
+在离散参数马尔可夫链 $\left\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\right\}$ 中, 如果一部转移概率 $p_{ij}(t_m)$ 不依赖于参数 $t_m$ , 即对任意两个不等参数 $t_m,t_k(m\neq k)$ 有
 
 $$
 P(X(t_{m+1})=j\vert X(t_m)=i)=P(X(t_{k+1})=j\vert X(t_k)=i)=p_{ij}
@@ -328,7 +328,7 @@ $$
 
 #### 转移概率矩阵
 
-设 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 是齐次马尔可夫链, 由于状态空间 $S$ 离散, 不妨设其状态空间为 $S=\{0,1,2,\dotsm,n\dotsm\}$ , 则对 $S$ 中任意两个状态 $i$ 和 $j$ , 由转移概率 $p_{ij}$ 排列的到一个矩阵
+设 $\left\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\right\}$ 是齐次马尔可夫链, 由于状态空间 $S$ 离散, 不妨设其状态空间为 $S=\left\{0,1,2,\dotsm,n\dotsm\right\}$ , 则对 $S$ 中任意两个状态 $i$ 和 $j$ , 由转移概率 $p_{ij}$ 排列的到一个矩阵
 
 $$
 \bm{P}=\begin{pmatrix}
@@ -346,7 +346,7 @@ $$
 
 #### 科尔莫戈罗夫-查普曼方程
 
-设 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 是马尔可夫链, 则
+设 $\left\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\right\}$ 是马尔可夫链, 则
 
 $$
 p_{ij}^{(n+l)}(t_m)=\sum_kp_{ik}^{(n)}(t_m)\cdot p_{kj}^{(l)}(t_{m+n})
@@ -380,7 +380,7 @@ $$
 
 #### 有限维概率分布
 
-马尔可夫链 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 在初始时刻 $t_0$ 的概率分布:
+马尔可夫链 $\left\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\right\}$ 在初始时刻 $t_0$ 的概率分布:
 
 $$
 p_j(t_0)=P(X(t_0)=j)\quad j=0,1,2,\dotsm
@@ -390,7 +390,7 @@ $$
 
 初始分布和转移概率完全确定了马尔可夫链的任何有限维分布.
 
-设齐次马尔可夫链 $\{X(n),n=0,1,2\dotsm\}$ 的状态空间为 $S=\{0,1,2,\dotsm,i,\dotsm\}$ , 则对任意 $n$ 个非负整数 $k_1<k_2<\dotsm<k_n$ 和 $S$ 内任意 $n$ 个状态 $j_1,j_2,\dotsm,j_n$ , 有
+设齐次马尔可夫链 $\left\{X(n),n=0,1,2\dotsm\right\}$ 的状态空间为 $S=\left\{0,1,2,\dotsm,i,\dotsm\right\}$ , 则对任意 $n$ 个非负整数 $k_1<k_2<\dotsm<k_n$ 和 $S$ 内任意 $n$ 个状态 $j_1,j_2,\dotsm,j_n$ , 有
 
 $$
 \begin{aligned}
@@ -419,7 +419,7 @@ $$
 
 #### 平稳分布
 
-设 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 是齐次马尔可夫链, 则若存在概率分布
+设 $\left\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\right\}$ 是齐次马尔可夫链, 则若存在概率分布
 
 $$
 \bm{\pi}=(\pi_0,\pi_1,\dotsm,\pi_j,\dotsm)\quad \left(\pi_j\ge0,\sum_{j=0}^{+\infty}\pi_j=1\right)
@@ -439,7 +439,7 @@ $$
 > \bm{\pi}=\bm{\pi P}
 > $$
 
-若齐次马尔可夫链 $\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\}$ 的初始分布
+若齐次马尔可夫链 $\left\{X(t),t=t_0,t_1,t_2,\dotsm,t_n,\dotsm\right\}$ 的初始分布
 
 $$
 p_j(t_0)=P(X(t_0)=j)\quad j=0,1,2,\dotsm
