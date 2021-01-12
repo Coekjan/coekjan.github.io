@@ -170,8 +170,8 @@ $$
 
 $$
 \begin{aligned}
-    \Delta \lambda&=\lambda-\lambda_0=\frac{h}{m_0c}(1-\cos\phi)=\frac{2h}{m_0c}\sin^2\frac{\phi}{2}\\
-    \xRightarrow{\lambda_c:=h/(m_0c)}\Delta \lambda&=2\lambda_c\sin^2\frac{\phi}{2}
+    \Delta \lambda&=\lambda-\lambda_0=\frac{h}{m_0c}(1-\cos\theta)=\frac{2h}{m_0c}\sin^2\frac{\theta}{2}\\
+    \xRightarrow{\lambda_c:=h/(m_0c)}\Delta \lambda&=2\lambda_c\sin^2\frac{\theta}{2}
 \end{aligned}
 $$
 
