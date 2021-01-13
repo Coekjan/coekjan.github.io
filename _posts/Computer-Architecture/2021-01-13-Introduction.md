@@ -181,10 +181,10 @@ tags:
 
 CP0寄存器名称 | 读写 | 寄存器规范
 --: | :-: | :--
-SR(Status-Register) | R/W | `IM`(设备中断使能), `EXL`(当前是否在中断), `IE`(全局中断使能)
-CAUSE(Cause-Register) | R | `IP`(设备中断请求), `EXC`(异常码), `BD`(分支延迟)
-EPC(Exception-PC) | R/W | `EPC`(异常返回点)
-PR(Processor-Register) | R | `0xDEAD_C0DE`(自定义型号)
+SR(状态寄存器) | R/W | `IM`(设备中断使能), `EXL`(是否处于内核态), `IE`(全局中断使能)
+CAUSE(原因寄存器) | R | `IP`(设备中断请求), `EXC`(异常码), `BD`(分支延迟)
+EPC(异常PC寄存器) | R/W | `EPC`(异常返回点)
+PR(处理器寄存器) | R | `0xDEAD_C0DE`(自定义型号)
 
 #### 非标准规格
 
