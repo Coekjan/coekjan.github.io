@@ -10,7 +10,7 @@
 }
 
 .highlight pre code {
-  white-space: pre;       // forces <code> to respect <pre> formatting
+  white-space: pre-line;       // forces <code> to respect <pre> formatting
 }
 
 
