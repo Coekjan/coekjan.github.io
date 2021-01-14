@@ -70,14 +70,14 @@ PRJ文件用于说明工程包含哪些模块, 使用绝对路径说明. 如若`
 mips.prj
 mips.v
 mips_tb.v
->   datapath
-    datapath.v
-    >   module
-        module1.v
-        module2.v
->   controller
-    decoder.v
-    main_controller.v
+- datapath
+  datapath.v
+  - module
+    module1.v
+    module2.v
+- controller
+  decoder.v
+  main_controller.v
 ```
 
 则需要在`mips.prj`中编写:
