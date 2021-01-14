@@ -111,9 +111,7 @@ ISim命令行需要设置环境变量, 我们采用**Python3**来设置环境变
 
 ```python
 import os
-
 # ...
-
 os.environ['XILINX'] = xilinx_path
 os.system(xilinx_path + '\\bin\\nt64\\fuse -nodebug -prj mips.prj -o mips.exe mips_tb >log.txt')
 os.system('mips.exe -nolog -tclbatch mips.tcl > test_ans.txt')
