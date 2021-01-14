@@ -28,9 +28,7 @@ MARS提供了命令行工具运行MIPS汇编程序, 具体可在**MARS->Help->MA
 
 ```cmd
 java -jar <mars> <assembly-file> [db] nc mc CompactDataAtZero a dump .text HexText code.txt
-```
 
-```cmd
 java -jar <mars> <assembly-file> [db] nc mc CompactDataAtZero a dump 0x00004180-0x00005180 HexText code_handler.txt
 ```
 
