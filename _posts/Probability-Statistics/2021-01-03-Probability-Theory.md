@@ -382,7 +382,7 @@ $$
 1. $\varPhi(0)=\displaystyle\frac{1}{2}$ ;
 2. $\varPhi(x)+\varPhi(-x)=1$
 
-若 $\xi\sim N(\mu,\sigma)$ , 则 $\zeta=\displaystyle\frac{\xi-\mu}{\sigma}\sim N(0,1)$ , 因此若 $\xi$ 的分布函数为 $F(x)$ , 则:
+若 $\xi\sim N(\mu,\sigma^2)$ , 则 $\zeta=\displaystyle\frac{\xi-\mu}{\sigma}\sim N(0,1)$ , 因此若 $\xi$ 的分布函数为 $F(x)$ , 则:
 
 $$
 F(x)=\varPhi\left(\frac{x-\mu}{\sigma}\right)
