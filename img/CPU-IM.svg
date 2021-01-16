@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 CPU-IM.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="3.60884in" height="2.56787in"
+		viewBox="0 0 259.837 184.887" xml:space="preserve" color-interpolation-filters="sRGB" class="st6">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st2 {fill:#000000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st3 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st4 {fill:#000000;font-family:Times New Roman;font-size:1.5em;font-weight:bold}
+		.st5 {fill:#000000;font-family:Times New Roman;font-size:0.666664em;font-weight:bold}
+		.st6 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="group1041-1" transform="translate(18,-19.5)" v:mID="1041" v:groupContext="group">
+			<title>IM.1041</title>
+			<g id="shape1042-2" v:mID="1042" v:groupContext="shape" transform="translate(3.63779,0)">
+				<title>工作表.1042</title>
+				<rect x="0" y="37.5" width="216.614" height="147.387" class="st1"/>
+			</g>
+			<g id="shape1043-4" v:mID="1043" v:groupContext="shape" transform="translate(2.26772,-72.2762)">
+				<title>PC.1008</title>
+				<ellipse cx="1.41732" cy="183.47" rx="1.41732" ry="1.41732" class="st2"/>
+			</g>
+			<g id="shape1044-6" v:mID="1044" v:groupContext="shape" transform="translate(218.835,-72.2762)">
+				<title>PC.1019</title>
+				<ellipse cx="1.41732" cy="183.47" rx="1.41732" ry="1.41732" class="st2"/>
+			</g>
+			<g id="shape1045-8" v:mID="1045" v:groupContext="shape" transform="translate(68.1496,-54.5596)">
+				<title>工作表.1045</title>
+				<desc>IM</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="43.7953" cy="165.753" width="87.6" height="38.2677"/>
+				<rect x="0" y="146.619" width="87.5906" height="38.2677" class="st3"/>
+				<text x="31.8" y="171.15" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>IM</text>			</g>
+			<g id="shape1046-11" v:mID="1046" v:groupContext="shape" transform="translate(-5.9952E-15,-59.2672)">
+				<title>PC.1032</title>
+				<desc>Addr</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="16.1575" cy="170.461" width="32.32" height="28.8526"/>
+				<rect x="0" y="156.034" width="32.315" height="28.8526" class="st3"/>
+				<text x="7.04" y="172.86" class="st5" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>Addr</text>			</g>
+			<g id="shape1047-14" v:mID="1047" v:groupContext="shape" transform="translate(190.772,-59.2672)">
+				<title>PC.1039</title>
+				<desc>Instr</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="16.1575" cy="170.461" width="32.32" height="28.8526"/>
+				<rect x="0" y="156.034" width="32.315" height="28.8526" class="st3"/>
+				<text x="7.71" y="172.86" class="st5" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>Instr</text>			</g>
+		</g>
+	</g>
+</svg>
