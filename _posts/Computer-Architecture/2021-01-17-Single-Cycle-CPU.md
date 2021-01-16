@@ -30,14 +30,14 @@ $6$ | $5$ | $5$ | $5$ | $5$ | $6$
 
 #### I型
 
-$31\qquad26$ | $25\qquad21$ | $20\qquad16$ | $15\qquad\qquad\qquad\qquad\qquad\qquad0$ 
+$31\qquad26$ | $25\qquad21$ | $20\qquad16$ | $15\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$ 
 :-:|:-:|:-:|:-:
 **opcode**|**rs**|**rt**|**imm16**
 $6$ | $5$ | $5$ | $16$
 
 #### J型
 
-$31\qquad26$ | $25\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$
+$31\qquad26$ | $25\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$
 :-:|:-:|:-:|:-:
 **opcode**|**imm26**
 $6$ | $26$
