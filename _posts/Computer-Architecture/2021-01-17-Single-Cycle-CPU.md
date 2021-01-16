@@ -70,9 +70,13 @@ $6$ | $26$
 
 ### PC (Program Counter)
 
-程序计数器, 引导指令存储器读出指令.
+程序计数器: 引导指令存储器读出指令.
+
+![]({{ '/img/CPU-PC.svg' | prepend: site.baseurl}})
 
 ### IM (Instruction Memory)
+
+指令存储器: 存储指令的只读模块, 输出的指令由地址端支配.
 
 ### GRF (General Register File)
 
