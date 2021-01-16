@@ -78,7 +78,13 @@ $6$ | $26$
 
 指令存储器: 存储指令的只读模块, 输出的指令由地址端支配.
 
+![]({{ '/img/CPU-IM.svg' | prepend: site.baseurl}})
+
 ### GRF (General Register File)
+
+通用寄存器文件, 内置32个通用寄存器(其中0号寄存器恒为0), 外部支持同时读取两个寄存器, 写一个寄存器.
+
+![]({{ '/img/CPU-GRF.svg' | prepend: site.baseurl}})
 
 ### EXT (Extender)
 
