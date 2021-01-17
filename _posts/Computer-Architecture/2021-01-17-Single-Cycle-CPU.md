@@ -62,7 +62,7 @@ $6$ | $26$
 `lw` | I | $$\begin{aligned}&\rm GRF[rt]\leftarrow\rm DM[GRF [rs]+sign\_ext(imm16) ]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将rs号寄存器的值, 与imm16**符号扩展**的值**相加**, 以之为地址访问内存中的字, 将整字**存入rt号**寄存器.
 `sw` | I | $$\begin{aligned}&\rm DM[GRF [rs]+sign\_ext(imm16) ]\leftarrow\rm GRF[rt]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将rs号寄存器的值, 与imm16**符号扩展**的值**相加**, 以之为地址定位到内存字单元, 将rt号寄存器的值整字存入其中.
 `beq` | I | $$\begin{aligned}&\rm if\quad GRF[rs]==GRF[rt]\quad then\\&\qquad\rm PC\leftarrow PC+4+sign\_ext(imm16\:\vert\vert\:0^2)\\& \rm else\\&\rm\qquad PC\leftarrow PC+4\end{aligned}$$ | 若rs号寄存器的值, 与rt号寄存器的值**相等**, 则将imm16**低位补两位0**, 并**符号扩展**后得到偏移量, PC相对于下一条指令作**偏移**.
-`j` | J | $$\rm PC\leftarrow PC[31\dots28]\:\vert\vert\:imm26\:\vert\vert\:0^2$$ | 将imm26**低位补两位0**, 并**高位拼接PC[31:28]**, 得到新PC值, **存入PC**寄存器.
+`j` | J | $$\rm PC\leftarrow PC_{31\dots28}\:\vert\vert\:imm26\:\vert\vert\:0^2$$ | 将imm26**低位补两位0**, 并**高位拼接PC[31:28]**, 得到新PC值, **存入PC**寄存器.
 
 > 我们须找到指令的共性, 从而得知系统的关键部件.
 
