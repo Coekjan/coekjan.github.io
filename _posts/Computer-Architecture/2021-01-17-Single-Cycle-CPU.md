@@ -11,6 +11,8 @@ tags:
     - Computer Architecture  
 ---
 
+本节将构造一个支持指令集{`addu`, `subu`, `addiu`, `lui`, `ori`, `lw`, `sw`, `beq`, `j`}的单周期CPU.
+
 ## MIPS指令特征
 
 ### 三大类指令
@@ -30,14 +32,14 @@ $6$ | $5$ | $5$ | $5$ | $5$ | $6$
 
 #### I型
 
-$31\qquad26$ | $25\qquad21$ | $20\qquad16$ | $15\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$ 
+$31\qquad26$ | $25\qquad21$ | $20\qquad16$ | $15\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$ 
 :-:|:-:|:-:|:-:
 **opcode**|**rs**|**rt**|**imm16**
 $6$ | $5$ | $5$ | $16$
 
 #### J型
 
-$31\qquad26$ | $25\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$
+$31\qquad26$ | $25\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$
 :-:|:-:|:-:|:-:
 **opcode**|**imm26**
 $6$ | $26$
@@ -106,4 +108,3 @@ $6$ | $26$
 
 ## 数据通路构造
 
-//...
