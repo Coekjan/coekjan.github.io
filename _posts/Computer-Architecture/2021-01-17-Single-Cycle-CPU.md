@@ -64,11 +64,11 @@ $6$ | $26$
 `beq` | I | $$\begin{aligned}&\rm if\quad GRF[rs]==GRF[rt]\quad then\\&\qquad\rm PC\leftarrow PC+4+sign\_ext(imm16\:\vert\vert\:0^2)\\& \rm else\\&\rm\qquad PC\leftarrow PC+4\end{aligned}$$ | 若rs号寄存器的值, 与rt号寄存器的值**相等**, 则将imm16**低位补两位0**, 并**符号扩展**后得到偏移量, PC相对于下一条指令作**偏移**.
 `j` | J | $$\rm PC\leftarrow PC[31\dots28]\:\vert\vert\:imm26\:\vert\vert\:0^2$$ | 将imm26**低位补两位0**, 并**高位拼接PC[31:28]**, 得到新PC值, **存入PC**寄存器.
 
-> 我们须找到指令的共性, 从而得知 CPU 的关键部件.
+> 我们须找到指令的共性, 从而得知系统的关键部件.
 
 ## 关键部件
 
-从上述对MIPS指令的特征分析, 我们指出, CPU中必须包含如下的关键部件.
+从上述对MIPS指令的特征分析, 我们指出, 系统中必须包含如下的关键部件.
 
 ### PC (Program Counter)
 
@@ -175,11 +175,11 @@ assign GRF_WEn      =   addu | subu | addiu | lui | ori | lw;
 //...
 ```
 
-## CPU组装
+## 系统组装
 
 ![]({{ '/img/S-CPU.svg' | prepend: site.baseurl}})
 
-## CPU测试
+## 系统测试
 
 ### 样例
 
@@ -191,7 +191,7 @@ assign GRF_WEn      =   addu | subu | addiu | lui | ori | lw;
 
 > 这一分解过程是有尽头的, 若分解到某一显然正确的部件, 那么就不需要继续往下分解.
 
-## CPU增量开发
+## 系统增量开发
 
 本节仅考虑了9条简单的指令, 如果需要对指令规模进行增量开发, 则可以按照以下步骤进行:
 1. RTL分析: 根据新指令RTL, 若已有部件可以支持新指令, 则直接进行指令集分析; 否则则需要为新指令增设新部件.
