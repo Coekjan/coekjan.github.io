@@ -28,7 +28,7 @@ $31\qquad26$ | $25\qquad21$ | $20\qquad16$ | $15\qquad11$ | $10\qquad6$| $5\qqua
 **opcode**|**rs**|**rt**|**rd**|**shamt**|**funct**
 $6$ | $5$ | $5$ | $5$ | $5$ | $6$
 
-> R型的opcode为`000000`; 使用不同的funct用以区分不同的R型指令.
+> R 型的 opcode 为 `000000` ; 使用不同的 funct 用以区分不同的 R 型指令.
 
 #### I型
 
@@ -64,7 +64,7 @@ $6$ | $26$
 `beq` | I | $$\begin{aligned}&\rm if\quad GRF[rs]==GRF[rt]\quad then\\&\qquad\rm PC\leftarrow PC+4+sign\_ext(imm16\:\vert\vert\:0^2)\\& \rm else\\&\rm\qquad PC\leftarrow PC+4\end{aligned}$$ | 若rs号寄存器的值, 与rt号寄存器的值**相等**, 则将imm16**低位补两位0**, 并**符号扩展**后得到偏移量, PC相对于下一条指令作**偏移**.
 `j` | J | $$\rm PC\leftarrow PC[31\dots28]\:\vert\vert\:imm26\:\vert\vert\:0^2$$ | 将imm26**低位补两位0**, 并**高位拼接PC[31:28]**, 得到新PC值, **存入PC**寄存器.
 
-> 我们需要找到指令的共性, 从而得知CPU需要具备的关键部件.
+> 我们须找到指令的共性, 从而得知 CPU 的关键部件.
 
 ## CPU关键部件
 
@@ -82,6 +82,12 @@ $6$ | $26$
 
 ![]({{ '/img/CPU-IM.svg' | prepend: site.baseurl}})
 
+### NPC (Next PC)
+
+Next PC的计算模块: 用于计算转移型指令的PC转移去向.
+
+![]({{ '/img/CPU-NPC.svg' | prepend: site.baseurl}})
+
 ### GRF (General Register File)
 
 通用寄存器文件: 内置32个通用寄存器(其中0号寄存器恒为0), 外部支持同时读取两个寄存器, 写一个寄存器.
@@ -96,7 +102,9 @@ $6$ | $26$
 
 ### ALU(Arithmetic Logic Unit)
 
-算术逻辑单元: 支持加, 减, 按位或, 高位加载.
+算术逻辑单元: 支持加, 减, 按位或, 高位加载, 异或.
+
+> 异或操作用于 `beq` 的"相等"判定.
 
 ![]({{ '/img/CPU-ALU.svg' | prepend: site.baseurl}})
 
@@ -108,3 +116,30 @@ $6$ | $26$
 
 ## 数据通路构造
 
+为构造数据通路, 我们必须分析指令集对通路的要求.
+
+### 指令集分析
+
+下面对指令集{`addu`, `subu`, `addiu`, `lui`, `ori`, `lw`, `sw`, `beq`, `j`}中部分指令所需的通路连接进行分析.
+
+> 其中, `subu` 与 `addu` 所需路径一致; `lui` , `ori` 与 `addiu` 所需路径一致.
+
+指令 | `addu` | `addiu` | `lw` | `sw` | `beq` | `j`
+:-: | :-: | :-: | :-: | :-: | :-: | :-:
+`PC.Next` | `PC.PC+4` | `PC.PC+4` | `PC.PC+4` | `PC.PC+4` | `NPC.NextPC` | `NPC.NextPC`
+`IM.Addr` | `PC.PC` | `PC.PC` | `PC.PC` | `PC.PC` | `PC.PC` | `PC.PC`
+`GRF.Addr1` | `IM.Instr[rs]` | `IM.Instr[rs]` |  `IM.Instr[rs]` | `IM.Instr[rs]` | `IM.Instr[rs]` | -
+`GRF.Addr2` | `IM.Instr[rt]` | - | - | `IM.Instr[rt]` | `IM.Instr[rt]` | -
+`EXT.In16` | - | `IM.Instr[imm16]` | `IM.Instr[imm16]` | `IM.Instr[imm16]` | - | -
+`ALU.SrcA` | `GRF.RData1` | `GRF.RData1` | `GRF.RData1` | `GRF.RData1` | `GRF.RData1` | -
+`ALU.SrcB` | `GRF.RData2` | `EXT.Out32` | `EXT.Out32` | `EXT.Out32` | `GRF.RData2` | -
+`DM.Addr` | - | - | `ALU.Out` | `ALU.Out` | - | -
+`DM.WData` | - | - | - | `GRF.RData2` | - | -
+`GRF.Addr3` | `IM.Instr[rd]` | `IM.Instr[rd]` | `IM.Instr[rt]` | - | - | -
+`GRF.WData`| `ALU.Out` | `ALU.Out` | `DM.RData` | - | - | -
+
+这样, 我们横向合并, 即可得到某输入端口所有的数据来源. 如: `ALU.SrcB` 端的来源有: `GRF.RData2` , `EXT.Out32` .
+
+若某端口的输入来源只有一个, 那么只需直接连接来源即可; 若某端口的输入来源不止一个, 那么就必须引入多路选择器, 并增加一个控制信号以选择数据.
+
+### 通路形成
