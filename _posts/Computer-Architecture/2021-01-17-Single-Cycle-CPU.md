@@ -84,7 +84,7 @@ $6$ | $26$
 
 ### NPC (Next PC)
 
-Next PC的计算模块: 用于计算转移型指令的PC转移去向.
+Next PC的计算模块: 用于计算下一条指令的PC.
 
 ![]({{ '/img/CPU-NPC.svg' | prepend: site.baseurl}})
 
@@ -126,7 +126,7 @@ Next PC的计算模块: 用于计算转移型指令的PC转移去向.
 
 指令 | `addu` | `addiu` | `lw` | `sw` | `beq` | `j`
 :-: | :-: | :-: | :-: | :-: | :-: | :-:
-`PC.Next` | `PC.PC+4` | `PC.PC+4` | `PC.PC+4` | `PC.PC+4` | `NPC.NextPC` | `NPC.NextPC`
+`PC.Next` | `NPC.NextPC` | `NPC.NextPC` | `NPC.NextPC` | `NPC.NextPC` | `NPC.NextPC` | `NPC.NextPC`
 `IM.Addr` | `PC.PC` | `PC.PC` | `PC.PC` | `PC.PC` | `PC.PC` | `PC.PC`
 `GRF.Addr1` | `IM.Instr[rs]` | `IM.Instr[rs]` |  `IM.Instr[rs]` | `IM.Instr[rs]` | `IM.Instr[rs]` | -
 `GRF.Addr2` | `IM.Instr[rt]` | - | - | `IM.Instr[rt]` | `IM.Instr[rt]` | -
@@ -143,3 +143,5 @@ Next PC的计算模块: 用于计算转移型指令的PC转移去向.
 若某端口的输入来源只有一个, 那么只需直接连接来源即可; 若某端口的输入来源不止一个, 那么就必须引入多路选择器, 并增加一个控制信号以选择数据.
 
 ### 通路形成
+
+![]({{ '/img/S-CPU-DP.svg' | prepend: site.baseurl}})
