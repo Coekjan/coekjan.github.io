@@ -76,18 +76,34 @@ $6$ | $26$
 
 ### IM (Instruction Memory)
 
-指令存储器: 存储指令的只读模块, 输出的指令由地址端支配.
+指令存储器: 字节编址, 存储指令的只读模块, 输出的指令由地址端支配.
 
 ![]({{ '/img/CPU-IM.svg' | prepend: site.baseurl}})
 
 ### GRF (General Register File)
 
-通用寄存器文件, 内置32个通用寄存器(其中0号寄存器恒为0), 外部支持同时读取两个寄存器, 写一个寄存器.
+通用寄存器文件: 内置32个通用寄存器(其中0号寄存器恒为0), 外部支持同时读取两个寄存器, 写一个寄存器.
 
 ![]({{ '/img/CPU-GRF.svg' | prepend: site.baseurl}})
 
 ### EXT (Extender)
 
+扩展器: 支持零扩展与符号扩展.
+
+![]({{ '/img/CPU-EXT.svg' | prepend: site.baseurl}})
+
 ### ALU(Arithmetic Logic Unit)
 
+算术逻辑单元: 支持加, 减, 按位或, 高位加载.
+
+![]({{ '/img/CPU-ALU.svg' | prepend: site.baseurl}})
+
 ### DM (Data Memory)
+
+数据存储器: 字节编址, 读写数据宽为一字.
+
+![]({{ '/img/CPU-DM.svg' | prepend: site.baseurl}})
+
+## 数据通路构造
+
+//...
