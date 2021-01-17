@@ -145,3 +145,33 @@ Next PC的计算模块: 用于计算下一条指令的PC.
 ### 通路形成
 
 ![]({{ '/img/S-CPU-DP.svg' | prepend: site.baseurl}})
+
+## 控制器
+
+从数据通路中, 可以看出通路需要以下控制信号:
+* `PC.En`
+* `NPC.Ctrl`
+* `GRF.WEn`
+* `EXT.Ctrl`
+* `ALU.Ctrl`
+* `DM.WEn`
+
+以及三个的多选器选择信号.
+
+为产生这些信号, 我们需要得到指令的opcode与funct进行分析. Verilog实现的部分代码如下:
+
+```verilog
+/* Identify */
+wire addu   = (opcode == 6'b000000) && (funct == 6'b100001);
+wire subu   = (opcode == 6'b000000) && (funct == 6'b100011);
+// ...
+wire j      = (opcode == 6'b000010);
+
+/* Generate */
+assign PC_En        =   1; // Always update PC
+assign NPC_Ctrl     =   beq     ? `BrEq :
+                        j       ? `Jmp  : `Add4;
+assign GRF_WEn      =   addu | subu | addiu | lui | ori | lw;
+//...
+```
+
