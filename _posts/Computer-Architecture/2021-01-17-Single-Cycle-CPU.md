@@ -19,7 +19,7 @@ tags:
 
 MIPS指令均为32位的01串, 根据这32位的功能划分, 可以粗略得到三大指令类型: R型, I型, J型.
 
-#### R型
+**R型**
 
 R型指令的编码如下:
 
@@ -30,14 +30,14 @@ $6$ | $5$ | $5$ | $5$ | $5$ | $6$
 
 > R 型的 opcode 为 `000000` ; 使用不同的 funct 用以区分不同的 R 型指令.
 
-#### I型
+**I型**
 
 $31\qquad26$ | $25\qquad21$ | $20\qquad16$ | $15\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$ 
 :-:|:-:|:-:|:-:
 **opcode**|**rs**|**rt**|**imm16**
 $6$ | $5$ | $5$ | $16$
 
-#### J型
+**J型**
 
 $31\qquad26$ | $25\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$
 :-:|:-:|:-:|:-:
@@ -181,11 +181,11 @@ assign GRF_WEn      =   addu | subu | addiu | lui | ori | lw;
 
 ## CPU测试
 
-### 样例构造
+### 样例
 
 单周期CPU中, 前后指令的指令不冲突, 因此只需进行正确性测试.
 
-### 系统验证
+### 验证
 
 根据系统论, 某系统若能分解为若干个子系统以及它们之间的关联方式, 则只需要证明子系统与关联方式正确, 则可以断言该系统正确. 而验证子系统只需要继续按该思路分解并验证.
 
