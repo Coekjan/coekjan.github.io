@@ -4,6 +4,7 @@ title:      『Physics』 Mechanical Wave
 subtitle:   『物理学』 机械波    
 date:       2020-12-31	   
 author:     Coekjan 
+header-img: ""	
 catalog:    true	
 katex:    true    
 tags:	

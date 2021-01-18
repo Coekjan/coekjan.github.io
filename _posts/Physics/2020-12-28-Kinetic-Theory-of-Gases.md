@@ -4,6 +4,7 @@ title:      『Physics』 Kinetic Theory of Gases
 subtitle:   『物理学』 气体动理论    
 date:       2020-12-28	   
 author:     Coekjan 
+header-img: ""	
 catalog:    true	
 katex:    true    
 tags:	

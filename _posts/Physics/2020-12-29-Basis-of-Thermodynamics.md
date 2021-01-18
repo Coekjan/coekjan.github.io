@@ -4,6 +4,7 @@ title:      『Physics』 Basis of Thermodynamics
 subtitle:   『物理学』 热力学基础    
 date:       2020-12-29	   
 author:     Coekjan 
+header-img: ""	
 catalog:    true	
 katex:    true    
 tags:	

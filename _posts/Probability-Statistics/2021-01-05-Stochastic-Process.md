@@ -4,6 +4,7 @@ title:      『Probability Statistics』 Stochastic Process
 subtitle:   『概率统计』 随机过程    
 date:       2021-01-05	   
 author:     Coekjan 
+header-img: ""	
 catalog:    true	
 katex:    true    
 tags:	

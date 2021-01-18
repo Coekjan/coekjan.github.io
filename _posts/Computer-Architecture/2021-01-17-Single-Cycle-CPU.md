@@ -4,6 +4,7 @@ title:      『Computer Architecture』 Single Cycle CPU
 subtitle:   『计算机体系结构』 单周期CPU    
 date:       2021-01-17	   
 author:     Coekjan 
+header-img: ""	
 catalog:    true    
 katex:  true    
 tags:	
