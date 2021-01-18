@@ -4,7 +4,6 @@ title:      『Physics』 Mechanical Vibration
 subtitle:   『物理学』 机械振动    
 date:       2020-12-30	   
 author:     Coekjan 
-header-img: img/post-bg-PHY.jpg	
 catalog:    true	
 katex:    true    
 tags:	

@@ -4,7 +4,6 @@ title:      『Probability Statistics』 Mathematical Statistics
 subtitle:   『概率统计』 数理统计    
 date:       2021-01-04	   
 author:     Coekjan 
-header-img: img/post-bg-PS.jpg	
 catalog:    true	
 katex:    true    
 tags:	

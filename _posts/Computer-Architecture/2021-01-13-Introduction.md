@@ -4,7 +4,6 @@ title:      『Computer Architecture』 Introduction
 subtitle:   『计算机体系结构』 引言    
 date:       2021-01-13	   
 author:     Coekjan 
-header-img: img/post-bg-CA.jpg	
 catalog:    true	
 tags:	
     - Computer Architecture  

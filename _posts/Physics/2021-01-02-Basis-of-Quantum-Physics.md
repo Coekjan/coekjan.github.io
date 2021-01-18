@@ -4,7 +4,6 @@ title:      『Physics』 Basis of Quantum Physics
 subtitle:   『物理学』 量子物理基础    
 date:       2021-01-02	   
 author:     Coekjan 
-header-img: img/post-bg-PHY.jpg	
 catalog:    true	
 katex:    true    
 tags:	

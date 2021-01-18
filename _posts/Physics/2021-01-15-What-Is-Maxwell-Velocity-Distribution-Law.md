@@ -4,7 +4,6 @@ title:      『Physics』 What Is Maxwell Velocity Distribution Law
 subtitle:   『物理学』 何为麦克斯韦速度分布    
 date:       2021-01-15	   
 author:     Coekjan 
-header-img: img/post-bg-PHY.jpg	
 catalog:    true	
 katex:    true    
 tags:	

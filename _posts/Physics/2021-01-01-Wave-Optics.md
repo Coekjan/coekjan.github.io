@@ -4,7 +4,6 @@ title:      『Physics』 Wave Optics
 subtitle:   『物理学』 波动光学    
 date:       2021-01-01	   
 author:     Coekjan 
-header-img: img/post-bg-PHY.jpg	
 catalog:    true	
 katex:    true    
 tags:	

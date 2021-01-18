@@ -4,7 +4,6 @@ title:      『Probability Statistics』 Probability Theory
 subtitle:   『概率统计』 概率论    
 date:       2021-01-03	   
 author:     Coekjan 
-header-img: img/post-bg-PS.jpg	
 catalog:    true	
 katex:    true    
 tags:	
