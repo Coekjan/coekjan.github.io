@@ -4,7 +4,7 @@ title:      『C Programming』 Memory Space And Allocation
 subtitle:   『C程序设计』 内存空间与分配    
 date:       2021-01-18	   
 author:     Coekjan 
-header-img: ""	
+header-img: img/post-bg-CP.jpg	
 catalog:    true    
 tags:	
     - C Programming  

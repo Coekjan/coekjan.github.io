@@ -4,7 +4,7 @@ title:      『Computer Architecture』 Automatic Testing
 subtitle:   『计算机体系结构』 自动化测试    
 date:       2021-01-14	   
 author:     Coekjan 
-header-img: ""	
+header-img: img/post-bg-CA.jpg	
 catalog:    true	
 tags:	
     - Computer Architecture  
