@@ -1,4 +1,4 @@
-[Coekjan's Blog](https://coekjan.github.io)
+[Coekjan's Blog](https://coekjan.cn)
 ============================================
 
 This respository supports **[Coekjan's Blog](https://coekjan.github.io)**.
