@@ -509,7 +509,7 @@ $$
 其中:
 
 $$
-\alpha:=\frac{\pi a}{\lambda}\sin\theta\quad\beta=\frac{\pi(a+b)}{\lambda}\sin\theta
+\alpha:=\frac{\pi a}{\lambda}\sin\theta\quad\beta:=\frac{\pi(a+b)}{\lambda}\sin\theta
 $$
 
 其中 $\displaystyle\left(\frac{\sin\alpha}{\alpha}\right)^2$ 为单缝衍射因子, $\displaystyle\left(\frac{\sin N\beta}{\sin\beta}\right)^2$ 为多缝干涉因子.
