@@ -67,6 +67,7 @@ C程序中常常使用`malloc`与`calloc`进行动态内存分配. 动态内存�
 **动态分配的内存必须使用`free`进行释放**. 分析如下程序:
 
 ```c
+#include <stdlib.h>
 int main() { // 危险行为, 请勿轻易尝试
     char *ptr;
     for(;;) {
