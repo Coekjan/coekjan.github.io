@@ -241,7 +241,18 @@ LO[31:0] | O | LO寄存器的值
 
 通过指令集分析, 我们可以构造出如下的通路, 此通路并未考虑转发旁路:
 
+![]({{ '/img/P-CPU-DP-2.svg' | prepend: site.baseurl}})
+
 ### 增加转发旁路 - 冲突解决
+
+应用上文的需求-供给模型, 我们不难找到所有的转发旁路:
+1. D级需求: E->D(如序列`jal-addu`), M->D(如序列`jal-nop-addu`)(W->D隐藏于GRF的内部转发中);
+2. E级需求: M->E(如序列`addu-addu`), W->E(如序列`addu-nop-addu`)
+3. M级需求: W->M(如序列`addu-sw`)
+
+那么只需在需求端给予多选器, 接受供给端的数据, 即可完成旁路的设计.
+
+![]({{ '/img/P-CPU-DP-3.svg' | prepend: site.baseurl}})
 
 ## 流水线控制
 
