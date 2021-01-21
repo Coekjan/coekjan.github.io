@@ -110,9 +110,136 @@ addu    $2, $1, $3
 
 ## 流水线数据通路
 
-// 待续...
+### 指令集分析
+
+分析[指令集](https://blog.coekjan.cn/2021/01/13/Introduction/#指令集仅支持定点指令)中前50条指令, 其过程与单周期中的分析表格类似. 我们有以下结论:
+1. GRF需要支持内部转发功能.
+2. ALU需要支持的运算有加法, 减法, 逻辑左移, 逻辑右移, 算术右移, 按位与, 按位或, 按位异或, 按位或非, 高位加载, 小于置位.
+3. 需支持字节, 半字, 整字三种写内存方式, 为此, 引入新模块BE产生字节使能, DM需支持字节使能端口.
+4. 需支持字节, 半字, 整字三种读内存方式, 为此, 引入新模块DBS, 对DM的输出进行截选.
+5. 需支持乘除法与`HI`, `LO`两个寄存器, 应在E级增加一乘除法元件MDU.
+6. 由于D级与F级间有一个周期延迟, 需另加一`+4`模块完成PC计算, NPC仅完成转移型指令的PC计算.
+
+#### GRF的内部转发
+
+以`RData1`为例:
+
+```verilog
+assign RData1 = (Addr1 == 5'b0)         ? 32'b0 :
+                (Addr1 == Addr3) && WEn ? WData : reg_array[Addr1]; // 内部转发
+/*
+ * 不支持内部转发时:
+ * assign RData1 = (Addr1 == 5'b0) ? 32'b0 : reg_array[Addr1];
+ */
+```
+
+其本质是W级向D级的转发过程.
+
+#### 字节使能的产生与使用, 数据截选
+
+##### BE模块
+
+![]({{ '/img/CPU-BE.svg' | prepend: site.baseurl}})
+
+```verilog
+module BE(
+    input [1:0] Addr10,
+    input [`StTypeWidth - 1:0] StType,
+    output [3:0] ByteEn
+);
+    assign ByteEn = StType == `StWord ? (4'b1111) :
+                    StType == `StHalf ? (
+                        Addr10 == 2'b00 ? 4'b0011 :
+                        Addr10 == 2'b10 ? 4'b1100 : 4'bx
+                    ) : 
+                    StType == `StByte ? (
+                        Addr10 == 2'b00 ? 4'b0001 :
+                        Addr10 == 2'b01 ? 4'b0010 :
+                        Addr10 == 2'b10 ? 4'b0100 :
+                        Addr10 == 2'b11 ? 4'b1000 : 4'bx
+                    ) : 4'bx;
+endmodule
+/*
+ * 对于一个整字, 可以划分为四个字节, 若某字节对应的使能为1, 则将其写入, 否则不写入.
+ */
+```
+
+##### DM模块
+
+![]({{ '/img/CPU-DM-BE.svg' | prepend: site.baseurl}})
+
+```verilog
+/*
+ * input [31:0] Addr
+ * input [31:0] WData
+ * input [3:0] ByteEn
+ * reg [31:0] data_mem [0:`DataMemSize - 1];
+ */
+wire [31:0] odata   = data_mem[Addr[/* 截选地址来寻址 */]];
+wire [31:0] wr_data = ByteEn == 4'b1111 ? WData :
+                      ByteEn == 4'b0011 ? {odata[31:16], WData[15: 0]}               :
+                      ByteEn == 4'b1100 ? {WData[15: 0], odata[15: 0]}               :
+                      ByteEn == 4'b0001 ? {odata[31: 8], WData[ 7: 0]}               :
+                      ByteEn == 4'b0010 ? {odata[31:16], WData[ 7: 0], odata[ 7: 0]} :
+                      ByteEn == 4'b0100 ? {odata[31:24], WData[ 7: 0], odata[15: 0]} :
+                      ByteEn == 4'b1000 ? {WData[ 7: 0], odata[23: 0]}               : 32'bx;
+// wr_data 是最终要写入的整字
+```
+
+##### DBS模块
+
+![]({{ '/img/CPU-DBS.svg' | prepend: site.baseurl}})
+
+```verilog
+module DBS(
+    input [1:0] Addr10,
+    input [31:0] RData,
+    input [`LdTypeWidth - 1:0] LdType,
+    output [31:0] Data
+);
+    assign Data = LdType == `LdWord      ? RData :
+                  LdType == `LdHalfUnsgn ? (
+                      Addr10 == 2'b00 ? {16'b0, RData[15: 0]} :
+                      Addr10 == 2'b10 ? {16'b0, RData[31:16]} : 32'bx
+                  ) :
+                  LdType == `LdHalfSgn   ? (
+                      Addr10 == 2'b00 ? {{16{RData[15]}}, RData[15: 0]} :
+                      Addr10 == 2'b10 ? {{16{RData[31]}}, RData[31:16]} : 32'bx
+                  ) : // ...
+endmodule
+```
+
+#### 模拟乘除法元件MDU
+
+本设计中约定, 乘除法使用有限状态机进行模拟仿真:
+1. 乘法耗时5周期, 除法耗时10周期;
+2. 乘除法元件接受到Start信号后的第一个时钟上升沿开始执行运算, 输出Busy为1;
+3. 运算结果保存在`HI`和`LO`后, Busy置0;
+4. 当Start或Busy为1时, 其他涉及乘除法元件的指令均被阻塞在D级.
+5. 数据写入`HI`或`LO`只需一周期.
+
+![]({{ '/img/CPU-MDU.svg' | prepend: site.baseurl}})
+
+其端口功能如下:
+
+端口 | 方向 | 说明
+:-: | :-: | :--
+Clk | I | 时钟信号
+Rst | I | 同步复位信号
+HIWEn | I | HI寄存器写使能
+LOWEn | I | LO寄存器写使能
+Value[31:0] | I | 时钟上升沿来临时, 若复位信号为0, 相应写使能有效, 则向相应寄存器写入Value
+Data1[31:0] | I | 运算数1
+Data2[31:0] | I | 运算数2
+Ctrl[`MDUCtrlWidth - 1:0] | I | 控制信号
+Start | I | 启动信号
+Busy | O | 指示模块是否忙
+HI[31:0] | O | HI寄存器的值
+LO[31:0] | O | LO寄存器的值
 
 ### 构建无旁路的通路 - 功能实现
+
+通过指令集分析, 我们可以构造出如下的通路, 此通路并未考虑转发旁路:
 
 ### 增加转发旁路 - 冲突解决
 
