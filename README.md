@@ -25,6 +25,8 @@ The template of the blog refers to
 
 The website is supported by
 * **[Jekyll](https://jekyllrb.com/)**
+* **[CODING Pages](https://help.coding.net/docs/pages/intro.html)**
+* **[Tencent Cloud](https://cloud.tencent.com/)**
 * **[Github Pages](https://pages.github.com/)**
 * **[Bootstrap](https://getbootstrap.com/)**
 * **[MathJax](https://www.mathjax.org/)**
