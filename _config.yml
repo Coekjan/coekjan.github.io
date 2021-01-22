@@ -71,7 +71,7 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: ee9b74f1c8c80b3f24b4773e223309ee
+ba_track_id: 8613fa30570545f35048d06bc3bd3fe6
 
 # Google Analytics
 # ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
