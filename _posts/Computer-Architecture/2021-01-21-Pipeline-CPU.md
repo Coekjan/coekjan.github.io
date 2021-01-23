@@ -270,7 +270,7 @@ LO[31:0] | O | LO寄存器的值
 assign GRF_WE = 1; // 写使能恒为1
 assign GRF_Addr3 = /* write GRF[rt] */ ? rt    :
                    /* write GRF[rd] */ ? rd    :
-                   /* write GRF[31] */ ? 5'b31 : 0; // 若不写寄存器, 则置Addr3为0
+                   /* write GRF[31] */ ? 5'd31 : 0; // 若不写寄存器, 则置Addr3为0
 ```
 
 > 写 `0` 寄存器相当于不写寄存器.
