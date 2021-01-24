@@ -30,6 +30,13 @@ char * global_string_constant = "Coekjan";
      * global_string_constant 是全局变量, 存于已初始化数据段
      * "Coekjan" 是只读的静态字符串, 存于已初始化数据段的常量区
      */
+char global_char_array[] = "Hey!";
+    /*
+     * 该定义等价于
+     * char global_char_array[] = {'H', 'e', 'y', '!', '\0'};
+     * 实质上是定义了一个全局数组, 存于栈上, 是可读可写的!!
+     * 请注意与上一个声明方法进行区分.
+     */
 int global_array[100]; // 全局数组, 存于未初始化的数据段
 
 void func(char func_argument) {
