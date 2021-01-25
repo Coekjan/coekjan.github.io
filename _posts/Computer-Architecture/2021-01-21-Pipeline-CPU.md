@@ -11,7 +11,7 @@ tags:
     - Computer Architecture  
 ---
 
-本节将构造一个支持[指令集](https://blog.coekjan.cn/2021/01/13/Introduction/#指令集仅支持定点指令)中前50条指令的流水线CPU. 暂不进行异常检测.
+本节将构造一个支持引言指令集中前50条指令的流水线CPU. 暂不进行异常检测.
 
 ## 流水线思想
 
