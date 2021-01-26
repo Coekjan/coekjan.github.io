@@ -152,12 +152,7 @@ module BE(
                         Addr10 == 2'b00 ? 4'b0011 :
                         Addr10 == 2'b10 ? 4'b1100 : 4'bx
                     ) : 
-                    StType == `StByte ? (
-                        Addr10 == 2'b00 ? 4'b0001 :
-                        Addr10 == 2'b01 ? 4'b0010 :
-                        Addr10 == 2'b10 ? 4'b0100 :
-                        Addr10 == 2'b11 ? 4'b1000 : 4'bx
-                    ) : 4'bx;
+                    // ...
 endmodule
 /*
  * 对于一个整字, 可以划分为四个字节, 若某字节对应的使能为1, 则将其写入, 否则不写入.
@@ -179,10 +174,7 @@ wire [31:0] odata   = data_mem[Addr[/* 截选地址来寻址 */]];
 wire [31:0] wr_data = ByteEn == 4'b1111 ? WData :
                       ByteEn == 4'b0011 ? {odata[31:16], WData[15: 0]}               :
                       ByteEn == 4'b1100 ? {WData[15: 0], odata[15: 0]}               :
-                      ByteEn == 4'b0001 ? {odata[31: 8], WData[ 7: 0]}               :
-                      ByteEn == 4'b0010 ? {odata[31:16], WData[ 7: 0], odata[ 7: 0]} :
-                      ByteEn == 4'b0100 ? {odata[31:24], WData[ 7: 0], odata[15: 0]} :
-                      ByteEn == 4'b1000 ? {WData[ 7: 0], odata[23: 0]}               : 32'bx;
+                      // ...
 // wr_data 是最终要写入的整字
 ```
 
