@@ -346,7 +346,7 @@ assign Irq = HardwareIntRq | ExceptionIrq;
 
 ### 系统桥
 
-// .. 待续
+本设计中外设与数据存储器均连入M级, 需要使用系统桥进行线路选择.
 
 ## 微系统全貌
 
