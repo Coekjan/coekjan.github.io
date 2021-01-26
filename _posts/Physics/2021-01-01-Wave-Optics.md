@@ -447,7 +447,7 @@ $$
 
 成像仪器的**最小分辨角**: $\theta_{\text{R}}=\theta_1=1.22\displaystyle\frac{\lambda}{d}$
 
-成像仪器的**分辨本领**（或称**分辨率**）: $R=\displaystyle\frac{1}{\theta_{\text{R}}}=\displaystyle\frac{d}{1.22\lambda}$
+成像仪器的**分辨本领**（或称**分辨率**): $R=\displaystyle\frac{1}{\theta_{\text{R}}}=\displaystyle\frac{d}{1.22\lambda}$
 
 成像仪器的**最小分辨距离**: $\Delta y=f\theta_{\text{R}}=1.22\displaystyle\frac{f\lambda}{d}$
 
