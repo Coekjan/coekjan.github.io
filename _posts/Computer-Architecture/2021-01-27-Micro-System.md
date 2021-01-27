@@ -356,6 +356,17 @@ assign Irq = HardwareIntRq | ExceptionIrq;
 /* CPU.RData = */ hitDM(CPU.Addr) ? DM.RData : //...
 ```
 
+其中:
+
+```verilog
+function hitDM;
+input [31:0] addr;
+begin
+    hitDM = (addr >= `DM_Base && addr <= `DM_Ceil);
+end
+endfunction
+```
+
 ## 微系统全貌
 
 ## 微系统测试
