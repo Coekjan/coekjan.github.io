@@ -307,7 +307,22 @@ wire ExceptionIntRq = |EXCCode; // EXCCode != 5'b0
 assign Irq = HardwareIntRq | ExceptionIrq;
 ```
 
-### 定时器 - 模拟外设
+### 气泡中断
+
+流水线在某些情况下阻塞产生气泡`nop`, 流水线寄存器中的PC值与BD值无效, 若这些气泡到达M级时, 外部传来中断, 则传入CP0的PC值与BD值必须作一些特殊处理: **向前级找非气泡指令, 以非气泡指令的PC与BD传入CP0**. 非气泡指令的特征是: PC在IM范围内**或**对应的EXCCode非0.
+
+```verilog
+/* CP0.PC = */ isLegalPC(instrM_PC) || (|instrM_EXCCode) ? instrM_PC :
+               isLegalPC(instrE_PC) || (|instrE_EXCCode) ? instrE_PC :
+               isLegalPC(instrD_PC) || (|instrD_EXCCode) ? instrD_PC : 32'b0;
+/* CP0.BD = */ isLegalPC(instrM_PC) || (|instrM_EXCCode) ? instrM_BD :
+               isLegalPC(instrE_PC) || (|instrE_EXCCode) ? instrE_BD :
+               isLegalPC(instrD_PC) || (|instrD_EXCCode) ? instrD_BD : 1'b0;
+```
+
+> 把连入CP0的PC称作**宏观PC**, 连入CP0的BD称为**宏观BD**.
+
+### 定时器 - 模拟外设I/O与中断
 
 定时器是倒计时的设备, 可以通过`lw`, `sw`指令读写定时器. 本设计中两个定时器的规格相同, 如下所示:
 
@@ -375,12 +390,39 @@ endfunction
 
 ## 微系统测试
 
-### 异常/中断处理程序的编写
+### 正常程序测试
+
+首先需要进行所有指令的正确性与冲突性测试, 其方法可参考流水线CPU的测试方案.
+
+### I/O测试
+
+使用`lw`与`sw`与定时器进行交互. 为使用MARS对拍, 可以对MARS源码进行修改, 可以参考[项目](https://github.com/Chenrt-ggx/ComputerOrganization).
+
+### 异常/中断测试
+
+#### 异常/中断处理程序的编写
+
+编写异常/中断处理程序的主要步骤为:
+1. 保存现场: 寄存器存入栈
+2. 分析异常码: 与CP0交互, 通过掩码, 移位等操作获得异常码. 随后进行异常码分析, 调用不同的处理函数
+3. 恢复现场: 寄存器从栈中取出
+4. 返回用户代码段: `eret`
+
+#### 异常处理测试
+
+可以使用python编写一个辅助程序, 生成具有异常代码的汇编程序. 使用ISim与MARS对拍即可完成测试. 注意, 每一个异常产生原因都要专门测试. 为使MARS产生某些特定异常(如: 写定时器的只读寄存器), 可以对MARS进行修改, 可以参考[项目](https://github.com/Chenrt-ggx/ComputerOrganization).
 
 
+#### 中断处理测试
 
-### 异常处理测试
+一方面, 可以使用定时器来产生周期性的中断信号: 把定时器1的中断信号传入CP0的`HwIrq[0]`, 把定时器2的中断信号传入CP0的`HwIrq[1]`. 在用户程序开始时, 将定时器初值设为周期, 随后启动定时器. 定时器的模式0可用于产生长时间中断, 模式1可用于产生周期性中断.
 
+另一方面, 为使用测试平台Testbench进行**针对某些PC**(称需要针对的PC为**特征PC**)的中断测试, 可以把宏观PC连接到顶层模块, 并把测试平台的中断信号连入CP0的`HwIrq[2]`. 在Testbench中, 每个上升沿检测宏观PC是否等于特征PC, 若相等, 则向CP0发送若干周期的中断信号.
 
+由于MARS不支持外部中断, 因此若要检验中断的实现是否正确, 一种方法是通过肉眼调试的方法进行检验, 另一方法是与已被检验的微系统进行对拍验证.
 
 ## 微系统增量开发
+
+* **增加设备**: 只需对系统桥进行增量开发即可(注意扩展内存地址), 随后进行I/O与中断测试.
+* **增加异常类型**: 只需对异常检测进行增量开发即可, 随后进行异常处理测试.
+
