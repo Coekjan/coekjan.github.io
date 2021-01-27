@@ -272,7 +272,7 @@ $$
 当二项分布中 $n$ 很大和 $p$ 很小时, 概率分布 $P(X=k)=C_n^kp^kq^{n-k}$ 十分接近泊松分布的概率分布.
 
 $$
-C_n^kp^kq^{n-k}\rightarrow \frac{e^{-\lambda}\lambda^k}{k!}\quad \lambda=np(\rightarrow+\infty)
+C_n^kp^kq^{n-k}\rightarrow \frac{e^{-\lambda}\lambda^k}{k!}\quad \lambda=np(n\rightarrow+\infty)
 $$
 
 当 $n\ge10,p\le0.1$ 时, 有近似公式:
