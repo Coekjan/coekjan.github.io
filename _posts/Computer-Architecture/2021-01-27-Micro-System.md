@@ -346,7 +346,15 @@ assign Irq = HardwareIntRq | ExceptionIrq;
 
 ### 系统桥
 
-本设计中外设与数据存储器均连入M级, 需要使用系统桥进行线路选择.
+本设计中外设与数据存储器均连入M级, 需要使用系统桥进行线路选择. 系统桥一端直接接受CPU中M级传来的地址, 写使能, 写数据, 并向CPU发送读出的数据; 另一端向外设与数据存储器发送地址与写使能, 写数据, 并从外设与数据存储器接受读出的数据. 以**CPU-系统桥-DM**线路为例:
+
+```verilog
+/* DM.WEn = */ hitDM(CPU.Addr) ? CPU.WEn : 1'b0;
+/* DM.Addr = */ CPU.Addr;
+/* DM.WData = */ CPU.WData;
+
+/* CPU.RData = */ hitDM(CPU.Addr) ? DM.RData : //...
+```
 
 ## 微系统全貌
 
