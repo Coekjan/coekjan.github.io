@@ -7,3 +7,4 @@ files
 .vscode
 Gemfile
 Gemfile.lock
+*.bat
