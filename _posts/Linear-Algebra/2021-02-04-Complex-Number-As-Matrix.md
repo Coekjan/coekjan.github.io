@@ -191,7 +191,7 @@ $$
 \end{aligned}
 $$
 
-待定 $\mathscr{F}'(\bm{Z}_0)$ 为
+待定 $\mathscr{F}^{\prime}(\bm{Z}_0)$ 为
 
 $$
 \mathscr{F}'(\bm{Z}_0)=\begin{pmatrix}
@@ -200,7 +200,7 @@ $$
 \end{pmatrix}
 $$
 
-记 $\Delta u:=u(x_0+\Delta x,y_0+\Delta y)-u(x_0,y_0),\:\Delta v:=v(x_0+\Delta x,y_0+\Delta y)-v(x_0,y_0)$ , 得:
+记 $\Delta u:=u(x_0+\Delta x,y_0+\Delta y)-u(x_0,y_0),\Delta v:=v(x_0+\Delta x,y_0+\Delta y)-v(x_0,y_0)$ , 得:
 
 $$
 \begin{aligned}
