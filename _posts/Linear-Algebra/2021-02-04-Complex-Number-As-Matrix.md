@@ -16,19 +16,19 @@ tags:
 引入实数 $1$ 对应的实部单位阵 $\bm{I}$ :
 
 $$
-\bm{I}=\begin{pmatrix}
+\bm{I}=\begin{bmatrix}
     1 & 0 \\
     0 & 1
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 引入虚数 $i$ 对应的虚部单位阵 $\bm{J}$ :
 
 $$
-\bm{J}=\begin{pmatrix}
+\bm{J}=\begin{bmatrix}
     0 & -1 \\
     1 & 0
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 > 矩阵 $\bm{J}$ 的线性变换含义是逆时针旋转 $90^\circ$ .
@@ -36,10 +36,10 @@ $$
 称复数 $z$ 对应的矩阵为 $\bm{Z}$ :
 
 $$
-\bm{Z}=\begin{pmatrix}
+\bm{Z}=\begin{bmatrix}
     a & -b \\
     b & a
-\end{pmatrix} = a\cdot\bm{I} + b\cdot\bm{J}
+\end{bmatrix} = a\cdot\bm{I} + b\cdot\bm{J}
 $$
 
 其中 $a$ 为 $z$ 的实部, $b$ 为 $z$ 的虚部.
@@ -47,10 +47,10 @@ $$
 令集合:
 
 $$
-\bm{\Xi}=\left\{\begin{pmatrix}
+\bm{\Xi}=\left\{\begin{bmatrix}
     a & -b \\
     b & a
-\end{pmatrix} \middle\vert a,b\in\bf{R} \right\}
+\end{bmatrix} \middle\vert a,b\in\bf{R} \right\}
 $$
 
 本质上, 构造了**双射** $\zeta : \bf{C}\rightarrow\Xi$ .
@@ -78,18 +78,18 @@ $z_1^{-1}=\vert z_1\vert^{-1}\cdot\overline{z_1}(z_1\neq0)$ | $\bm{Z}_1^{-1}=(\d
 
 $$
 \begin{aligned}
-    \bm{Z}=&\sqrt{\det\bm{Z}}\begin{pmatrix}
+    \bm{Z}=&\sqrt{\det\bm{Z}}\begin{bmatrix}
         \displaystyle\frac{a}{\sqrt{a^2+b^2}} & \displaystyle-\frac{b}{\sqrt{a^2+b^2}} \\
         \displaystyle\frac{b}{\sqrt{a^2+b^2}} & \displaystyle\frac{a}{\sqrt{a^2+b^2}}
-    \end{pmatrix}\\
-    \xlongequal{r:=\sqrt{\det\bm{Z}}}&\underbrace{\begin{pmatrix}
+    \end{bmatrix}\\
+    \xlongequal{r:=\sqrt{\det\bm{Z}}}&\underbrace{\begin{bmatrix}
         r & 0 \\
         0 & r
-    \end{pmatrix}}_{\text{Scaling}}
-    \underbrace{\begin{pmatrix}
+    \end{bmatrix}}_{\text{Scaling}}
+    \underbrace{\begin{bmatrix}
         \cos\theta & -\sin\theta \\
         \sin\theta & \cos\theta
-    \end{pmatrix}}_{\text{Rotation}}=r\cos\theta\cdot\bm{I}+r\sin\theta\cdot\bm{J}
+    \end{bmatrix}}_{\text{Rotation}}=r\cos\theta\cdot\bm{I}+r\sin\theta\cdot\bm{J}
 \end{aligned}
 $$
 
@@ -100,25 +100,25 @@ $$
 另外, 对于多个复数乘法的情形, 可用上式进行迅速简化计算:
 
 $$
-\prod_{k=1}^n\bm{Z}_k=\begin{pmatrix}
+\prod_{k=1}^n\bm{Z}_k=\begin{bmatrix}
     \displaystyle\prod_{k=1}^nr_k & 0 \\
     0 & \displaystyle\prod_{k=1}^nr_k
-\end{pmatrix}\begin{pmatrix}
+\end{bmatrix}\begin{bmatrix}
     \displaystyle\cos\sum_{k=1}^n\theta_k & -\displaystyle\sin\sum_{k=1}^n\theta_k \\
     \displaystyle\sin\sum_{k=1}^n\theta_k & \displaystyle\cos\sum_{k=1}^n\theta_k
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 类似, 复数的幂次方运算也可如上式进行迅速简化:
 
 $$
-\bm{Z}^n=\begin{pmatrix}
+\bm{Z}^n=\begin{bmatrix}
     r^n & 0 \\
     0 & r^n
-\end{pmatrix}\begin{pmatrix}
+\end{bmatrix}\begin{bmatrix}
     \displaystyle\cos n\theta & -\displaystyle\sin n\theta \\
     \displaystyle\sin n\theta & \displaystyle\cos n\theta
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 ## 复变函数的矩阵表示
@@ -166,58 +166,58 @@ $$
 命复变函数 $f(z)=u(x,y)+v(x,y)i$ , 其中 $x,y$ 分别为 $z$ 的实部与虚部, 则 $f$ 对应的矩阵表示为:
 
 $$
-\mathscr{F}(\bm{Z})=\begin{pmatrix}
+\mathscr{F}(\bm{Z})=\begin{bmatrix}
     u(x,y) & -v(x,y) \\
     v(x,y) & u(x,y)
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 根据微分的矩阵表示:
 
 $$
 \begin{aligned}
-    &\begin{pmatrix}
+    &\begin{bmatrix}
         u(x_0+\Delta x,y_0+\Delta y) & -v(x_0+\Delta x,y_0+\Delta y) \\
         v(x_0+\Delta x,y_0+\Delta y) & u(x_0+\Delta x,y_0+\Delta y)
-    \end{pmatrix}-
-    \begin{pmatrix}
+    \end{bmatrix}-
+    \begin{bmatrix}
         u(x_0,y_0) & -v(x_0,y_0) \\
         v(x_0,y_0) & u(x_0,y_0)
-    \end{pmatrix}\\
-    =&\mathscr{F}'(\bm{Z}_0)\cdot\begin{pmatrix}
+    \end{bmatrix}\\
+    =&\mathscr{F}'(\bm{Z}_0)\cdot\begin{bmatrix}
         \Delta x & -\Delta y \\
         \Delta y & \Delta x
-    \end{pmatrix} + \bm{r}(\bm{\Delta Z})
+    \end{bmatrix} + \bm{r}(\bm{\Delta Z})
 \end{aligned}
 $$
 
 待定 $\mathscr{F}^{\prime}(\bm{Z}_0)$ 为
 
 $$
-\mathscr{F}'(\bm{Z}_0)=\begin{pmatrix}
+\mathscr{F}'(\bm{Z}_0)=\begin{bmatrix}
     \Re & -\Im \\
     \Im & \Re
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 记 $\Delta u:=u(x_0+\Delta x,y_0+\Delta y)-u(x_0,y_0),\Delta v:=v(x_0+\Delta x,y_0+\Delta y)-v(x_0,y_0)$ , 得:
 
 $$
 \begin{aligned}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \Delta u & -\Delta v \\
         \Delta v & \Delta u
-    \end{pmatrix}&=\begin{pmatrix}
+    \end{bmatrix}&=\begin{bmatrix}
         \Re & -\Im \\
         \Im & \Re
-    \end{pmatrix}\begin{pmatrix}
+    \end{bmatrix}\begin{bmatrix}
         \Delta x & -\Delta y \\
         \Delta y & \Delta x
-    \end{pmatrix}+\bm{r}(\bm{\Delta Z})\\
-    &=\begin{pmatrix}
+    \end{bmatrix}+\bm{r}(\bm{\Delta Z})\\
+    &=\begin{bmatrix}
         \Re\Delta x-\Im\Delta y & -(\Re\Delta y+\Im\Delta x) \\
         \Re\Delta y+\Im\Delta x & \Re\Delta x-\Im\Delta y
-    \end{pmatrix}+\bm{r}(\bm{\Delta Z})
+    \end{bmatrix}+\bm{r}(\bm{\Delta Z})
 \end{aligned}
 $$
 
@@ -250,29 +250,29 @@ $$
 因此:
 
 $$
-\mathscr{F}'(\bm{Z}_0)=\begin{pmatrix}
+\mathscr{F}'(\bm{Z}_0)=\begin{bmatrix}
     \Re & -\Im \\
     \Im & \Re
-\end{pmatrix}\qquad\left(\left.\frac{\partial u}{\partial x}\right\vert_{x=x_0}=\Re=\left.\frac{\partial v}{\partial y}\right\vert_{y=y_0},\:\left.-\frac{\partial u}{\partial y}\right\vert_{y=y_0}=\Im=\left.\frac{\partial v}{\partial x}\right\vert_{x=x_0}\right)
+\end{bmatrix}\qquad\left(\left.\frac{\partial u}{\partial x}\right\vert_{x=x_0}=\Re=\left.\frac{\partial v}{\partial y}\right\vert_{y=y_0},\:\left.-\frac{\partial u}{\partial y}\right\vert_{y=y_0}=\Im=\left.\frac{\partial v}{\partial x}\right\vert_{x=x_0}\right)
 $$
 
 利用这个结论, 还可以得到一个更普适的计算方式:
 
 $$
-\mathscr{F}'(\bm{Z}_0)=\left.\begin{pmatrix}
+\mathscr{F}'(\bm{Z}_0)=\left.\begin{bmatrix}
     \displaystyle\frac{\partial u}{\partial x} & \displaystyle\frac{\partial u}{\partial y} \\\\
     \displaystyle\frac{\partial v}{\partial x} & \displaystyle\frac{\partial v}{\partial y}
-\end{pmatrix}\right\vert_{(x,y)=(x_0,y_0)}\quad(\text{Jacobi Matrix})
+\end{bmatrix}\right\vert_{(x,y)=(x_0,y_0)}\quad(\text{Jacobi Matrix})
 $$
 
 > 若把复变函数 $f(z)=u(x,y)+v(x,y)i$ 写作向量值函数:
 > 
 > $$
-> f(\vec z)=f\begin{pmatrix}
+> f(\vec z)=f\begin{bmatrix}
 >     x \\ y
-> \end{pmatrix}=\begin{pmatrix}
+> \end{bmatrix}=\begin{bmatrix}
 >     u(x,y) \\ v(x,y)
-> \end{pmatrix}
+> \end{bmatrix}
 > $$
 > 
 > 则该 $\text{Jacobi Matrix}$ 正是对应的 $\bm{J} f(\vec z_0)$ 矩阵.
