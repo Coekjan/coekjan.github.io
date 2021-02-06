@@ -6,7 +6,7 @@ date:       2021-02-04
 author:     Coekjan 
 header-img: img/post-bg-LA.jpg	
 catalog:    true	
-katex:    true    
+mathjax:    true    
 tags:	
     - Linear Algebra  
 ---
