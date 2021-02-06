@@ -2,6 +2,16 @@
 layout: default
 ---
 
+{% if page.mathjax %}
+<!-- add support for mathjax-->
+{% include mathjax_support.html %}
+{% endif %}
+
+{% if page.katex %}
+<!-- add support for katex-->
+{% include katex_support.html %}
+{% endif %}
+
 <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
@@ -161,16 +171,6 @@ layout: default
         </div>
     </div>
 </article>
-
-<!-- add support for mathjax-->
-{% if page.mathjax %}
-{% include mathjax_support.html %}
-{% endif %}
-
-<!-- add support for katex-->
-{% if page.katex %}
-{% include katex_support.html %}
-{% endif %}
 
 {% if site.disqus_username %}
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
