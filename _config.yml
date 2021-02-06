@@ -6,14 +6,14 @@ header-img: img/home-bg.jpg
 email: cn_yzr@qq.com
 description: "分享经验, 共享知识"
 keyword: "北京航空航天大学, 计算机科学与技术"
-url: "https://coekjan.github.io"          # your host, for absolute URL
+url: "https://coekjan.gitee.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/coekjan/coekjan.github.io.git" # you code repository
 github_url: "https://github.com/Coekjan"
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "An undergraduate from BUAA-SCSE."
+sidebar-about-description: "From BUAA-SCSE."
 sidebar-avatar: /img/about-ycj.jpg
 
 
@@ -102,10 +102,6 @@ page-katex: false
 
 # Friends
 friends: [
-  {
-    title: "Coekjan",
-    href: "https://coekjan.github.io"
-  },
   {
     title: "ROIFE",
     href: "https://roife.github.io"
