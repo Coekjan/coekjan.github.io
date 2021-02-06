@@ -11,6 +11,7 @@
     }
 </script>
 <script src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" onload="renderMathInElement(document.body, KaTeX)"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script>
     $("script[type='math/tex']").replaceWith(function() {
         var tex = $(this).text();
@@ -19,6 +20,7 @@
   
     $("script[type='math/tex; mode=display']").replaceWith(function() {
         var tex = $(this).html();
+        console.log(tex);
         return KaTeX.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
     });
-  </script>
+</script>
