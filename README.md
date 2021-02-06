@@ -3,19 +3,20 @@
 
 This respository supports **[Coekjan's Blog](https://blog.coekjan.cn)**.
 
-### Developer
+## Developer
 
-#### @Coekjan
+### @Coekjan
 * Studying in *School of Computer Science and Engineering, Beihang University*
 * From *Zhaoqing, Guangdong*
 
-### Topic
+## Topic
 
 * ***Computer Science***
+* ***Computer Technology***
 * ***Mathematics***
 * ***Natural Science***
 
-### Acknowledgements
+## Acknowledgements
 
 The template of the blog refers to
 
@@ -25,13 +26,12 @@ The template of the blog refers to
 
 The website is supported by
 * **[Jekyll](https://jekyllrb.com/)**
-* **[CODING Pages](https://help.coding.net/docs/pages/intro.html)**
-* **[Tencent Cloud](https://cloud.tencent.com/)**
+* **[Gitee Pages](https://gitee.com/help/articles/4136#article-header0)**
 * **[Github Pages](https://pages.github.com/)**
 * **[Bootstrap](https://getbootstrap.com/)**
 * **[MathJax](https://www.mathjax.org/)**
 * **[KaTeX](https://katex.org/)**
 
-### License
+## License
 
 **The respository is licensed under the [MIT License](https://github.com/Coekjan/coekjan.github.io/blob/main/LICENSE)** .
