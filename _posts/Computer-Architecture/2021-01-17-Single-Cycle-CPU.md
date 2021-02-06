@@ -1,27 +1,27 @@
----
-layout:     post
-title:      『Computer Architecture』 Single Cycle CPU
-subtitle:   『计算机体系结构』 单周期CPU
-date:       2021-01-17
-author:     Coekjan
-header-img: img/post-bg-CA.jpg
-catalog:    true
-katex:  true
-tags:
-    - Computer Architecture
+---	
+layout:     post	
+title:      『Computer Architecture』 Single Cycle CPU	
+subtitle:   『计算机体系结构』 单周期CPU    
+date:       2021-01-17	   
+author:     Coekjan 
+header-img: img/post-bg-CA.jpg	
+catalog:    true    
+katex:  true    
+tags:	
+    - Computer Architecture  
 ---
 
-本节将构造一个支持指令集 {`addu`, `subu`, `addiu`, `lui`, `ori`, `lw`, `sw`, `beq`, `j`} 的单周期 CPU.
+本节将构造一个支持指令集{`addu`, `subu`, `addiu`, `lui`, `ori`, `lw`, `sw`, `beq`, `j`}的单周期CPU.
 
-## MIPS 指令特征
+## MIPS指令特征
 
 ### 三大类指令
 
-MIPS 指令均为 32 位的 01 串, 根据这 32 位的功能划分, 可以粗略得到三大指令类型: R 型, I 型, J 型.
+MIPS指令均为32位的01串, 根据这32位的功能划分, 可以粗略得到三大指令类型: R型, I型, J型.
 
-**R 型 **
+**R型**
 
-R 型指令的编码如下:
+R型指令的编码如下:
 
 $31\qquad26$ | $25\qquad21$ | $20\qquad16$ | $15\qquad11$ | $10\qquad6$| $5\qquad0$
 :-:|:-:|:-:|:-:|:-:|:-:
@@ -30,45 +30,45 @@ $6$ | $5$ | $5$ | $5$ | $5$ | $6$
 
 > R 型的 opcode 为 `000000` ; 使用不同的 funct 用以区分不同的 R 型指令.
 
-**I 型 **
+**I型**
 
-$31\qquad26$ | $25\qquad21$ | $20\qquad16$ | $15\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$
+$31\qquad26$ | $25\qquad21$ | $20\qquad16$ | $15\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$ 
 :-:|:-:|:-:|:-:
 **opcode**|**rs**|**rt**|**imm16**
 $6$ | $5$ | $5$ | $16$
 
-**J 型 **
+**J型**
 
 $31\qquad26$ | $25\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad0$
 :-:|:-:|:-:|:-:
 **opcode**|**imm26**
 $6$ | $26$
 
-### 指令 RTL
+### 指令RTL
 
 > **RTL**: Register Transfer Language
 
-在 MIPS 指令集中, 会使用 RTL 给出指令的功能. 理解 RTL 是实现指令的关键.
+在MIPS指令集中, 会使用RTL给出指令的功能. 理解RTL是实现指令的关键.
 
-下面以指令集 {`addu`, `subu`, `addiu`, `lui`, `ori`, `lw`, `sw`, `beq`, `j`} 的 RTL 为例, 作一些解释.
+下面以指令集{`addu`, `subu`, `addiu`, `lui`, `ori`, `lw`, `sw`, `beq`, `j`}的RTL为例, 作一些解释.
 
-指令 | 类型 | RTL | 解释
+指令| 类型 | RTL | 解释
 :-:|:-:|:-:|:--
-`addu`| R | $$\begin{aligned}&\rm GRF[rd]\leftarrow\rm GRF[rs]+GRF[rt]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将 rs 号寄存器的值, 与 rt 号寄存器的值 ** 相加 **, 结果 ** 存入 rd 号 ** 寄存器.
-`subu` | R | $$\begin{aligned}&\rm GRF[rd]\leftarrow\rm GRF[rs]-GRF[rt]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将 rs 号寄存器的值, 与 rt 号寄存器的值 ** 相减 **, 结果 ** 存入 rd 号 ** 寄存器.
-`addiu` | I | $$\begin{aligned}&\rm GRF[rt]\leftarrow\rm GRF[rs]+sign\_ext(imm16)\\ &\rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将 rs 号寄存器值, 与 imm16** 符号扩展 ** 后的值 ** 相加 **, 结果 ** 存入 rt 号 ** 寄存器.
-`lui` | I | $$\begin{aligned}&\rm GRF[rt]\leftarrow\rm imm16\:\vert\vert\:0^{16}\\ &\rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将 imm16** 高位加载 **, ** 存入 rt 号 ** 寄存器.
-`ori` | I | $$\begin{aligned}&\rm GRF[rt]\leftarrow\rm GRF[rs]\:\operatorname{or}\:zero\_ext(imm16)\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将 rs 号寄存器的值, 与 imm16** 零扩展 ** 后的值 ** 按位或 **, 结果 ** 存入 rt 号 ** 寄存器.
-`lw` | I | $$\begin{aligned}&\rm GRF[rt]\leftarrow\rm DM[GRF [rs]+sign\_ext(imm16) ]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将 rs 号寄存器的值, 与 imm16** 符号扩展 ** 的值 ** 相加 **, 以之为地址访问内存中的字, 将整字 ** 存入 rt 号 ** 寄存器.
-`sw` | I | $$\begin{aligned}&\rm DM[GRF [rs]+sign\_ext(imm16) ]\leftarrow\rm GRF[rt]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将 rs 号寄存器的值, 与 imm16** 符号扩展 ** 的值 ** 相加 **, 以之为地址定位到内存字单元, 将 rt 号寄存器的值整字存入其中.
-`beq` | I | $$\begin{aligned}&\rm if\quad GRF[rs]==GRF[rt]\quad then\\&\qquad\rm PC\leftarrow PC+4+sign\_ext(imm16\:\vert\vert\:0^2)\\& \rm else\\&\rm\qquad PC\leftarrow PC+4\end{aligned}$$ | 若 rs 号寄存器的值, 与 rt 号寄存器的值 ** 相等 **, 则将 imm16** 低位补两位 0**, 并 ** 符号扩展 ** 后得到偏移量, PC 相对于下一条指令作 ** 偏移 **.
-`j` | J | $$\rm PC\leftarrow PC_{31\dots28}\:\vert\vert\:imm26\:\vert\vert\:0^2$$ | 将 imm26** 低位补两位 0**, 并 ** 高位拼接 PC[31:28]**, 得到新 PC 值, ** 存入 PC** 寄存器.
+`addu`| R | $$\begin{aligned}&\rm GRF[rd]\leftarrow\rm GRF[rs]+GRF[rt]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将rs号寄存器的值, 与rt号寄存器的值**相加**, 结果**存入rd号**寄存器.
+`subu` | R | $$\begin{aligned}&\rm GRF[rd]\leftarrow\rm GRF[rs]-GRF[rt]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将rs号寄存器的值, 与rt号寄存器的值**相减**, 结果**存入rd号**寄存器.
+`addiu` | I | $$\begin{aligned}&\rm GRF[rt]\leftarrow\rm GRF[rs]+sign\_ext(imm16)\\ &\rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将rs号寄存器值, 与imm16**符号扩展**后的值**相加**, 结果**存入rt号**寄存器.
+`lui` | I | $$\begin{aligned}&\rm GRF[rt]\leftarrow\rm imm16\:\vert\vert\:0^{16}\\ &\rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将imm16**高位加载**, **存入rt号**寄存器.
+`ori` | I | $$\begin{aligned}&\rm GRF[rt]\leftarrow\rm GRF[rs]\:\operatorname{or}\:zero\_ext(imm16)\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将rs号寄存器的值, 与imm16**零扩展**后的值**按位或**, 结果**存入rt号**寄存器.
+`lw` | I | $$\begin{aligned}&\rm GRF[rt]\leftarrow\rm DM[GRF [rs]+sign\_ext(imm16) ]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将rs号寄存器的值, 与imm16**符号扩展**的值**相加**, 以之为地址访问内存中的字, 将整字**存入rt号**寄存器.
+`sw` | I | $$\begin{aligned}&\rm DM[GRF [rs]+sign\_ext(imm16) ]\leftarrow\rm GRF[rt]\\& \rm PC\leftarrow\rm PC+4\end{aligned}$$ | 将rs号寄存器的值, 与imm16**符号扩展**的值**相加**, 以之为地址定位到内存字单元, 将rt号寄存器的值整字存入其中.
+`beq` | I | $$\begin{aligned}&\rm if\quad GRF[rs]==GRF[rt]\quad then\\&\qquad\rm PC\leftarrow PC+4+sign\_ext(imm16\:\vert\vert\:0^2)\\& \rm else\\&\rm\qquad PC\leftarrow PC+4\end{aligned}$$ | 若rs号寄存器的值, 与rt号寄存器的值**相等**, 则将imm16**低位补两位0**, 并**符号扩展**后得到偏移量, PC相对于下一条指令作**偏移**.
+`j` | J | $$\rm PC\leftarrow PC_{31\dots28}\:\vert\vert\:imm26\:\vert\vert\:0^2$$ | 将imm26**低位补两位0**, 并**高位拼接PC[31:28]**, 得到新PC值, **存入PC**寄存器.
 
 > 我们须找到指令的共性, 从而得知系统的关键部件.
 
 ## 关键部件
 
-从上述对 MIPS 指令的特征分析, 我们指出, 系统中必须包含如下的关键部件.
+从上述对MIPS指令的特征分析, 我们指出, 系统中必须包含如下的关键部件.
 
 ### PC (Program Counter)
 
@@ -84,13 +84,13 @@ $6$ | $26$
 
 ### NPC (Next PC)
 
-Next PC 的计算模块: 用于计算下一条指令的 PC.
+Next PC的计算模块: 用于计算下一条指令的PC.
 
 ![]({{ '/img/CPU-NPC.svg' | prepend: site.baseurl}})
 
 ### GRF (General Register File)
 
-通用寄存器文件: 内置 32 个通用寄存器 (其中 0 号寄存器恒为 0), 外部支持同时读取两个寄存器, 写一个寄存器.
+通用寄存器文件: 内置32个通用寄存器(其中0号寄存器恒为0), 外部支持同时读取两个寄存器, 写一个寄存器.
 
 ![]({{ '/img/CPU-GRF.svg' | prepend: site.baseurl}})
 
@@ -104,7 +104,7 @@ Next PC 的计算模块: 用于计算下一条指令的 PC.
 
 算术逻辑单元: 支持加, 减, 按位或, 高位加载, 异或.
 
-> 异或操作用于 `beq` 的 "相等" 判定.
+> 异或操作用于 `beq` 的"相等"判定.
 
 ![]({{ '/img/CPU-ALU.svg' | prepend: site.baseurl}})
 
@@ -120,7 +120,7 @@ Next PC 的计算模块: 用于计算下一条指令的 PC.
 
 ### 指令集分析
 
-下面对指令集 {`addu`, `subu`, `addiu`, `lui`, `ori`, `lw`, `sw`, `beq`, `j`} 中部分指令所需的通路连接进行分析.
+下面对指令集{`addu`, `subu`, `addiu`, `lui`, `ori`, `lw`, `sw`, `beq`, `j`}中部分指令所需的通路连接进行分析.
 
 > 其中, `subu` 与 `addu` 所需路径一致; `lui` , `ori` 与 `addiu` 所需路径一致.
 
@@ -144,7 +144,7 @@ Next PC 的计算模块: 用于计算下一条指令的 PC.
 
 ### 通路形成
 
-> 这里将 IM 与 DM 分离出数据通路.
+> 这里将IM与DM分离出数据通路.
 
 ![]({{ '/img/S-CPU-DP.svg' | prepend: site.baseurl}})
 
@@ -157,9 +157,9 @@ Next PC 的计算模块: 用于计算下一条指令的 PC.
 * `EXT.Ctrl`
 * `ALU.Ctrl`
 * `DM.WEn`
-* 3 个的多选器的选择信号.
+* 3个的多选器的选择信号.
 
-为产生这些信号, 我们需要得到指令的 opcode 与 funct 进行分析. Verilog 实现的部分代码如下:
+为产生这些信号, 我们需要得到指令的opcode与funct进行分析. Verilog实现的部分代码如下:
 
 ```verilog
 /* Identify */
@@ -184,7 +184,7 @@ assign GRF_WEn      =   addu | subu | addiu | lui | ori | lw;
 
 ### 样例
 
-单周期 CPU 中, 前后指令的指令不冲突, 因此只需进行正确性测试.
+单周期CPU中, 前后指令的指令不冲突, 因此只需进行正确性测试.
 
 ### 验证
 
@@ -194,9 +194,9 @@ assign GRF_WEn      =   addu | subu | addiu | lui | ori | lw;
 
 ## 系统增量开发
 
-本节仅考虑了 9 条简单的指令, 如果需要对指令规模进行增量开发, 则可以按照以下步骤进行:
-1. RTL 分析: 分析新指令 RTL, 若已有部件可以支持新指令, 则直接进行指令集分析; 否则则需要为新指令增设新部件.
-2. 指令集分析: 在已有的 [指令集分析表格](# 指令集分析) 中继续增加待添加指令, 并重新合并行, 得到所有输入端口的所有数据来源.
-3. 通路增量开发: 根据指令集分析, 增加必要的 MUX.
+本节仅考虑了9条简单的指令, 如果需要对指令规模进行增量开发, 则可以按照以下步骤进行:
+1. RTL分析: 根据新指令RTL, 若已有部件可以支持新指令, 则直接进行指令集分析; 否则则需要为新指令增设新部件.
+2. 指令集分析: 在已有的[指令集分析表格](#指令集分析)中继续增加待添加指令, 并重新合并行, 得到所有输入端口的所有数据来源.
+3. 通路增量开发: 根据指令集分析, 增加必要的MUX.
 4. 控制器增量开发: 根据指令集分析, 增加必要的控制信号.
 5. 针对新指令进行测试.
