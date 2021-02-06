@@ -1,7 +1,7 @@
-[Coekjan's Blog](https://blog.coekjan.cn)
+[Coekjan's Blog](https://coekjan.gitee.io)
 ============================================
 
-This respository supports **[Coekjan's Blog](https://blog.coekjan.cn)**.
+This respository supports **[Coekjan's Blog](https://coekjan.gitee.io)**.
 
 ## Developer
 
