@@ -59,8 +59,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 299b8b5c52197266310c                            #生成的clientID
-  clientSecret: eecf90743ba58dced6c27bf7ae881db2935b9e26    #生成的clientSecret
+  clientID: 35fb63b8acbe8f8e2ecd                            #生成的clientID
+  clientSecret: 34224ea559ea54ad4692378d66b33817390899ce    #生成的clientSecret
   repo:  coekjan.github.io    #仓库名称
   owner: coekjan    #github用户名
   admin: coekjan
