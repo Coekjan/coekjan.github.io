@@ -60,15 +60,6 @@ layout: default
                 </ul>
                 {% endif %}
             </div>
-            {% if page.mathjax %}
-            <!-- add support for mathjax-->
-            {% include mathjax_support.html %}
-            {% endif %}
-
-            {% if page.katex %}
-            <!-- add support for katex-->
-            {% include katex_support.html %}
-            {% endif %}
         {% else %}
 
 <!-- USE SIDEBAR -->
@@ -223,3 +214,13 @@ layout: default
         {% endif %}
 	</div>
 </div>
+
+{% if page.mathjax %}
+<!-- add support for mathjax-->
+{% include mathjax_support.html %}
+{% endif %}
+
+{% if page.katex %}
+<!-- add support for katex-->
+{% include katex_support.html %}
+{% endif %}
