@@ -2,16 +2,6 @@
 layout: default
 ---
 
-<!-- add support for mathjax-->
-{% if page.mathjax %}
-{% include mathjax_support.html %}
-{% endif %}
-
-<!-- add support for katex-->
-{% if page.katex %}
-{% include katex_support.html %}
-{% endif %}
-
 <!-- Page Header -->
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
     <div class="container">
@@ -70,6 +60,15 @@ layout: default
                 </ul>
                 {% endif %}
             </div>
+            {% if page.mathjax %}
+            <!-- add support for mathjax-->
+            {% include mathjax_support.html %}
+            {% endif %}
+
+            {% if page.katex %}
+            <!-- add support for katex-->
+            {% include katex_support.html %}
+            {% endif %}
         {% else %}
 
 <!-- USE SIDEBAR -->
