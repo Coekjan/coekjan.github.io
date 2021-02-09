@@ -64,7 +64,7 @@ $$
 $z_1+z_2=(a_1+a_2)+(b_1+b_2)i$ | $\bm{Z}_1+\bm{Z}_2=(a_1+a_2)\bm{I}+(b_1+b_2)\bm{J}$
 $kz_1=(ka_1)+(kb_1)i$ | $k\bm{Z}_1=(ka_1)\bm{I}+(kb_1)\bm{J}$
 $z_1z_2=(a_1a_2-b_1b_2)+(a_1b_2+a_2b_1)i$ | $\bm{Z}_1\bm{Z}_2=(a_1a_2-b_1b_2)\bm{I}+(a_1b_2+a_2b_1)\bm{J}$
-$\vert z_1\vert=a_1^2+b_1^2$ | $\det\bm{Z}_1=a_1^2+b_1^2$
+$\vert z_1\vert=\sqrt{a_1^2+b_1^2}$ | $\sqrt{\det\bm{Z}_1}=\sqrt{a_1^2+b_1^2}$
 $\overline{z_1}=a_1-b_1i$ | $\bm{Z}_1^T=a_1\bm{I}-b_1\bm{J}$
 $z_1^{-1}=\vert z_1\vert^{-1}\cdot\overline{z_1}(z_1\neq0)$ | $\bm{Z}_1^{-1}=(\det \bm{Z}_1)^{-1}\cdot\bm{Z}_1^T(\bm{Z}_1\neq\bm{O})$
 
