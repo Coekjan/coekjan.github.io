@@ -1,7 +1,7 @@
-[Coekjan's Blog](https://coekjan.gitee.io)
+[Coekjan's Blog](https://blog.coekjan.cn)
 ============================================
 
-This respository supports **[Coekjan's Blog](https://coekjan.gitee.io)**.
+This respository supports **[Coekjan's Blog](https://blog.coekjan.cn)**.
 
 ## Developer
 
@@ -26,8 +26,8 @@ The template of the blog refers to
 
 The website is supported by
 * **[Jekyll](https://jekyllrb.com/)**
-* **[Gitee Pages](https://gitee.com/help/articles/4136#article-header0)**
 * **[Github Pages](https://pages.github.com/)**
+* **[Coding Pages](https://help.coding.net/docs/pages/intro.html)**
 * **[Bootstrap](https://getbootstrap.com/)**
 * **[MathJax](https://www.mathjax.org/)**
 * **[KaTeX](https://katex.org/)**
