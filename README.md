@@ -1,7 +1,9 @@
-[Coekjan's Blog](https://blog.coekjan.cn)
+Coekjan's Blog
 ============================================
 
-This respository supports **[Coekjan's Blog](https://blog.coekjan.cn)**.
+***[Coding Respository](https://coekjan.coding.net/public/coekjan/blog/git/files)*** supports the **[blog](https://blog.coekjan.cn)** (Recommended).
+
+***[Github Respository](https://github.com/Coekjan/coekjan.github.io)*** supprots the **[blog](https://coekjan.github.io)**
 
 ## Developer
 
@@ -26,12 +28,12 @@ The template of the blog refers to
 
 The website is supported by
 * **[Jekyll](https://jekyllrb.com/)**
-* **[Github Pages](https://pages.github.com/)**
 * **[Coding Pages](https://help.coding.net/docs/pages/intro.html)**
+* **[Github Pages](https://pages.github.com/)**
 * **[Bootstrap](https://getbootstrap.com/)**
 * **[MathJax](https://www.mathjax.org/)**
 * **[KaTeX](https://katex.org/)**
 
 ## License
 
-**The respository is licensed under the [MIT License](https://github.com/Coekjan/coekjan.github.io/blob/main/LICENSE)** .
+**The respository is licensed under the *[MIT License](https://github.com/Coekjan/coekjan.github.io/blob/main/LICENSE)*** .
