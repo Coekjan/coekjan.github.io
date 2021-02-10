@@ -1,9 +1,9 @@
 Coekjan's Blog
 ============================================
 
-***[Coding Respository](https://coekjan.coding.net/public/coekjan/blog/git/files)*** supports the **[blog](https://blog.coekjan.cn)** (Recommended).
+***[Coding Repository](https://coekjan.coding.net/public/coekjan/blog/git/files)*** supports the **[blog](https://blog.coekjan.cn)** (Recommended).
 
-***[Github Respository](https://github.com/Coekjan/coekjan.github.io)*** supprots the **[blog](https://coekjan.github.io)**
+***[Github Repository](https://github.com/Coekjan/coekjan.github.io)*** supprots the **[blog](https://coekjan.github.io)**.
 
 ## Developer
 
