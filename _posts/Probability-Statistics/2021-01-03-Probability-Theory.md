@@ -15,7 +15,7 @@ tags:
 
 ### 概率的公理化定义
 
-随机试验 $E$ , 样本空间 $S$ , 设 $F=\{A\vert A\subset S \}$ , 并满足以下条件:
+随机试验 $E$ , 样本空间 $S$ , 设 $F= \lbrace A\vert A\subset S \rbrace$ , 并满足以下条件:
 1. $\varnothing\notin F, S\in F$ ;
 2. 若 $A\in F$ , 则 $\overline{A}\in F$ ;
 3. 对任意有限个或可列个 $A_i\in F$ , 都有 $\displaystyle\sum_iA_i\in F$ .
