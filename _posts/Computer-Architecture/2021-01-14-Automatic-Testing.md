@@ -26,7 +26,7 @@ MARS 提供了命令行工具运行 MIPS 汇编程序, 具体可在 **MARS->Help
 
 ### 汇编转机器码
 
-```cmd
+```powershell
 java -jar <mars> <assembly-file> [db]
     nc mc CompactDataAtZero a dump .text HexText code.txt
 
@@ -52,7 +52,7 @@ java -jar <mars> <assembly-file> [db]
 
 修改完毕后, 命令行运行汇编程序即可得到黄金模型的输出
 
-```cmd
+```powershell
 java -jar <mars> <assembly-file> [db] nc mc CompactDataAtZero >std_ans.txt
 ```
 
@@ -84,7 +84,7 @@ PRJ 文件用于说明工程包含哪些模块, 使用绝对路径说明. 如若
 
 则需要在 `mips.prj` 中编写:
 
-```prj
+```make
 Verilog work "D:\Project\mips.v"
 Verilog work "D:\Project\mips_tb.v"
 Verilog work "D:\Project\datapath\datapath.v"
