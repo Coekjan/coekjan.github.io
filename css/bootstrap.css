@@ -1519,8 +1519,8 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
+  color: #450d1b;
+  background-color: #ffffff;
   border-radius: 4px;
 }
 kbd {
@@ -2254,7 +2254,7 @@ th {
 .table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857143;
-  vertical-align: top;
+  vertical-align: middle;
   border-top: 1px solid #ddd;
 }
 .table > thead > tr > th {
