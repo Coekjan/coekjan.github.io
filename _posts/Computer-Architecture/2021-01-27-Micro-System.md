@@ -16,7 +16,7 @@ tags:
 ### 异常指令
 
 考察如下指令: 
-```mips
+```powershell
 lw      $1, 1($0)
 ```
 
@@ -31,7 +31,7 @@ lw      $1, 1($0)
 > 本设计中默认异常处理程序中无异常指令.
 
 基本编写方法如下: 
-```mips
+```powershell
 .ktext 0x00004180
 
 ######################
@@ -200,11 +200,11 @@ assign RData = (Addr == `CAUSE_Addr) ? _Cause : // ...
 ```
 
 程序员可以通过`mfc0`读取CAUSE寄存器值, 随后可以通过掩码, 移位等操作取得异常码与BD信息: 
-```mips
+```powershell
 mfc0    $t0, $13        # load cause-register
 srl     $s0, $t0, 2     # right-shift
 andi    $s0, $s0, 0x1f  # mask => $s0 is EXCCode
-slt     $s1, $t0, $zero # if $t0 < $zero then cause[31] is 1'b0 => BD = 1
+slt     $s1, $t0, $zero # if $t0 < $zero then cause[31] is 1'b1 => BD = 1
 ```
 
 ##### EPC寄存器
