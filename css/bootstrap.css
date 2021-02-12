@@ -188,6 +188,9 @@ td,
 th {
   padding: 0;
 }
+td.rouge-code {
+  width: 100%;
+}
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -1539,14 +1542,13 @@ kbd kbd {
 pre {
   display: block;
   padding: 9.5px;
-  margin: 0 0 10px;
+  margin: 0 0 0px;
   font-size: 13px;
   line-height: 1.42857143;
   color: #333;
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
   border-radius: 4px;
 }
 pre code {
@@ -2243,7 +2245,6 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -2426,10 +2427,8 @@ table th[class*="col-"] {
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
-    margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #ddd;
   }
   .table-responsive > .table {
     margin-bottom: 0;

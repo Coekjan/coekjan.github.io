@@ -282,7 +282,7 @@ pre,
 }
 pre code {
   display: block;
-  width: auto;
+  width: fit-content;
   white-space: pre;
   word-wrap: normal;
 }
