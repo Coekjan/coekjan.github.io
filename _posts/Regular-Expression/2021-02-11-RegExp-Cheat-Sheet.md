@@ -118,7 +118,7 @@ tags:
 
 编写正则表达式`(\w+)`匹配单词, 分组并记忆. 随后使用`String`对象的`replace`函数进行替换:
 
-```JavaScript
+```javascript
 var text = 'JavaScript is the best language!';
 text = text.replace(/(\w+)/g, '"$1"');
 console.log(text); // => "JavaScript" "is" "the" "best" "language"!
