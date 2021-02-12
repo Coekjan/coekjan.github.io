@@ -264,7 +264,7 @@ $$
 f_M(v_x, v_y, v_z)=\left(\frac{m_0}{2\pi k T}\right)^{3/2}\exp\left[-\frac{m_0(v_x^2+v_y^2+v_z^2)}{2kT}\right]
 $$
 
-> 本质上, 是称 $v_x, v_y, v_z \sim N(0, \displaystyle\frac{kT}{m_0})$ , 且三者相互独立. 则有:
+> 本质上, 是称 $v_x, v_y, v_z \sim N\left(0, \displaystyle\frac{kT}{m_0}\right)$ , 且三者相互独立. 则有:
 > 
 > $$
 > \left\{\begin{aligned}
