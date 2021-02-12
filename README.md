@@ -36,4 +36,4 @@ The website is supported by
 
 ## License
 
-**The respository is licensed under the *[MIT License](https://github.com/Coekjan/coekjan.github.io/blob/main/LICENSE)*** .
+**The repository is licensed under the *[MIT License](https://github.com/Coekjan/coekjan.github.io/blob/main/LICENSE)*** .
