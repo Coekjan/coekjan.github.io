@@ -58,14 +58,17 @@ kramdown:
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: 35fb63b8acbe8f8e2ecd                            #生成的clientID
-  clientSecret: 34224ea559ea54ad4692378d66b33817390899ce    #生成的clientSecret
+  enable: false    #是否开启Gitalk评论
+  clientID: x                            #生成的clientID
+  clientSecret: x    #生成的clientSecret
   repo:  coekjan.github.io    #仓库名称
   owner: coekjan    #github用户名
   admin: coekjan
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
+# Utterances
+utterances:
+  enable: true
 
 # 统计
 
