@@ -21,7 +21,7 @@ a_n=\left\{\begin{aligned}
     &\vdots&&\vdots\\
     &a_k&&,n=k\\
     &x_1a_{n-1}+x_2a_{n-2}+\dotsm+x_ka_{n-k}&&,n>k
-\end{aligned}\right.
+\end{aligned}\right.\quad(\forall i \in \{1,2,\dotsm,k\}, x_i\neq0)
 $$
 
 则称这个序列是**齐次线性递推序列**, 同时称这个序列满足**齐次线性递推关系**. 其中, 把 $k$ 称为这个递推关系的**阶数**, $a_1,\dotsm,a_k$ 都是已知的常数.
@@ -36,7 +36,7 @@ $$
 a_n=\left\{\begin{aligned}
     &a_1,&&n=1\\
     &xa_{n-1},&&n>1
-\end{aligned}\right.
+\end{aligned}\right.\quad(x\neq0)
 $$
 
 显然可以进行直接迭代求解通项公式:
