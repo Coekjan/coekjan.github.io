@@ -405,3 +405,5 @@ a_n=\sum_{j\notin\lparen i,i+w-1\rbrack}C_jq_j^{n-1}+\left(\sum_{j\in\lparen i,i
 $$
 
 多组重根的情形是类似的, 此处不再赘述.
+
+> 此处的结论与[二阶齐次线性递推序列](#二阶齐次线性递推序列)的讨论结果是一致的.
