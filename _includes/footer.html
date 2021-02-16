@@ -261,3 +261,41 @@
 </script>
 {% endif %}
 
+<script>
+$(document).ready(function(){
+    var modal = $("#image-cover-modal");
+    if(!modal) return;
+    var modalImg = $("#image-cover-image");
+    var imgs = $("img").not(".img-unzoomable");
+
+    modal.click(function () {
+        modal.toggleClass("model-shown");
+        $("body").css("overflow", "auto");
+        modal.scrollTop(0);
+    });
+
+    modalImg.click(function() {
+        if(modalImg.css("maxWidth") === "95%") modalImg.css({
+            "maxWidth": "",
+            "cursor": "zoom-out"
+        });
+        else modalImg.css({
+            "maxWidth": "95%",
+            "cursor": "zoom-in"
+        });
+        event.stopPropagation();
+    });
+
+    imgs.click(function () {
+        modalImg.attr("src", $(this).attr("src"));
+        modalImg.css({
+            "maxWidth": "95%",
+            "cursor": "zoom-in"
+        });
+
+        modal.toggleClass("model-shown");
+        $("body").css("overflow", "hidden");
+    });
+    imgs.css("cursor", "pointer")
+});
+</script>
