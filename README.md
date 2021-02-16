@@ -25,6 +25,7 @@ The template of the blog refers to
 * **[Hux Blog](https://github.com/Huxpro/huxpro.github.io)**
 * **[BY Blog](https://github.com/qiubaiying/qiubaiying.github.io)**
 * **[Globien Interlingu](https://github.com/globien/globien.github.io)**
+* **[Roife Blog](https://github.com/roife/roife.github.io)**
 
 The website is supported by
 * **[Jekyll](https://jekyllrb.com/)**
