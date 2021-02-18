@@ -9,8 +9,9 @@
 
 ### $\TeX$
 
-* [$\KaTeX$](https://katex.org/) - 快速的数学公式排版
-* [$\rm{MathJax}$](https://www.mathjax.org/) - 美观而通用的数学公式排版
+* [$\LaTeX\text{(Online Equation Editor)}$](https://latex.codecogs.com/eqneditor/editor.php) - 在线编辑 $\LaTeX$ 公式
+* [$\KaTeX$](https://katex.org/) - 快速的数学公式排版库
+* [$\rm{MathJax}$](https://www.mathjax.org/) - 美观而通用的数学公式排版库
 
 ### 正则表达式
 
