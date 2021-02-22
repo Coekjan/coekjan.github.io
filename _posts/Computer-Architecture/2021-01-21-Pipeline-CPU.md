@@ -306,7 +306,7 @@ assign GRF_Addr3 = /* write GRF[rt] */ ? rt    :
 // E->D, M->D
 assign MUXSel_rs_D = (InstrE_A != 5'b0 && InstrD_rs == InstrE_A) ? `EtoD :
                      (InstrM_A != 5'b0 && InstrD_rs == InstrE_A) ? `MtoD : `NoForwarding;
-assign MUSSel_rt_D = (InstrE_A != 5'b0 && InstrD_rt == InstrE_A) ? `EtoD :
+assign MUXSel_rt_D = (InstrE_A != 5'b0 && InstrD_rt == InstrE_A) ? `EtoD :
                      (InstrM_A != 5'b0 && InstrD_rt == InstrE_A) ? `MtoD : `NoForwarding;
 // ...
 ```
