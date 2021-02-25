@@ -2,7 +2,7 @@
 
 * **[HDLBits](https://hdlbits.01xz.net/wiki/Main_Page)** - Verilog实践练习
 
-### 数据结构与算法
+### 软件设计
 
 * **[Luogu](https://www.luogu.com.cn/)** - 在洛谷, 享受编程的快乐
 * **[Visualgo](https://visualgo.net/zh)** - 可视化动态数据结构与算法
