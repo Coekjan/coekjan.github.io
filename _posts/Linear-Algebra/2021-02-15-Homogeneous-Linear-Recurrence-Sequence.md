@@ -296,7 +296,7 @@ $$
     x_{1,2,\dotsm,k}^1\cdot f^{(1)}(x_{1,2,\dotsm,k})&=0\\
     &\vdots\\
     x_{1,2,\dotsm,k}^{k-1}\cdot f^{(k-1)}(x_{1,2,\dotsm,k})&=0
-\end{aligned}\right.\qquad\left(f^{(n)}=\frac{\operatorname{d}^n}{\operatorname{d}x^n}\right)
+\end{aligned}\right.\qquad\left(f^{(n)}=\frac{\operatorname{d}^n}{\operatorname{d}x^n}f\right)
 $$
 
 **证明**:
