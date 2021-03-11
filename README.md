@@ -1,9 +1,7 @@
 Coekjan's Blog
 ============================================
 
-***[Coding Repository](https://coekjan.coding.net/public/coekjan/blog/git/files)*** supports the **[blog](https://blog.coekjan.cn)** (Recommended).
-
-***[Github Repository](https://github.com/Coekjan/coekjan.github.io)*** supprots the **[blog](https://coekjan.github.io)**.
+***[Coding Repository](https://coekjan.coding.net/public/coekjan/blog/git/files)*** supports **[Coekjan's blog](https://coekjan.cn)**.
 
 ## Developer
 
@@ -30,8 +28,6 @@ The template of the blog refers to
 The website is supported by
 * **[Jekyll](https://jekyllrb.com/)**
 * **[Coding Pages](https://help.coding.net/docs/pages/intro.html)**
-* **[Github Pages](https://pages.github.com/)**
-* **[Bootstrap](https://getbootstrap.com/)**
 * **[MathJax](https://www.mathjax.org/)**
 * **[KaTeX](https://katex.org/)**
 
