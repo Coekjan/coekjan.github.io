@@ -12,7 +12,7 @@
 * Studying in *School of Computer Science and Engineering, Beihang University*
 * From *Zhaoqing, Guangdong*
 
-## Topic
+## Topics
 
 * ***Computer Science***
 * ***Computer Technology***
