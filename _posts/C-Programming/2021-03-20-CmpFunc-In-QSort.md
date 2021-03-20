@@ -157,8 +157,8 @@ void bubbleSort(int array[], int len, int (*cmp)(const int*, const int*)) {
 
 ```c
 #define bubble_sort(T)\
-    void T ## BubbleSort(T array[], T len, T (* cmp)(const T*, const T*)) {\
-        T i, j, flag;\
+    void T ## BubbleSort(T array[], int len, int (* cmp)(const T*, const T*)) {\
+        int i, j, flag;\
         for (i = 0; i < len; ++i) {\
             flag = 1;\
             for (j = 0; j < len - i - 1; ++j) {\
