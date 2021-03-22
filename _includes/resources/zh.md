@@ -17,7 +17,7 @@
 * [$\KaTeX$](https://katex.org/) - 快速的数学公式排版库
 * [$\rm{MathJax}$](https://www.mathjax.org/) - 美观而通用的数学公式排版库
 
-### 正则表达式https://incredible.pm
+### 正则表达式
 
 * **[RegExper](https://regexper.com/)** - 可视化正则表达式
 * **[Regex101](https://regex101.com/)** - 正则表达式性能测试
