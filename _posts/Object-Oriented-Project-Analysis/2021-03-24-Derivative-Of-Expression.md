@@ -38,7 +38,7 @@ $$
 
 其中的符号作如下解释:
 * $\text{A}\mid\text{B}$ 表示选择 $\text{A}$ 和 $\text{B}$ 两者之一, 优先级最低
-* $\{\text{T}\}$ 表示 $\text{T}$ 重复0, 1或多次
+* $\lbrace\text{T}\rbrace$ 表示 $\text{T}$ 重复0, 1或多次
 * $[\text{T}]$ 表示 $\text{T}$ 重复0或1次
 * $(\text{T})$ 表示 $\text{T}$ 仅出现1次, 用于调整优先级
 * $\text{'T'}$ 表示字符 $\text{T}$ 本身
