@@ -170,7 +170,7 @@ $$
 程序上, 只需不断作平方运算, 根据二进制位的 $0/1$ 取舍即可, 下面给出伪代码:
 
 ```pascal
-FUNCTION FAST_POW (base, idx) : // INPUT
+FAST_POW (base, idx) : // INPUT
     res = 1
     WHILE idx != 0 :
         IF idx & 1 == 1 :
