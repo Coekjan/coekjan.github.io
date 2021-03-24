@@ -21,7 +21,7 @@ $$
     &\mid\text{Expression PlusMinus White Term White}\\
     \text{Term}\rightarrow&\text{[PlusMinus White] Factor}\\&\mid\text{Term White '*' White Factor}\\
     \text{Factor}\rightarrow&\text{VarFactor \textbar ConstFactor \textbar ExprFactor}\\
-    \text{VarFactor}\rightarrow&\text{PowFuncFactor}\mid\text{TriFunFactor}\\
+    \text{VarFactor}\rightarrow&\text{PowFuncFactor}\mid\text{TriFuncFactor}\\
     \text{ConstFactor}\rightarrow&\text{SignedInt}\\
     \text{ExprFactor}\rightarrow&\text{'(' Expression ')'}\\
     \text{TriFuncFactor}\rightarrow&\text{'sin' White '(' White Factor White ')' [White Index]}\\
@@ -149,8 +149,8 @@ public class Adder extends Function {
 
 $$
 \begin{aligned}
-    \text{E}&\rightarrow\text{T '+' E}\\
-    \text{T}&\rightarrow\text{F '*' T}\\
+    \text{E}&\rightarrow\text{T \textbar T '+' E}\\
+    \text{T}&\rightarrow\text{F \textbar F '*' T}\\
     \text{F}&\rightarrow\text{num\textbar '(' E ')'}
 \end{aligned}
 $$
@@ -196,15 +196,21 @@ private void extractTokens() throws IllegalFuncString {
 ```pascal
 PARSE_E() :
     term = PARSE_T()
-    ASSERT tokens[current] == '+'
-    current = current + 1
-    EXIT Adder(term, PARSE_E())         // return
+    IF tokens END:
+        EXIT term
+    ELSE:
+        ASSERT tokens[current] == '+'
+        current = current + 1
+        EXIT Adder(term, PARSE_E())
 
 PARSE_T() :
     fact = PARSE_F()
-    ASSERT tokens[current] == '*'
-    current = current + 1
-    EXIT Multiplier(fact, PARSE_T())    // return
+    IF tokens END:
+        EXIT fact
+    ELSE:
+        ASSERT tokens[current] == '*'
+        current = current + 1
+        EXIT Multiplier(fact, PARSE_T())
 
 PARSE_F() :
     CASE tokens[current].type :
@@ -223,7 +229,7 @@ PARSE_F() :
 
 这样, 通过合理的构造函数设置, 即可通过 `PARSE_E` 函数完成表达式模型的构建.
 
-递归下降充分利用了**向前看下一个 `Token`** 的能力, 为将要到来的表达式做引导.
+递归下降充分利用了**看下一个 `Token`** 的能力, 为将要到来的表达式做引导.
 
 ### 本项目中递归下降的注意要点
 
@@ -401,8 +407,8 @@ public Function simplify() {
 
 $$
 \begin{aligned}
-    \text{E}&\rightarrow\text{T '+' E}\\
-    \text{T}&\rightarrow\text{F '*' T}\\
+    \text{E}&\rightarrow\text{T \textbar T '+' E}\\
+    \text{T}&\rightarrow\text{F \textbar F '*' T}\\
     \text{F}&\rightarrow\text{num\textbar '(' E ')'}
 \end{aligned}
 $$
@@ -420,23 +426,23 @@ max_depth = 4           # avoid stack overflow
 
 def rand_E(depth=0):
     res = ''
+    res += rand_T()
     if depth < max_depth and random.random() > 0.5:
-        res += rand_T()
         res += '+'
         res += rand_E(depth + 1)
     return res
 
 def rand_T(depth=0):
     res = ''
+    res += rand_F()
     if depth < max_depth and random.random() > 0.5:
-        res += rand_F()
         res += '*'
         res += rand_T(depth + 1)
     return res
 
 def rand_F():
     res = ''
-    if depth >= max_depth and random.random() > 0.5:
+    if random.random() > 0.5:
         res += random.randint(1, 1 << 32)
     else:
         res += '(' + rand_E() + ')'
@@ -452,3 +458,5 @@ def rand_F():
 ![]({{ '/img/OO-DE-AutoTest-Process.svg' | prepend: site.baseurl}})
 
 > 运行 `java` 程序可以使用 `python` 的 `subprocess` 库完成.
+
+此外, `SymPy` 的 `equals` 方法解析多层的嵌套函数十分缓慢, 应使用**线性随机取点**的方法判定两函数相等与否.
