@@ -9,7 +9,8 @@
 ### 软件设计
 
 * **[Luogu](https://www.luogu.com.cn/)** - 在洛谷, 享受编程的快乐
-* **[Visualgo](https://visualgo.net/zh)** - 可视化动态数据结构与算法
+* **[Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)** - 可视化动态数据结构与算法 - 基础
+* **[Visualgo](https://visualgo.net/zh)** - 可视化动态数据结构与算法 - 进阶
 
 ### $\TeX$
 
