@@ -458,6 +458,6 @@ def rand_F():
 
 ![]({{ '/img/OO-DE-AutoTest-Process.svg' | prepend: site.baseurl}})
 
-> 运行 `java` 程序可以使用 `python` 的 `subprocess` 库完成.
+> 可以使用 `python` 的 `subprocess` 库完成运行 `java` 程序.
 
 此外, `SymPy` 的 `equals` 方法解析多层的嵌套函数十分缓慢, 应使用**线性随机取点**的方法判定两函数相等与否.
