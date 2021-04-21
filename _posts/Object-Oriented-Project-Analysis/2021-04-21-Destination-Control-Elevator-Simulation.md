@@ -237,8 +237,6 @@ public class StandardStrategy extends Strategy {
 }
 ```
 
-> 其中 `PersonQueue` 的 `firstPersonRequest` 方法在外部输入完成后, 返回 `PersonQueue.EXIT` 信号, 方便电梯线程的结束. 这一点在后文的线程结束方法将有更详细的介绍.
-
 ### 作为有限状态机的电梯
 
 注意到电梯的状态是有限的: 运行, 释放与接受请求, 等待指令. 则可以使用状态模式进行设计, 构造有限状态机.
