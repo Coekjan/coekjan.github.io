@@ -290,6 +290,8 @@ public class Elevator extends Thread {
 
 可采用辅助程序进行定时输入, 方便测试. 这一工作相对简单, 使用简单的C程序就能完成. 以Windows系统下的测试为例:
 
+> 该程序改造自[该作者](https://github.com/dhy2000)的程序
+
 ```c
 // TimableInput.c
 #include <stdio.h>
