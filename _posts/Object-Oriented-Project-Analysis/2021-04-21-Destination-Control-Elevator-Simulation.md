@@ -297,10 +297,9 @@ public class Elevator extends Thread {
 #include <windows.h>
 
 char buffer[1005];
-double current;
+double current = 0;
 
-int main()
-{
+int main() {
     double millis;
     while (scanf("[%lf]", &millis) != EOF) {
         millis *= 1000;
