@@ -10,7 +10,7 @@ tags:
     - C Programming  
 ---
 
-本文参考自 ***C in a Nutsehll: The Definitive Reference***.
+本文参考自 ***C in a Nutshell: The Definitive Reference***.
 
 ## 从源代码到可执行文件
 
