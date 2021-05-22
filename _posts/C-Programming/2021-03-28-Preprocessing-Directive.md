@@ -310,6 +310,8 @@ printf("The message was printed by line %d in the file %s.\n", __LINE__, __FILE_
 
 为了使得程序具有良好的可移植性, 应当尽可能少用或不用 `#pragma` 命令.
 
+> 需要注意的是, `#pragma pack(n)` 仅仅只是告诉编译器**最多**对齐到 `n` 字节, 并不是要求必须对齐到 `n` 字节.
+
 ### `_Pragma` 运算符
 
 宏展开不能创建 `#pragma` 命令. 当遇到需要这么做时, 可以使用**C99**新增的预处理运算符 `_Pragma` , 它可以配合宏使用:
