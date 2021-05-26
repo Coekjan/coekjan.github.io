@@ -29,7 +29,7 @@ $$
 
 ### 压强公式
 
-> 这部分推导在[气体动理论](https://coekjan.github.io/2020/12/28/Kinetic-Theory-of-Gases/)中有提及.
+> 这部分推导在[气体动理论]({{ '/2020/12/28/Kinetic-Theory-of-Gases/#压强公式推导' | prepend: site.baseurl}})中有提及.
 
 考虑一个长方形容器, 长宽高分别为 $l_1$ , $l_2$ , $l_3$ , 并假设容器中有 $N$ 个同类的理想气体分子, 每个分子的质量均为 $m_0$ .
 
