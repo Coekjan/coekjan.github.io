@@ -6,6 +6,7 @@ date:       2021-01-13
 author:     Coekjan 
 header-img: img/post-bg-CA.jpg	
 catalog:    true	
+non-ligatures: true 
 tags:	
     - Computer Architecture  
 ---

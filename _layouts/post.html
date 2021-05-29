@@ -22,6 +22,15 @@ layout: default
         background: rgba(0,0,0, {{ page.header-mask }});
     }
     {% endif %}
+
+    {% if page.non-ligatures %}
+    code,
+    kbd,
+    pre,
+    samp {
+        font-variant-ligatures: none;
+    }
+    {% endif %}
 </style>
 <header class="intro-header" >
     <div class="header-mask"></div>

@@ -7,6 +7,7 @@ author:     Coekjan
 header-img: img/post-bg-CA.jpg	
 catalog:    true    
 katex:  true    
+non-ligatures: true 
 tags:	
     - Computer Architecture  
 ---
