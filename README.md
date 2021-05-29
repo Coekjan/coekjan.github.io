@@ -35,6 +35,7 @@ The website is supported by
 * **[Coding Pages](https://help.coding.net/docs/pages/intro.html)**
 * **[MathJax](https://www.mathjax.org/)**
 * **[KaTeX](https://katex.org/)**
+* **[Jetbrains Mono](https://www.jetbrains.com/lp/mono/)**
 
 ## License
 
