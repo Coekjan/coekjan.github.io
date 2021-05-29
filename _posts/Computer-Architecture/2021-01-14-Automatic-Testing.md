@@ -69,7 +69,7 @@ ISE带有的ISim是仿真CPU工程的软件, 可以通过命令行运行CPU工�
 
 PRJ文件用于说明工程包含哪些模块, 使用绝对路径说明. 如若 `D:\Project` 文件夹下有工程:
 
-```library
+```text
 |-mips.prj
 |-mips.v
 |-mips_tb.v
