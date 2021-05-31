@@ -3,12 +3,12 @@
     "title": "Coekjan Blog",
     "author": "Coekjan <cn_yzr@qq.com>",
     "version": "1.7.0",
-    "homepage": "http://blog.coekjan.cn",
+    "homepage": "https://coekjan.cn",
     "repository": {
         "type": "git",
-        "url": "https://github.com/coekjan/coekjan.github.io"
+        "url": "https://github.com/Coekjan/Coekjan-Blog"
     },
-    "bugs": "https://github.com/coekjan/coekjan.github.io/issues",
+    "bugs": "https://github.com/Coekjan/Coekjan-Blog/issues",
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-contrib-less": "~0.11.4",
