@@ -36,6 +36,7 @@ The website is supported by
 * **[MathJax](https://www.mathjax.org/)**
 * **[KaTeX](https://katex.org/)**
 * **[Jetbrains Mono](https://www.jetbrains.com/lp/mono/)**
+* **[Fira Code](https://github.com/farseerfc/FiraCode)**
 
 ## License
 
