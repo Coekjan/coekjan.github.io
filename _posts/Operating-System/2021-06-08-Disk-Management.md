@@ -157,6 +157,7 @@ $$
 可以证明:
 1. $\oplus$ 运算是符合交换律和结合律的.
 2. 若 $a_0=a_1\oplus a_2\oplus\dotsm\oplus a_{n-1}$ , 则有:
+   
    $$
    a_i=\bigoplus_{k\neq i}a_k
    $$
