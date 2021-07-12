@@ -14,3 +14,5 @@
 一些有趣的项目:
 * **[STL-in-C](https://github.com/Coekjan/STL-in-C)**
   * 使用GNU C扩展的Nested Functions, 搭配C的宏, 模拟C++的STL
+* **[MIPS-CPU](https://github.com/Coekjan/MIPS-CPU)**
+  * 使用Chisel3搭建的MIPS-CPU

@@ -5,6 +5,7 @@
 ### 硬件设计
 
 * **[HDLBits](https://hdlbits.01xz.net/wiki/Main_Page)** - Verilog实践练习
+* **[Chisel](https://www.chisel-lang.org/chisel3/docs/introduction.html)** - 现代的高级硬件描述语言
 
 ### 软件设计
 
