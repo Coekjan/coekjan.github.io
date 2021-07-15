@@ -196,8 +196,8 @@ STR(FUNC(1.0))
 但本意是将 `FUNC(1.0)` 的展开结果字符串化, 要实现本意就需要引入**宏的延时展开技术**:
 
 ```c
-#define STR(s) #s
-#define XSTR(s) STR(s)
+#define XSTR(s) #s
+#define STR(s) XSTR(s)
 #define FUNC(x) (cos(x))
 STR(FUNC(1.0))
 ```
