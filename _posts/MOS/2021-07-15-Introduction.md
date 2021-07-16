@@ -228,8 +228,8 @@ void *set_except_vector(int n, void *addr)
 ```powershell
 .section .text.exc_vec3         // load this section to 0x80000080
 NESTED(except_vec3, 0, sp)
-    .set noat
-    .set noreorder
+    .set    noat
+    .set    noreorder
     mfc0    k1, CP0_CAUSE
     la      k0, exception_handlers
     andi    k1, k1, 0x7c
@@ -242,6 +242,10 @@ END(except_vec3)
 ```
 
 > 值得注意的是, 这里完全使用 `k0` , `k1` 两个内核保留的寄存器, **可以保证用户态下其他通用寄存器的值不被改变**, 也就保持了现场不变.
+> 
+> 此外, 这里涉及到了两个 `.set` 指令:
+> * `noat` : 意味着接下来的代码中**不允许汇编器使用 `at` 寄存器**. 这是因为此时刚刚陷入内核, 还未保存现场, 用户态下除了 `k0` , `k1` 之外都不能够被改变.
+> * `noreorder`: 意味着接下来的代码中不允许汇编器重排指令顺序.
 
 * `mfc0 k1, CP0_CAUSE`: 将Cause寄存器中的值取出, 存到 `k1` 寄存器.
 * `la k0, exception_handlers`: `la` 为扩展指令, 意为load address. 该指令将上面提到的 `exception_handlers` 的**首地址**存到了 `k0` 寄存器.
