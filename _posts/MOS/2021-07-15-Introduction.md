@@ -249,6 +249,7 @@ END(except_vec3)
 
 * `mfc0 k1, CP0_CAUSE`: 将Cause寄存器中的值取出, 存到 `k1` 寄存器.
 * `la k0, exception_handlers`: `la` 为扩展指令, 意为load address. 该指令将上面提到的 `exception_handlers` 的**首地址**存到了 `k0` 寄存器.
+  > `la` 指令本质是选用 `addiu` , `lui` , `ori` 等指令完成的扩展指令.
 * `andi k1, k1, 0x7c`: 此处做位掩码, 使得 `k1` 中仅保留Cause寄存器中的ExcCode段.
   > 按位与 `0x7c` 即, 仅保留 6 - 2 位. 恰好是 ExcCode 在 Cause 寄存器中的位置.
 * `addu k0, k0, k1`: 在前面的语句中, `k0` 寄存器保存了 `exception_handlers` 的首地址, `k1` 保存了**ExcCode乘4的值**, 此处做偏移, 使得 **`k0` 的值为 `exception_handlers` 数组的第ExcCode项**.
