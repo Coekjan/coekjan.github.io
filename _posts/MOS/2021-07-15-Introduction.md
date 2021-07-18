@@ -43,6 +43,8 @@ ID | 寄存器名 | 功能 | 备注
 
 ### SR中的 `IM` 与 `KU`, `IE`
 
+![]({{ '/img/MIPS-CP0-SR.svg' | prepend: site.baseurl}})
+
 > * `IM`: Interrupt Mask
 > * `KU`: Kernel-mode or User-mode
 > * `IE`: Interrupt Enable
@@ -56,6 +58,8 @@ ID | 寄存器名 | 功能 | 备注
 2. `IEc` 为1, 意味着CPU会响应中断; `IEc` 为0, 意味着CPU不会响应中断.
 
 ### Cause中的 `BD`, `IP`, `ExcCode`
+
+![]({{ '/img/MIPS-CP0-Cause.svg' | prepend: site.baseurl}})
 
 > * `BD`: Branch Delay
 > * `IP`: Interrupt Pending
