@@ -254,7 +254,7 @@ void boot_map_segment(Pde *pgdir,
             1 /* create if entry of page directory is not exists */
         );
         /* Step 2. fill in the page table */
-        *pgtable_entry = (/* III. Physical Frame Number of `pa + i` */)
+        *pgtable_entry = (/* III. Physical Frame Address of `pa + i` */)
                          | perm | PTE_V;
     }
 }
@@ -313,7 +313,7 @@ int page_insert(Pde *pgdir, struct Page *pp, u_long va, u_int perm) {
     if ((ret = pgdir_walk(pgdir, va, 1, &pgtable_entry)) < 0)
         return ret; // exception
     /* Step 2. fill in the page table */
-    *pgtable_entry = (/* III. Physical Frame Number of `pp` */) | perm;
+    *pgtable_entry = (/* III. Physical Frame Address of `pp` */) | perm;
     pp->pp_ref++;
     return 0;
 }
@@ -342,7 +342,7 @@ void tlb_invalidate(Pde *pgdir /* unused? */, u_long va) {
 LEAF(tlb_out)
     mfc0        k1, CP0_ENTRYHI // save current EntryHI
     mtc0        a0, CP0_ENTRYHI
-    // `tlbp` will probe the entry which HI equals to EntryHI
+    // `tlbp` will probe the entry whose HI equals to EntryHI
     tlbp
     // `tlbp` costs clocks
     nop
