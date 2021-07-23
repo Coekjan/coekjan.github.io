@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 MOS-Fill-In-Page-Table.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.33128in" height="6.10523in"
+		viewBox="0 0 599.852 439.577" xml:space="preserve" color-interpolation-filters="sRGB" class="st19">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {marker-end:url(#mrkr13-7);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.22935779816514}
+		.st3 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st4 {fill:#000000;font-family:Times New Roman;font-size:1.00001em}
+		.st5 {fill:#ffffff;stroke:#000000;stroke-dasharray:5.25,3.75;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st6 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st7 {fill:#000000;font-family:Times New Roman;font-size:0.75em}
+		.st8 {fill:#000000;font-family:Times New Roman;font-size:1.00001em;font-weight:bold}
+		.st9 {fill:#000000;font-family:Times New Roman;font-size:0.833336em;font-style:italic;font-weight:bold}
+		.st10 {font-size:1em;font-weight:normal}
+		.st11 {font-size:0.899997em;font-style:normal;font-weight:normal;text-decoration:underline}
+		.st12 {stroke:#000000;stroke-dasharray:0.75,1.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st13 {fill:none;stroke:#000000;stroke-dasharray:0.75,1.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st14 {fill:#000000;font-family:Consolas;font-size:0.666664em}
+		.st15 {font-size:1em}
+		.st16 {font-family:宋体;font-size:1em}
+		.st17 {fill:#b7dde8;fill-opacity:0.45;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st18 {fill:#fee599;fill-opacity:0.33;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st19 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend13">
+			<path d="M 3 1 L 0 0 L 3 -1 L 3 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr13-7" class="st2" v:arrowType="13" v:arrowSize="2" v:setback="13.08" refX="-13.08" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend13" transform="scale(-4.36,-4.36) "/>
+		</marker>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="group57-1" transform="translate(18.375,-18.375)" v:mID="57" v:groupContext="group">
+			<title>工作表.57</title>
+			<g id="shape33-2" v:mID="33" v:groupContext="shape" transform="translate(301.465,-141.732)">
+				<title>工作表.33</title>
+				<path d="M0 385.72 L112.39 385.72 L112.39 429.77" class="st1"/>
+			</g>
+			<g id="shape35-8" v:mID="35" v:groupContext="shape" transform="translate(301.465,-21.2599)">
+				<title>工作表.35</title>
+				<path d="M0 389.4 L112.51 389.4 L112.51 429.77" class="st1"/>
+			</g>
+			<g id="group36-13" transform="translate(3.8268,-188.504)" v:mID="36" v:groupContext="group">
+				<title>工作表.36</title>
+				<g id="shape12-14" v:mID="12" v:groupContext="shape" transform="translate(0,-8.15601E-06)">
+					<title>工作表.12</title>
+					<desc>PDBase(VA)</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="92.126" cy="432.49" width="184.26" height="14.1732"/>
+					<rect x="0" y="425.404" width="184.252" height="14.1732" class="st3"/>
+					<text x="60.13" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>PDBase(VA)</text>				</g>
+				<g id="shape13-17" v:mID="13" v:groupContext="shape" transform="translate(184.252,-5.68434E-14)">
+					<title>工作表.13</title>
+					<desc>PDX</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="46.063" cy="432.49" width="92.13" height="14.1732"/>
+					<rect x="0" y="425.404" width="92.126" height="14.1732" class="st3"/>
+					<text x="34.06" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>PDX</text>				</g>
+				<g id="shape14-20" v:mID="14" v:groupContext="shape" transform="translate(276.378,0)">
+					<title>工作表.14</title>
+					<desc>00</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="10.6299" cy="432.49" width="21.26" height="14.1732"/>
+					<rect x="0" y="425.404" width="21.2599" height="14.1732" class="st3"/>
+					<text x="4.63" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>00</text>				</g>
+			</g>
+			<g id="group37-23" transform="translate(263.622,-127.559)" v:mID="37" v:groupContext="group">
+				<title>工作表.37</title>
+				<g id="shape15-24" v:mID="15" v:groupContext="shape" transform="translate(0,-1.18447E-05)">
+					<title>工作表.15</title>
+					<desc>PTBase(PA)</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="92.126" cy="432.49" width="184.26" height="14.1732"/>
+					<rect x="0" y="425.404" width="184.252" height="14.1732" class="st3"/>
+					<text x="61.79" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>PTBase(PA)</text>				</g>
+				<g id="shape18-27" v:mID="18" v:groupContext="shape" transform="translate(184.252,0)">
+					<title>工作表.18</title>
+					<desc>Perm</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="56.6929" cy="432.49" width="113.39" height="14.1732"/>
+					<rect x="0" y="425.404" width="113.386" height="14.1732" class="st3"/>
+					<text x="44.03" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>Perm</text>				</g>
+			</g>
+			<g id="group38-30" transform="translate(130.394,-253.984)" v:mID="38" v:groupContext="group">
+				<title>工作表.38</title>
+				<g id="shape30-31" v:mID="30" v:groupContext="shape">
+					<title>工作表.30</title>
+					<path d="M0 439.58 L184.25 439.58 L184.25 393.66 L0 393.66 L0 439.58 Z" class="st5"/>
+				</g>
+				<g id="shape2-33" v:mID="2" v:groupContext="shape" transform="translate(3.9968E-14,-3.96847)">
+					<title>工作表.2</title>
+					<desc>PDX</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="46.063" cy="432.49" width="92.13" height="14.1732"/>
+					<rect x="0" y="425.404" width="92.126" height="14.1732" class="st3"/>
+					<text x="34.06" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>PDX</text>				</g>
+				<g id="shape3-36" v:mID="3" v:groupContext="shape" transform="translate(92.126,-3.96847)">
+					<title>工作表.3</title>
+					<desc>PTX</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="46.063" cy="432.49" width="92.13" height="14.1732"/>
+					<rect x="0" y="425.404" width="92.126" height="14.1732" class="st3"/>
+					<text x="34.73" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>PTX</text>				</g>
+				<g id="shape4-39" v:mID="4" v:groupContext="shape" transform="translate(184.252,-3.96847)">
+					<title>工作表.4</title>
+					<desc>0</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="56.6929" cy="432.49" width="113.39" height="14.1732"/>
+					<rect x="0" y="425.404" width="113.386" height="14.1732" class="st3"/>
+					<text x="53.69" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>0</text>				</g>
+				<g id="shape5-42" v:mID="5" v:groupContext="shape" transform="translate(2.89768E-14,-18.1417)">
+					<title>工作表.5</title>
+					<desc>31</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="8.50394" cy="433.907" width="17.01" height="11.3386"/>
+					<rect x="0" y="428.238" width="17.0079" height="11.3386" class="st6"/>
+					<text x="4" y="436.61" class="st7" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>31</text>				</g>
+				<g id="shape6-45" v:mID="6" v:groupContext="shape" transform="translate(75.1181,-18.1417)">
+					<title>工作表.6</title>
+					<desc>22</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="8.50394" cy="433.907" width="17.01" height="11.3386"/>
+					<rect x="0" y="428.238" width="17.0079" height="11.3386" class="st6"/>
+					<text x="4" y="436.61" class="st7" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>22</text>				</g>
+				<g id="shape7-48" v:mID="7" v:groupContext="shape" transform="translate(92.126,-18.1417)">
+					<title>工作表.7</title>
+					<desc>21</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="8.50394" cy="433.907" width="17.01" height="11.3386"/>
+					<rect x="0" y="428.238" width="17.0079" height="11.3386" class="st6"/>
+					<text x="4" y="436.61" class="st7" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>21</text>				</g>
+				<g id="shape8-51" v:mID="8" v:groupContext="shape" transform="translate(167.244,-18.1417)">
+					<title>工作表.8</title>
+					<desc>12</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="8.50394" cy="433.907" width="17.01" height="11.3386"/>
+					<rect x="0" y="428.238" width="17.0079" height="11.3386" class="st6"/>
+					<text x="4" y="436.61" class="st7" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>12</text>				</g>
+				<g id="shape9-54" v:mID="9" v:groupContext="shape" transform="translate(184.252,-18.1417)">
+					<title>工作表.9</title>
+					<desc>11</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="8.50394" cy="433.907" width="17.01" height="11.3386"/>
+					<rect x="0" y="428.238" width="17.0079" height="11.3386" class="st6"/>
+					<text x="4" y="436.61" class="st7" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>11</text>				</g>
+				<g id="shape10-57" v:mID="10" v:groupContext="shape" transform="translate(280.63,-18.1417)">
+					<title>工作表.10</title>
+					<desc>0</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="8.50394" cy="433.907" width="17.01" height="11.3386"/>
+					<rect x="0" y="428.238" width="17.0079" height="11.3386" class="st6"/>
+					<text x="6.25" y="436.61" class="st7" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>0</text>				</g>
+				<g id="shape27-60" v:mID="27" v:groupContext="shape" transform="translate(0,-54.9921)">
+					<title>工作表.27</title>
+					<desc>Virtual Address</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="148.819" cy="431.073" width="297.64" height="17.0078"/>
+					<rect x="0" y="422.569" width="297.638" height="17.0078" class="st6"/>
+					<text x="107.65" y="434.67" class="st8" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>Virtual Address</text>				</g>
+				<g id="shape29-63" v:mID="29" v:groupContext="shape" transform="translate(6.39488E-14,-29.5984)">
+					<title>工作表.29</title>
+					<desc>VPN</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="92.126" cy="431.782" width="184.26" height="15.5905"/>
+					<rect x="0" y="423.986" width="184.252" height="15.5905" class="st6"/>
+					<text x="80.12" y="435.38" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>VPN</text>				</g>
+			</g>
+			<g id="group39-66" transform="translate(3.8268,-65.1969)" v:mID="39" v:groupContext="group">
+				<title>工作表.39</title>
+				<g id="shape19-67" v:mID="19" v:groupContext="shape" transform="translate(0,-8.15601E-06)">
+					<title>工作表.19</title>
+					<desc>PTBase(VA)</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="92.126" cy="432.49" width="184.26" height="14.1732"/>
+					<rect x="0" y="425.404" width="184.252" height="14.1732" class="st3"/>
+					<text x="60.8" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>PTBase(VA)</text>				</g>
+				<g id="shape20-70" v:mID="20" v:groupContext="shape" transform="translate(184.252,-5.68434E-14)">
+					<title>工作表.20</title>
+					<desc>PTX</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="46.063" cy="432.49" width="92.13" height="14.1732"/>
+					<rect x="0" y="425.404" width="92.126" height="14.1732" class="st3"/>
+					<text x="34.73" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>PTX</text>				</g>
+				<g id="shape21-73" v:mID="21" v:groupContext="shape" transform="translate(276.378,0)">
+					<title>工作表.21</title>
+					<desc>00</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="10.6299" cy="432.49" width="21.26" height="14.1732"/>
+					<rect x="0" y="425.404" width="21.2599" height="14.1732" class="st3"/>
+					<text x="4.63" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>00</text>				</g>
+			</g>
+			<g id="group40-76" transform="translate(263.622,-7.08664)" v:mID="40" v:groupContext="group">
+				<title>工作表.40</title>
+				<g id="shape25-77" v:mID="25" v:groupContext="shape" transform="translate(0,-1.18447E-05)">
+					<title>工作表.25</title>
+					<desc>PFN</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="92.126" cy="432.49" width="184.26" height="14.1732"/>
+					<rect x="0" y="425.404" width="184.252" height="14.1732" class="st3"/>
+					<text x="81.12" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>PFN</text>				</g>
+				<g id="shape26-80" v:mID="26" v:groupContext="shape" transform="translate(184.252,5.68434E-14)">
+					<title>工作表.26</title>
+					<desc>Perm</desc>
+					<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+					<v:textRect cx="56.6929" cy="432.49" width="113.39" height="14.1732"/>
+					<rect x="0" y="425.404" width="113.386" height="14.1732" class="st3"/>
+					<text x="44.03" y="436.09" class="st4" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>Perm</text>				</g>
+			</g>
+			<g id="shape41-83" v:mID="41" v:groupContext="shape" transform="translate(301.465,-195.591)">
+				<title>工作表.41</title>
+				<desc>I. Read from memory hint – access memory in kseg0</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="63.2835" cy="423.986" width="126.57" height="31.1811"/>
+				<rect x="0" y="408.396" width="126.567" height="31.1811" class="st6"/>
+				<text x="4" y="421.44" class="st9" v:langID="2052"><v:paragraph/><v:tabList/>I.<tspan class="st10"> </tspan><tspan
+							class="st10">Read from memory<v:newlineChar/></tspan><tspan x="4" dy="1.235em" class="st11">hint </tspan><tspan
+							class="st11">–</tspan><tspan class="st11"> </tspan><tspan class="st11">access memory in kseg0</tspan></text>			</g>
+			<g id="shape43-92" v:mID="43" v:groupContext="shape" transform="translate(64.9902,297.844) rotate(-90)">
+				<title>工作表.43</title>
+				<path d="M0 439.58 L17.9 439.58" class="st12"/>
+			</g>
+			<g id="shape44-95" v:mID="44" v:groupContext="shape" transform="translate(428.031,-160.157)">
+				<title>工作表.44</title>
+				<desc>if (Perm &#38; PTE_V) == 0 then if create then /* allocate a page...</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="66.6142" cy="393.514" width="133.23" height="92.126"/>
+				<path d="M0 439.58 L133.23 439.58 L133.23 347.45 L0 347.45 L0 439.58 Z" class="st13"/>
+				<text x="4" y="358.65" class="st14" v:langID="2052"><v:paragraph/><v:tabList/>if (Perm &#38; PTE_V) == 0 then<v:newlineChar/><tspan
+							x="4" dy="1.2em" class="st15">    </tspan>if create then<v:newlineChar/><tspan x="4" dy="1.2em"
+							class="st15">        </tspan>/* allocate a page <tspan x="4" dy="1.2em" class="st15">for this page table and set </tspan><tspan
+							x="4" dy="1.2em" class="st15">proper permission. */<v:newlineChar/></tspan><tspan x="4" dy="1.2em"
+							class="st15">    </tspan>else<v:newlineChar/><tspan x="4" dy="1.2em" class="st15">        </tspan>/* exception */<v:newlineChar/><tspan
+							x="4" dy="1.2em" class="st15">    </tspan>endif<v:newlineChar/><tspan x="4" dy="1.2em" class="st15">endif</tspan></text>			</g>
+			<g id="shape45-106" v:mID="45" v:groupContext="shape" transform="translate(21.2598,-136.063)">
+				<title>工作表.45</title>
+				<desc>II. Convert Physical Address to Kernel Virtual Address hint –...</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="121.394" cy="423.986" width="242.79" height="31.1811"/>
+				<rect x="0" y="408.396" width="242.787" height="31.1811" class="st6"/>
+				<text x="10.29" y="421.6" class="st9" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>II. <tspan
+							class="st10">Convert Physical Address to Kernel Virtual Address<v:newlineChar/></tspan><tspan x="65.91"
+							dy="1.235em" class="st11">hint </tspan><tspan class="st11">–</tspan><tspan class="st11"> </tspan><tspan
+							class="st11">use macro: KADDR(pa)</tspan></text>			</g>
+			<g id="shape48-114" v:mID="48" v:groupContext="shape" transform="translate(94.1929,-79.3701)">
+				<title>工作表.48</title>
+				<path d="M169.43 384.02 L0 384.02 L0 429.77" class="st1"/>
+			</g>
+			<g id="shape49-119" v:mID="49" v:groupContext="shape" transform="translate(301.465,-72.2835)">
+				<title>工作表.49</title>
+				<desc>III. Write target PFN and Perm to memory</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="94.4646" cy="428.947" width="188.93" height="21.2598"/>
+				<rect x="0" y="418.317" width="188.929" height="21.2598" class="st6"/>
+				<text x="4" y="431.36" class="st9" v:langID="2052"><v:paragraph/><v:tabList/>III.<tspan class="st10"> </tspan><tspan
+							class="st10">Write target PFN and Perm to memory</tspan></text>			</g>
+			<g id="shape50-124" v:mID="50" v:groupContext="shape" transform="translate(382.677,-287.598)">
+				<title>工作表.50</title>
+				<desc>PDX – Page Directory indeX PTX – Page Table indeX PDBase – Ba...</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="90.2126" cy="381.963" width="180.43" height="115.228"/>
+				<rect x="0" y="324.348" width="180.425" height="115.228" class="st6"/>
+				<text x="4" y="337.23" class="st7" v:langID="2052"><v:paragraph/><v:tabList/>PDX <v:tabChar/><tspan dx="2.474em"
+							class="st16">–</tspan> Page Directory indeX<v:newlineChar/><tspan x="4" dy="1.316em" class="st15">PTX <v:tabChar/></tspan><tspan
+							dx="2.585em" class="st16">–</tspan> Page Table indeX<v:newlineChar/><tspan x="4" dy="1.316em"
+							class="st15">PDBase <v:tabChar/></tspan><tspan dx="1.252em" class="st16">–</tspan> Base address of Page Directory<v:newlineChar/><tspan
+							x="4" dy="1.316em" class="st15">PTBase <v:tabChar/></tspan><tspan dx="1.364em" class="st16">–</tspan> Base address of Page Table<v:newlineChar/><tspan
+							x="4" dy="1.316em" class="st15">VA <v:tabChar/></tspan><tspan dx="3.03em" class="st16">–</tspan> Virtual Address<v:newlineChar/><tspan
+							x="4" dy="1.316em" class="st15">PA <v:tabChar/></tspan><tspan dx="3.196em" class="st16">–</tspan> Physical Address<v:newlineChar/><tspan
+							x="4" dy="1.316em" class="st15">Perm <v:tabChar/></tspan><tspan dx="2.364em" class="st16">–</tspan> Permission<v:newlineChar/><tspan
+							x="4" dy="1.316em" class="st15">VPN <v:tabChar/></tspan><tspan dx="2.474em" class="st16">–</tspan> Virtual Page Number<v:newlineChar/><tspan
+							x="4" dy="1.316em" class="st15">PFN <v:tabChar/></tspan><tspan dx="2.64em" class="st16">–</tspan> Physical Frame Number</text>			</g>
+			<g id="shape52-144" v:mID="52" v:groupContext="shape" transform="translate(0,-59.5275)">
+				<title>工作表.52</title>
+				<path d="M0 245.12 L563.1 245.12 L563.1 399.25 L303.76 399.25 L303.76 439.58 L0 439.58 L0 245.12 Z" class="st17"/>
+			</g>
+			<g id="shape54-146" v:mID="54" v:groupContext="shape" transform="translate(0,-221.102)">
+				<title>工作表.54</title>
+				<desc>Step 1. &#34;Walk&#34; the page directory</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="94.4646" cy="425.97" width="188.93" height="27.2126"/>
+				<rect x="0" y="412.364" width="188.929" height="27.2126" class="st6"/>
+				<text x="4" y="429.57" class="st8" v:langID="2052"><v:paragraph/><v:tabList/>Step 1. &#34;Walk&#34; the page directory</text>			</g>
+			<g id="shape55-149" v:mID="55" v:groupContext="shape">
+				<title>工作表.55</title>
+				<path d="M303.76 339.72 L563.1 339.72 L563.1 439.58 L0 439.58 L0 380.05 L303.76 380.05 L303.76 339.72 Z"
+						class="st18"/>
+			</g>
+			<g id="shape56-151" v:mID="56" v:groupContext="shape" transform="translate(0,-14.1732)">
+				<title>工作表.56</title>
+				<desc>Step 2. Fill in the page table</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="94.4646" cy="425.97" width="188.93" height="27.2126"/>
+				<rect x="0" y="412.364" width="188.929" height="27.2126" class="st6"/>
+				<text x="4" y="427.16" class="st8" v:langID="2052"><v:paragraph/><v:tabList/>Step 2. Fill in the page table</text>			</g>
+		</g>
+	</g>
+</svg>
