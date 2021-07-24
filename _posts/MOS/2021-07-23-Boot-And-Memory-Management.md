@@ -251,7 +251,7 @@ void boot_map_segment(Pde *pgdir,
         pgtable_entry = boot_pgdir_walk(
             pgdir,
             va + i,
-            1 /* create if entry of page directory is not exists */
+            1 /* create if entry of page directory not exists yet */
         );
         /* Step 2. fill in the page table */
         *pgtable_entry = (/* III. Physical Frame Address of `pa + i` */)
@@ -299,7 +299,7 @@ int page_insert(Pde *pgdir, struct Page *pp, u_long va, u_int perm) {
     // Step 0. check whether `va` is already mapping to `pa`
     pgdir_walk(pgdir, va, 0 /* for check */, &pgtable_entry);
     if (pgtable_entry != 0 && (*pgtable_entry & PTE_V) != 0) {
-        // check whether `va` is mapped to another physical frame
+        // check whether `va` is mapping to another physical frame
         if (pa2page(*pgtable_entry) != pp) {
             page_remove(pgdir, va); // unmap it!
         } else {
