@@ -217,7 +217,7 @@ MOS实验中, 采用**二级页表**来实现虚拟内存. 在 `mips_vm_init` �
 
 > 涉及函数 `boot_pgdir_walk` , `boot_map_segment` .
 
-在 `page_init` 被调用之前, 物理内存管理尚未完成, 因此无法调用 `page_alloc`, `page_free` 函数进行物理内存分配与释放. 但这之前使用的内存空间也需要建立虚实地址映射(`boot_map_segment`).
+在 `page_init` 被调用之前, 物理内存管理尚未完成, 因此无法调用 `page_alloc`, `page_free` 函数进行物理内存分配与释放. 但 `pages` 和 `envs` 这两个数组需要与用户空间的 `UPAGES` 和 `UENVS` 空间建立虚实地址映射(`boot_map_segment`).
 
 因此, 在上面的图示中, 使用 `boot_pgdir_walk` 来完成Step 1; 在 `boot_map_segment` 中完成Step 2. 其中 `walk` 的过程中需要使用 `alloc` 来创建页表.
 
@@ -374,7 +374,7 @@ END(tlb_out)
 
 该汇编文件中, 使用了汇编宏 `BUILD_HANDLER` 来生成 `handle_tlb` 的代码, `handle_tlb` 最终落入 `do_refill` 函数完成TLB填写.
 
-> `handle_tlb` 的前后过程比较复杂: 涉及到保存现场, 关闭中断, 设置栈指针, 恢复现场, 开启中断, 恢复栈指针等操作. **这些操作在此处不作解释**, 有兴趣的读者可以参阅源代码. 后续有关中断异常的文章中将重点介绍这些流程.
+> `handle_tlb` 的前后过程比较复杂: 涉及到保存现场, 设置栈指针, 恢复现场, 开启中断, 恢复栈指针等操作. **这些操作在此处不作解释**, 有兴趣的读者可以参阅源代码. 后续有关中断异常的文章中将重点介绍这些流程.
 > 
 > 此处只对其中最核心的 `do_refill` 例程进行简单解释.
 
