@@ -98,7 +98,7 @@ realGraph[source][j] += startTime + waitTime;
 修正后, 就可以利用Dijkstra算法完成最短路径的搜寻, 其中需要注意的有:
 1. 需要使用 `prevElevator` 数组: `prevElevator[i]` 表示到达 `i` 结点最后需要乘坐的电梯;
 2. 遇到权重一样的边, 应当选择负载较小的电梯;
-3. 换乘电梯时, 需要对权重进行修正: `weight += startTime + weitTime;` .
+3. 换乘电梯时, 需要对权重进行修正: `weight += startTime + waitTime;` .
 
 #### 代价估计
 
