@@ -2,6 +2,10 @@
 
 * **[Incredible Proof Machine](https://incredible.pm)** - 可视化逻辑证明
 
+### 形式语言与自动机理论
+
+* **[Min DFA](https://cyberzhg.github.io/toolbox/min_dfa)** - 正则表达式转最小有穷自动机
+
 ### 硬件设计
 
 * **[HDLBits](https://hdlbits.01xz.net/wiki/Main_Page)** - Verilog实践练习
