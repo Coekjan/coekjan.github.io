@@ -158,10 +158,6 @@ Section "Device"
     Identifier  "Intel Graphics"
     Driver      "intel"
     Option      "AccelMethod"     "uxa"
-    Option      "TearFree"        "true"
-    Option      "SwapbuffersWait" "true"
-    Option      "TripleBuffer"    "true"
-    Option      "DRI"             "true"
 EndSection
 ```
 
