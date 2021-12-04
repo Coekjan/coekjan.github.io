@@ -1,8 +1,8 @@
 ---	
 layout:     post	
-title:      『Manjaro Linux』 Fix Manjaro Screen Tearing On Dell Inspiron 16 Plus	
-subtitle:   『Manjaro Linux』 在戴尔灵越16Plus上修复Manjaro的屏幕撕裂    
-date:       2021-11-26	   
+title:      『Manjaro Linux』 Fix Screen Flickering On Dell Inspiron 16 Plus	
+subtitle:   『Manjaro Linux』 在戴尔灵越16Plus上修复Manjaro的屏幕闪烁    
+date:       2021-12-4	   
 author:     Coekjan 
 header-img: img/post-bg-MJ.jpg	
 catalog:    true	
@@ -11,7 +11,7 @@ tags:
     - Manjaro Linux  
 ---
 
-本文记录笔者在戴尔灵越16Plus上解决Manjaro屏幕撕裂的方法。
+本文记录笔者在戴尔灵越 16Plus 上解决 Manjaro 屏幕闪烁的方法。
 
 ## Manjaro版本与配置信息
 
@@ -136,33 +136,20 @@ Info:
   default: Bash v: 5.1.8 running-in: yakuake inxi: 3.3.09
 ```
 
-## 屏幕撕裂解决方案
+## 屏幕闪烁解决方案
 
-首先安装[xf86-video-intel](https://archlinux.org/packages/?name=xf86-video-intel)，直接采用yay来安装此软件：
-
-```shell
-~$ yay -S xf86-video-intel
-```
-
-随后按下述步骤，创建并打开20-intel.conf文件：
+编辑 /etc/default/grub 文件，修改下述两个配置项为对应的值（加入 `i915.enable_psr=0`）。
 
 ```shell
-~$ cd /etc/X11/xorg.conf.d
-~$ sudo vim 20-intel.conf
+GRUB_CMDLINE_LINUX_DEFAULT="quiet apparmor=1 security=apparmor udev.log_priority=3 i915.enable_psr=0"
+GRUB_CMDLINE_LINUX="i915.enable_psr=0"
 ```
 
-文件中填入：
-
-```plaintext
-Section "Device"
-    Identifier  "Intel Graphics"
-    Driver      "intel"
-    Option      "AccelMethod"     "uxa"
-EndSection
-```
-
-随后重启即可：
+随后命令行中使用下述命令：
 
 ```shell
+~$ grub-mkconfig -o /boot/grub/grub.cfg
 ~$ reboot
 ```
+
+问题得到解决。
