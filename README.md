@@ -1,12 +1,5 @@
-**[Coekjan-blog](https://coekjan.cn)**
+**[Coekjan-blog](https://coekjan.github.io)**
 ============================================
-
-***[Coding Repository](https://coekjan.coding.net/public/coekjan/blog/git/files)*** supports **Coekjan-blog**.
-
-The website is currently accessible via the following links:
-* *[coekjan.cn](https://coekjan.cn)*
-* *[www.coekjan.cn](https://www.coekjan.cn)*
-* *[blog.coekjan.cn](https://blog.coekjan.cn)*
 
 ## Developer
 
