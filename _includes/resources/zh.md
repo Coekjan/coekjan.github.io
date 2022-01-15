@@ -1,3 +1,8 @@
+### CS WIKI
+
+* **[CS DIY WIKI](https://csdiy.wiki)** - CS 自学指南
+* **[CS Missing Semester](https://missing-semester-cn.github.io/)** - 计算机教学中缺失的一课
+
 ### 离散数学
 
 * **[Incredible Proof Machine](https://incredible.pm)** - 可视化逻辑证明
