@@ -36,7 +36,8 @@ $ docker build -t oslab:latest .
 构建镜像。假设你的开发工作目录在 `host-dir` 中，可以通过：
 
 ```shell
-$ docker run -d -p 3372:22 --mount type=bind,source="host-dir",target="/home/scse/mos" oslab:latest
+$ docker run -d -p 3372:22 \
+      --mount type=bind,source="host-dir",target="/home/scse/mos" oslab:latest
 ```
 
 运行镜像，并将开发目录挂载到容器中的 `/home/scse/mos` 目录中。随后可以通过：
