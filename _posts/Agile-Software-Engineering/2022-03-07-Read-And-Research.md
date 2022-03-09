@@ -1,7 +1,7 @@
 ---	
 layout:     post	
 title:      『Agile Software Engineering』 Read And Research	
-subtitle:   『Agile Software Engineering』 阅读与调研    
+subtitle:   『敏捷软件工程』 阅读与调研    
 date:       2022-03-08	   
 author:     Coekjan 
 header-img: img/post-bg-ASE.jpg	
