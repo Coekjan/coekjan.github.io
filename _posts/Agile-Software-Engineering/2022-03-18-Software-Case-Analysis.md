@@ -95,7 +95,7 @@ tags:
 
 ### Bug 反馈
 
-<!-- TODO -->
+![]({{ '/img/ASE-CSDN-BBS-Issue.png' | prepend: site.baseurl }})
 
 ### 体验与采访
 
