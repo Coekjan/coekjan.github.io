@@ -19,6 +19,7 @@
 
 ### 软件设计
 
+* **[Pro Git](https://www.progit.cn/)** - 专业的 Git 教程
 * **[Luogu](https://www.luogu.com.cn/)** - 在洛谷, 享受编程的快乐
 * **[Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)** - 可视化动态数据结构与算法 - 基础
 * **[Visualgo](https://visualgo.net/zh)** - 可视化动态数据结构与算法 - 进阶
