@@ -386,8 +386,8 @@ public static List<string> GenChainChar(List<string> words, char head, char tail
 
 本次结对成员有 @roife 和 @coekjan，以下是结对编程中两人的优缺点：
 * @roife：
-  * 优点：
-  * 缺点：
+  * 优点：学习过 GUI 的绘制，了解部分问题的算法
+  * 缺点：不太习惯 Visual Studio，对于 C# 语法不够了解，写代码有些拖延
 * @coekjan：
   * 优点：比较熟悉工程性代码的解耦设计，曾经写过不少工程性代码
   * 缺点：不太懂算法，对代码风格之类的有强迫症
