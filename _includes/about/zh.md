@@ -13,8 +13,10 @@
 
 一些有趣的项目：
 * **[STL-in-C](https://github.com/Coekjan/STL-in-C)**
-  * 使用GNU C扩展的Nested Functions，搭配C的宏，模拟C++的STL
+  * 使用 GNU C 扩展的 Nested Functions，搭配 C 的宏，模拟 C++ 的 STL
 * **[MIPS-CPU](https://github.com/Coekjan/MIPS-CPU)**
-  * 使用Chisel3搭建的MIPS-CPU
+  * 使用 Chisel3 搭建的 MIPS-CPU
 * **[Trivial-Derivation](https://github.com/Coekjan/Trivial-Derivation)**
-  * 使用大量Scala特性编写的表达式求导程序，可作为入门Scala的第一项目
+  * 使用大量 Scala 特性编写的表达式求导程序，可作为入门 Scala 的第一项目
+* **[CEMU](https://github.com/cyyself/cemu)**
+  * 支持 RISC-V、MIPS、LoongArch32(Reduced) 的轻量模拟器，可以方便整合 Difftest 差分测试框架
